@@ -44,6 +44,5 @@ scale = Vector2(2.25781, 1.48438)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="temp_platform"]
 position = Vector2(-13.0657, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_biuue")
 one_way_collision = true
