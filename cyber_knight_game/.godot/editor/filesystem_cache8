@@ -1,3 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694794882
+::res://::1694803626
 icon.svg::CompressedTexture2D::1025480096012583275::1694794816::1694794882::1::::<><>::
+::res://assets/::1694826774
+::res://assets/placeholder/::1694826802
+playerGrey_walk1.png::CompressedTexture2D::746570269040930530::1693880440::1694826804::1::::<><>::
+playerGrey_walk2.png::CompressedTexture2D::1253313233842893967::1693880440::1694826804::1::::<><>::
+::res://assets/visuals/::1694803516
+background.png::CompressedTexture2D::6277987580316417389::1694712521::1694803516::1::::<><>::
