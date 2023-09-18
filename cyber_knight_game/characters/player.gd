@@ -1,15 +1,25 @@
 extends CharacterBody2D
 
-const SPEED = 350.0 # X movement speed
-const JUMP_VELOCITY = -650.0# Y movement speed. In Godot going up is negative
+var SPEED = 350.0 # X movement speed
+var JUMP_VELOCITY = -650.0# Y movement speed. In Godot going up is negative
+var DASH_VELOCITY = 3400.0 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-const DASH_VELOCITY = 3400.0 
+
 var can_dash = true
 var is_dashing = false
 var dash_direction = 0
 var facing
+var screen_size 
 
+func _ready():
+	screen_size = get_viewport_rect().size
+
+func _process(delta):
+	# No out of bounds lol
+	pass
+	#position = position.clamp(Vector2.ZERO, screen_size)
+	
 
 func dash():
 	
@@ -54,10 +64,6 @@ func _physics_process(delta):
 	if not is_on_floor() and not is_dashing:
 		velocity.y += gravity * delta
 	
-	# Get the input direction and handle the movement/deceleration.
-	var direction = Input.get_axis("left", "right")
-	
-	
 	dash()
 	
 	# Handle Jump.
@@ -66,10 +72,14 @@ func _physics_process(delta):
 	
 	# not is_dashing is important
 	# allows the player to dash even when they are holding left or right
+	# Get the input direction and handle the movement/deceleration.
+	var direction = Input.get_axis("left", "right")
 	if direction and not is_dashing:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	
 	
 	# built in function that seems important lol
 	move_and_slide()
