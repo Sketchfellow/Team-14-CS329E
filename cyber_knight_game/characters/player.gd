@@ -21,7 +21,7 @@ func dash():
 		facing = 'r'
 		dash_direction = 1
 	
-	if Input.is_action_just_pressed("dash") and can_dash:
+	if Input.is_action_just_pressed("jump") and can_dash and not is_on_floor():
 		
 		# Animations
 		if facing == 'r':
@@ -46,11 +46,12 @@ func dash():
 		# regular dash cooldown. Effectively 1.1 seconds
 		await get_tree().create_timer(1.0).timeout
 		can_dash = true
+
 		
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and not is_dashing:
 		velocity.y += gravity * delta
 	
 	# Get the input direction and handle the movement/deceleration.
