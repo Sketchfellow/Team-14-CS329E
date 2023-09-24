@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 350.0 # X movement speed
+var SPEED = 500.0 # X movement speed
 var JUMP_VELOCITY = -650.0# Y movement speed. In Godot going up is negative
 var DASH_VELOCITY = 3400.0 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var can_dash = true
 var is_dashing = false
 var dash_direction = 0
-var facing
+var facing = 'l'
 var screen_size 
 
 func _ready():
@@ -36,11 +36,11 @@ func dash():
 		# Animations
 		if facing == 'r':
 			$AnimatedSprite2D.flip_h = false
-			$AnimatedSprite2D.animation = "lwalk"
+			$AnimatedSprite2D.animation = "dash"
 			
 		if facing == 'l':
 			$AnimatedSprite2D.flip_h = true
-			$AnimatedSprite2D.animation = "lwalk"
+			$AnimatedSprite2D.animation = "dash"
 		
 		velocity.x = dash_direction * DASH_VELOCITY
 		
@@ -74,9 +74,20 @@ func _physics_process(delta):
 	# allows the player to dash even when they are holding left or right
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("left", "right")
+	
+	
 	if direction and not is_dashing:
+		facing = "l" if direction == -1 else "r"
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		if is_on_floor():
+			$AnimatedSprite2D.animation = "run"
+		$AnimatedSprite2D.play()
 		velocity.x = direction * SPEED
 	else:
+		if is_on_floor():
+			$AnimatedSprite2D.animation = "neutral"
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		$AnimatedSprite2D.play()
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	
