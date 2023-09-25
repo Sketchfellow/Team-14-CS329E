@@ -16,7 +16,6 @@ size = Vector2(72, 140)
 [node name="testing_stage" type="Node"]
 
 [node name="BG" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-7.62939e-06, 376)
 scale = Vector2(2.69512, 2.69512)
 texture = ExtResource("1_xjfsy")

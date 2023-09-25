@@ -1,4 +1,2 @@
-res://levels/testing_stage.tscn
 res://characters/cyber_knight_player.tscn
-res://characters/player.tscn
-res://characters/player.gd
+res://levels/testing_stage.tscn
