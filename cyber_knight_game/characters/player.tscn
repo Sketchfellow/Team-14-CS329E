@@ -149,7 +149,7 @@ shape = SubResource("CapsuleShape2D_cc0sj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_8y21m")
-animation = &"dash"
+animation = &"neutral"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var SPEED = 600.0 # X movement speed
 var JUMP_VELOCITY = -700.0# Y movement speed. In Godot going up is negative
-var DASH_VELOCITY = 4000.0 
+var DASH_VELOCITY = 4500.0 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
@@ -45,11 +45,11 @@ func dash():
 		is_dashing = true
 		# This quick timer will allow the is_dashing variable to do its job at
 		# preventing left and right movements from interrupting dash
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.2).timeout
 		is_dashing = false
 		$CollisionShape2D.disabled = false
 		$dashCollisionShape.disabled = true
-		# regular dash cooldown. Effectively 1.1 seconds
+		# regular dash cooldown. Effectively 1.2 seconds
 		await get_tree().create_timer(1.0).timeout
 		can_dash = true
 
