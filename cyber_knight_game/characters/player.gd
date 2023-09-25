@@ -1,24 +1,22 @@
 extends CharacterBody2D
 
-var SPEED = 500.0 # X movement speed
-var JUMP_VELOCITY = -650.0# Y movement speed. In Godot going up is negative
-var DASH_VELOCITY = 3400.0 
+var SPEED = 600.0 # X movement speed
+var JUMP_VELOCITY = -700.0# Y movement speed. In Godot going up is negative
+var DASH_VELOCITY = 4000.0 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 var can_dash = true
 var is_dashing = false
+var is_jumping = false
 var dash_direction = 0
 var facing = 'l'
 var screen_size 
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	$dashCollisionShape.disabled = true
 
-func _process(delta):
-	# No out of bounds lol
-	pass
-	#position = position.clamp(Vector2.ZERO, screen_size)
 	
 
 func dash():
@@ -32,15 +30,11 @@ func dash():
 		dash_direction = 1
 	
 	if Input.is_action_just_pressed("jump") and can_dash and not is_on_floor():
+		$dashCollisionShape.disabled = false
+		$CollisionShape2D.disabled = true
 		
-		# Animations
-		if facing == 'r':
-			$AnimatedSprite2D.flip_h = false
-			$AnimatedSprite2D.animation = "dash"
-			
-		if facing == 'l':
-			$AnimatedSprite2D.flip_h = true
-			$AnimatedSprite2D.animation = "dash"
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		$AnimatedSprite2D.animation = "dash"
 		
 		velocity.x = dash_direction * DASH_VELOCITY
 		
@@ -53,6 +47,8 @@ func dash():
 		# preventing left and right movements from interrupting dash
 		await get_tree().create_timer(0.1).timeout
 		is_dashing = false
+		$CollisionShape2D.disabled = false
+		$dashCollisionShape.disabled = true
 		# regular dash cooldown. Effectively 1.1 seconds
 		await get_tree().create_timer(1.0).timeout
 		can_dash = true
@@ -61,21 +57,30 @@ func dash():
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor() and not is_dashing:
+	if not is_on_floor() and not is_dashing and not is_jumping:
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		$AnimatedSprite2D.animation = "air"
 		velocity.y += gravity * delta
 	
 	dash()
 	
 	# Handle Jump.
-	if Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		is_jumping = true
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		$AnimatedSprite2D.animation = "jump"
+		$AnimatedSprite2D.play()
+		
+		
 		velocity.y = JUMP_VELOCITY
+		is_jumping = false
+		
+	
+	var direction = Input.get_axis("left", "right")
 	
 	# not is_dashing is important
 	# allows the player to dash even when they are holding left or right
 	# Get the input direction and handle the movement/deceleration.
-	var direction = Input.get_axis("left", "right")
-	
-	
 	if direction and not is_dashing:
 		facing = "l" if direction == -1 else "r"
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
@@ -83,6 +88,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.animation = "run"
 		$AnimatedSprite2D.play()
 		velocity.x = direction * SPEED
+	
 	else:
 		if is_on_floor():
 			$AnimatedSprite2D.animation = "neutral"
