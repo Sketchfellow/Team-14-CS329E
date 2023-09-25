@@ -1,6 +1,7 @@
 CollisionShape2D
 Sprite2D
 StaticBody2D
+Node
 Camera2D
 CharacterBody2D
 Node2D

@@ -15,7 +15,7 @@ var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	$dashCollisionShape.disabled = true
+	$dashCollisionShape.disabled=false
 
 	
 
@@ -30,8 +30,8 @@ func dash():
 		dash_direction = 1
 	
 	if Input.is_action_just_pressed("jump") and can_dash and not is_on_floor():
-		$dashCollisionShape.disabled = false
-		$CollisionShape2D.disabled = true
+		$dashCollisionShape.disabled=false
+		$CollisionShape2D.disabled=true
 		
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "dash"
@@ -47,8 +47,8 @@ func dash():
 		# preventing left and right movements from interrupting dash
 		await get_tree().create_timer(0.2).timeout
 		is_dashing = false
-		$CollisionShape2D.disabled = false
-		$dashCollisionShape.disabled = true
+		$CollisionShape2D.disabled=false
+		$dashCollisionShape.disabled=true
 		# regular dash cooldown. Effectively 1.2 seconds
 		await get_tree().create_timer(1.0).timeout
 		can_dash = true
