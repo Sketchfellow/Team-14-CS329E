@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cvjsfoj623loy"]
+[gd_scene load_steps=27 format=3 uid="uid://cvjsfoj623loy"]
 
 [ext_resource type="Script" path="res://characters/player.gd" id="1_vwpwm"]
 [ext_resource type="Texture2D" uid="uid://cdbjg1sq6umym" path="res://assets/visuals/player_jump_animation/3.png" id="2_22qob"]
@@ -14,7 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bsu333loqwo3p" path="res://assets/visuals/player_run_animation/4.png" id="12_rp7fo"]
 [ext_resource type="Texture2D" uid="uid://74ojbddeik10" path="res://assets/visuals/player_run_animation/5.png" id="13_4yb6q"]
 [ext_resource type="Texture2D" uid="uid://dvia1sw81c8ao" path="res://assets/visuals/player_run_animation/6.png" id="14_bs234"]
+[ext_resource type="Texture2D" uid="uid://skhvtyxfo6t3" path="res://assets/visuals/player_shoot_animation/1.png" id="15_8r78y"]
 [ext_resource type="Texture2D" uid="uid://7dyf1pvqur0s" path="res://assets/visuals/player_walk_animation/1.png" id="15_nocf7"]
+[ext_resource type="Texture2D" uid="uid://b1ieawkhoyafb" path="res://assets/visuals/player_shoot_animation/2.png" id="16_0txgg"]
 [ext_resource type="Texture2D" uid="uid://omdkhpd1rkok" path="res://assets/visuals/player_walk_animation/2.png" id="16_mjjnq"]
 [ext_resource type="Texture2D" uid="uid://d24mua2r1fcsf" path="res://assets/visuals/player_walk_animation/3.png" id="17_memu0"]
 [ext_resource type="Texture2D" uid="uid://ctory7antxypk" path="res://assets/visuals/player_walk_animation/4.png" id="18_sas8i"]
@@ -101,6 +103,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("15_8r78y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0txgg")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("15_nocf7")
 }, {
 "duration": 1.0,
@@ -141,6 +154,6 @@ shape = SubResource("CapsuleShape2D_cc0sj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8y21m")
-animation = &"dash"
+animation = &"shoot"
 
 [node name="Camera2D" type="Camera2D" parent="."]

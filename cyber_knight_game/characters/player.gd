@@ -17,7 +17,12 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	$dashCollisionShape.disabled=false
 
-	
+func shoot():
+	if Input.is_action_just_pressed("shoot"):
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		$AnimatedSprite2D.animation = "shoot"
+		await get_tree().create_timer(1.0).timeout
+
 
 func dash():
 	
@@ -62,7 +67,10 @@ func _physics_process(delta):
 		$AnimatedSprite2D.animation = "air"
 		velocity.y += gravity * delta
 	
+	shoot()
+	
 	dash()
+	
 	
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
