@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695653293
-export_presets.cfg::TextFile::-1::1695652977::0::1::::<><>::
+::res://::1695672623
+export_presets.cfg::TextFile::-1::1695653293::0::1::::<><>::
 icon.svg::CompressedTexture2D::1025480096012583275::1694794816::1694794882::1::::<><>::
 ::res://assets/::1694826774
 ::res://assets/placeholder/::1694826804
@@ -34,12 +34,12 @@ Cyber_Knight.png::CompressedTexture2D::1900190669189303620::1695540005::16955400
 6.png::CompressedTexture2D::3786069263767946418::1695538378::1695538386::1::::<><>::
 7.png::CompressedTexture2D::7072609234817519737::1695537051::1695537152::1::::<><>::
 ::res://builds/::1695653264
-::res://builds/mac/::1695653133
-::res://builds/web/::1695653325
+::res://builds/mac/::1695653668
+::res://builds/web/::1695653683
 index.apple-touch-icon.png::CompressedTexture2D::5166549417331964802::1695653292::1695653328::1::::<><>::
 index.icon.png::CompressedTexture2D::2414295361072224074::1695653292::1695653328::1::::<><>::
 index.png::CompressedTexture2D::4556053515609814096::1695653292::1695653328::1::::<><>::
-::res://builds/windows/::1695653204
+::res://builds/windows/::1695653692
 ::res://characters/::1695652892
 cyber_knight_player.tscn::PackedScene::6266489069086575696::1695652892::0::1::::<><>::res://characters/player.gd<>uid://cdbjg1sq6umym::::res://assets/visuals/player_jump_animation/3.png<>uid://sn5yngsnyquw::::res://assets/visuals/player_dash_animation/1.png<>uid://50vtcshqpc50::::res://assets/visuals/player_jump_animation/1.png<>uid://bs55m50r1nlux::::res://assets/visuals/player_jump_animation/2.png<>uid://2cp4ljtmelma::::res://assets/visuals/Cyber_Knight.png<>uid://ex0t3kfj3m2t::::res://assets/visuals/player_idle_animation/1.png<>uid://dyo11ewxywmc4::::res://assets/visuals/player_idle_animation/2.png<>uid://cby1reglhlwpu::::res://assets/visuals/player_run_animation/1.png<>uid://d4f06y6d7143r::::res://assets/visuals/player_run_animation/2.png<>uid://b3fj3dar8ewbv::::res://assets/visuals/player_run_animation/3.png<>uid://bsu333loqwo3p::::res://assets/visuals/player_run_animation/4.png<>uid://74ojbddeik10::::res://assets/visuals/player_run_animation/5.png<>uid://dvia1sw81c8ao::::res://assets/visuals/player_run_animation/6.png<>uid://7dyf1pvqur0s::::res://assets/visuals/player_walk_animation/1.png<>uid://omdkhpd1rkok::::res://assets/visuals/player_walk_animation/2.png<>uid://d24mua2r1fcsf::::res://assets/visuals/player_walk_animation/3.png<>uid://ctory7antxypk::::res://assets/visuals/player_walk_animation/4.png<>uid://dap0u0qkdwpqy::::res://assets/visuals/player_walk_animation/5.png<>uid://bt7aai2um11le::::res://assets/visuals/player_walk_animation/6.png<>uid://c71a3t64v3ijx::::res://assets/visuals/player_walk_animation/7.png
 player.gd::GDScript::-1::1695626529::0::1::::<>CharacterBody2D<>::
