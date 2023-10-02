@@ -40,6 +40,7 @@ func dash():
 		
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "dash"
+		$DashingSound.play()
 		
 		velocity.x = dash_direction * DASH_VELOCITY
 		
@@ -78,6 +79,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.play()
+		$JumpingSound.play()
 		
 		
 		velocity.y = JUMP_VELOCITY
@@ -94,6 +96,11 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		if is_on_floor():
 			$AnimatedSprite2D.animation = "run"
+			# this makes sure that the audio doesn't play on top of itself
+			# basically, this makes sure that the sound effect finishes playing once, before playing again
+			if $FootSteps.is_playing() == false:
+				$FootSteps.play()
+			
 		$AnimatedSprite2D.play()
 		velocity.x = direction * SPEED
 	
