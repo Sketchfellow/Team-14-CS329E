@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://qdwya21f08rq"]
+
+[sub_resource type="SystemFont" id="SystemFont_34gl4"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Title" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("SystemFont_34gl4")
+text = "Cyber Knight"
+
+[node name="Button" type="Button" parent="."]
+offset_top = 256.0
+offset_right = 320.0
+offset_bottom = 384.0
