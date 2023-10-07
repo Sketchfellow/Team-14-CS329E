@@ -1,17 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://qdwya21f08rq"]
+[gd_scene load_steps=3 format=3 uid="uid://qdwya21f08rq"]
 
-[sub_resource type="SystemFont" id="SystemFont_34gl4"]
+[ext_resource type="Texture2D" uid="uid://8jwlo85ix60d" path="res://assets/visuals/cyberknight main menu.png" id="1_25hlh"]
+[ext_resource type="Texture2D" uid="uid://cf0rw13oduats" path="res://assets/visuals/pop_ups/main_popup.png" id="2_cs68n"]
 
 [node name="HUD" type="CanvasLayer"]
 
-[node name="Title" type="Label" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = SubResource("SystemFont_34gl4")
-text = "Cyber Knight"
+[node name="main_desktop" type="TextureRect" parent="."]
+offset_right = 1366.0
+offset_bottom = 768.0
+texture = ExtResource("1_25hlh")
+
+[node name="popup" type="TextureRect" parent="."]
+offset_left = 464.0
+offset_top = 248.0
+offset_right = 912.0
+offset_bottom = 424.0
+texture = ExtResource("2_cs68n")
+
+[node name="StartGame" type="Button" parent="."]
+modulate = Color(0, 0.35, 100, 0.17)
+self_modulate = Color(0, 0.352941, 0.960784, 1)
+offset_left = 568.0
+offset_top = 375.0
+offset_right = 696.0
+offset_bottom = 402.0
+
+[node name="StartGame2" type="Button" parent="."]
+modulate = Color(0, 0.35, 100, 0.35)
+self_modulate = Color(0, 0.352941, 0.960784, 1)
+offset_left = 90.0
+offset_top = 232.0
+offset_right = 188.0
+offset_bottom = 321.0
 
 [node name="Button" type="Button" parent="."]
-offset_top = 256.0
-offset_right = 320.0
-offset_bottom = 384.0
+modulate = Color(100, 1, 1, 0.49)
+offset_left = 709.0
+offset_top = 375.0
+offset_right = 809.0
+offset_bottom = 402.0

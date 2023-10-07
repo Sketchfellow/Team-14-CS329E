@@ -1,4 +1,5 @@
 Button
+TextureRect
 Label
 CanvasLayer
 AudioStreamPlayer
