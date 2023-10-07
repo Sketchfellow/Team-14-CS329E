@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var Bullet : PackedScene
+
 var SPEED = 600.0 # X movement speed
 var JUMP_VELOCITY = -700.0# Y movement speed. In Godot going up is negative
 var DASH_VELOCITY = 4500.0 
@@ -12,6 +14,8 @@ var is_jumping = false
 var dash_direction = 0
 var facing = 'l'
 var screen_size 
+var is_shooting = false
+var is_slashing = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -21,7 +25,22 @@ func shoot():
 	if Input.is_action_just_pressed("shoot"):
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "shoot"
-		await get_tree().create_timer(1.0).timeout
+		is_shooting = true
+		var b = Bullet.instantiate()
+		add_child(b)
+		b.transform = $Marker2D.global_transform
+		await get_tree().create_timer(0.2).timeout
+		$AnimatedSprite2D.stop()
+		is_shooting = false
+
+func slash():
+	if Input.is_action_just_pressed("slash"):
+		$AnimatedSprite2D.flip_h = true if facing == "r" else false
+		$AnimatedSprite2D.animation = "slash"
+		is_slashing = true
+		await get_tree().create_timer(0.2).timeout
+		$AnimatedSprite2D.stop()
+		is_slashing = false
 
 
 func dash():
@@ -70,6 +89,8 @@ func _physics_process(delta):
 	
 	shoot()
 	
+	slash()
+	
 	dash()
 	
 	
@@ -105,7 +126,7 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	
 	else:
-		if is_on_floor():
+		if is_on_floor() and not is_shooting and not is_slashing:
 			$AnimatedSprite2D.animation = "neutral"
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.play()

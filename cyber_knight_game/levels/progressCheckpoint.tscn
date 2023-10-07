@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b635r7pahxgwj"]
+
+[ext_resource type="Script" path="res://progressCheckpoint.gd" id="1_gu1y8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6s4ks"]
+size = Vector2(38, 866)
+
+[node name="progress" type="Area2D"]
+script = ExtResource("1_gu1y8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, -84)
+shape = SubResource("RectangleShape2D_6s4ks")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
