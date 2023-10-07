@@ -1,15 +1,4 @@
+res://HUD/HUD.tscn
 res://characters/cyber_knight_player.tscn
-res://levels/testing_stage.tscn
-res://characters/player.gd
-res://ui_stuff/dialog_box.tscn
-res://DialogBox.gd
-res://ui_stuff/dialogueManager.gd
-res://levels/tutorial_level.tscn
-res://characters/tutorial_character.tscn
-res://characters/tutorial_character.gd
-res://levels/tutorial_level.gd
-res://global_variables/globalVars.gd
-res://progressCheckpoint.gd
-res://levels/progressCheckpoint.tscn
-res://laser.gd
 res://projectiles/laser.tscn
+res://levels/tutorial_level.tscn
