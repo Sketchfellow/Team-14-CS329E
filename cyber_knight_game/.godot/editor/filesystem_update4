@@ -1,4 +1,4 @@
-res://HUD/HUD.tscn
 res://characters/cyber_knight_player.tscn
 res://projectiles/laser.tscn
+res://HUD/HUD.tscn
 res://levels/tutorial_level.tscn
