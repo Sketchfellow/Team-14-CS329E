@@ -1,9 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-<<<<<<< Updated upstream
-::res://::1696785533
-=======
-::res://::1696782492
->>>>>>> Stashed changes
+::res://::1696811621
 DialogBox.gd::GDScript::-1::1696730581::0::1::::<>MarginContainer<>::
 export_presets.cfg::TextFile::-1::1696617157::0::1::::<><>::
 icon.svg::CompressedTexture2D::1025480096012583275::1695068493::1696686822::1::::<><>::
@@ -214,12 +210,8 @@ textbox.png::CompressedTexture2D::8074896570644255050::1696730581::1696730581::1
 rita1.png::CompressedTexture2D::5296387198379738420::1696730581::1696730581::1::::<><>::
 rita2.png::CompressedTexture2D::1896088365066585197::1696730581::1696730581::1::::<><>::
 rita3.png::CompressedTexture2D::1964662674864334210::1696730581::1696730581::1::::<><>::
-<<<<<<< Updated upstream
-::res://assets/visuals/virus_assets/::1696786340
-Single laser.png::CompressedTexture2D::41050422056665301::1696620102::1696786348::1::::<><>::
-=======
-::res://assets/visuals/virus_assets/::1696212025
->>>>>>> Stashed changes
+::res://assets/visuals/virus_assets/::1696811431
+Single laser.png::CompressedTexture2D::41050422056665301::1696811431::1696811431::1::::<><>::
 ::res://assets/visuals/virus_assets/virus1_death_animation/::1696212025
 Virus1.png::CompressedTexture2D::5055898242923402353::1696212025::1696212025::1::::<><>::
 ::res://assets/visuals/virus_assets/virus1_neutral_animation/::1696212025
@@ -238,37 +230,34 @@ index.apple-touch-icon.png::CompressedTexture2D::5166549417331964802::1696617155
 index.icon.png::CompressedTexture2D::2414295361072224074::1696617155::1696212025::1::::<><>::
 index.png::CompressedTexture2D::4556053515609814096::1696212025::1696212025::1::::<><>::
 ::res://builds/windows/::1696617157
-::res://characters/::1696780307
-cyber_knight_player.tscn::PackedScene::6266489069086575696::1696780307::0::1::::<><>::res://characters/player.gd<>uid://cdbjg1sq6umym::::res://assets/visuals/player_jump_animation/3.png<>uid://bkdhagluo1bsm::::res://projectiles/laser.tscn<>uid://sn5yngsnyquw::::res://assets/visuals/player_dash_animation/1.png<>uid://50vtcshqpc50::::res://assets/visuals/player_jump_animation/1.png<>uid://bs55m50r1nlux::::res://assets/visuals/player_jump_animation/2.png<>uid://2cp4ljtmelma::::res://assets/visuals/Cyber_Knight.png<>uid://ex0t3kfj3m2t::::res://assets/visuals/player_idle_animation/1.png<>uid://dyo11ewxywmc4::::res://assets/visuals/player_idle_animation/2.png<>uid://cby1reglhlwpu::::res://assets/visuals/player_run_animation/1.png<>uid://d4f06y6d7143r::::res://assets/visuals/player_run_animation/2.png<>uid://b3fj3dar8ewbv::::res://assets/visuals/player_run_animation/3.png<>uid://bsu333loqwo3p::::res://assets/visuals/player_run_animation/4.png<>uid://74ojbddeik10::::res://assets/visuals/player_run_animation/5.png<>uid://dvia1sw81c8ao::::res://assets/visuals/player_run_animation/6.png<>uid://skhvtyxfo6t3::::res://assets/visuals/player_shoot_animation/1.png<>uid://7dyf1pvqur0s::::res://assets/visuals/player_walk_animation/1.png<>uid://b1ieawkhoyafb::::res://assets/visuals/player_shoot_animation/2.png<>uid://omdkhpd1rkok::::res://assets/visuals/player_walk_animation/2.png<>uid://d24mua2r1fcsf::::res://assets/visuals/player_walk_animation/3.png<>uid://cf1ejkegipghp::::res://assets/visuals/player_sword_slash_animation/1.png<>uid://nuuyieypkymo::::res://assets/visuals/player_sword_slash_animation/2.png<>uid://ctory7antxypk::::res://assets/visuals/player_walk_animation/4.png<>uid://2we48hiateul::::res://assets/visuals/player_sword_slash_animation/3.png<>uid://dap0u0qkdwpqy::::res://assets/visuals/player_walk_animation/5.png<>uid://bt7aai2um11le::::res://assets/visuals/player_walk_animation/6.png<>uid://c71a3t64v3ijx::::res://assets/visuals/player_walk_animation/7.png<>uid://3vckm6sb5j43::::res://assets/sound/8bit-SFX-Library/Player/jump-10.wav<>uid://c1cka6lwwr1bj::::res://assets/sound/8bit-SFX-Library/Player/jump-2.wav
-player.gd::GDScript::-1::1696730581::0::1::::<>CharacterBody2D<>::
+::res://characters/::1696811454
+cyber_knight_player.tscn::PackedScene::6266489069086575696::1696811454::0::1::::<><>::res://characters/player.gd<>uid://cdbjg1sq6umym::::res://assets/visuals/player_jump_animation/3.png<>uid://bkdhagluo1bsm::::res://projectiles/laser.tscn<>uid://sn5yngsnyquw::::res://assets/visuals/player_dash_animation/1.png<>uid://50vtcshqpc50::::res://assets/visuals/player_jump_animation/1.png<>uid://bs55m50r1nlux::::res://assets/visuals/player_jump_animation/2.png<>uid://2cp4ljtmelma::::res://assets/visuals/Cyber_Knight.png<>uid://ex0t3kfj3m2t::::res://assets/visuals/player_idle_animation/1.png<>uid://dyo11ewxywmc4::::res://assets/visuals/player_idle_animation/2.png<>uid://cby1reglhlwpu::::res://assets/visuals/player_run_animation/1.png<>uid://d4f06y6d7143r::::res://assets/visuals/player_run_animation/2.png<>uid://b3fj3dar8ewbv::::res://assets/visuals/player_run_animation/3.png<>uid://bsu333loqwo3p::::res://assets/visuals/player_run_animation/4.png<>uid://74ojbddeik10::::res://assets/visuals/player_run_animation/5.png<>uid://dvia1sw81c8ao::::res://assets/visuals/player_run_animation/6.png<>uid://skhvtyxfo6t3::::res://assets/visuals/player_shoot_animation/1.png<>uid://7dyf1pvqur0s::::res://assets/visuals/player_walk_animation/1.png<>uid://b1ieawkhoyafb::::res://assets/visuals/player_shoot_animation/2.png<>uid://omdkhpd1rkok::::res://assets/visuals/player_walk_animation/2.png<>uid://d24mua2r1fcsf::::res://assets/visuals/player_walk_animation/3.png<>uid://cf1ejkegipghp::::res://assets/visuals/player_sword_slash_animation/1.png<>uid://nuuyieypkymo::::res://assets/visuals/player_sword_slash_animation/2.png<>uid://ctory7antxypk::::res://assets/visuals/player_walk_animation/4.png<>uid://2we48hiateul::::res://assets/visuals/player_sword_slash_animation/3.png<>uid://dap0u0qkdwpqy::::res://assets/visuals/player_walk_animation/5.png<>uid://bt7aai2um11le::::res://assets/visuals/player_walk_animation/6.png<>uid://c71a3t64v3ijx::::res://assets/visuals/player_walk_animation/7.png<>uid://3vckm6sb5j43::::res://assets/sound/8bit-SFX-Library/Player/jump-10.wav<>uid://c1cka6lwwr1bj::::res://assets/sound/8bit-SFX-Library/Player/jump-2.wav<>res://player_sword/Lsword.gd<>res://player_sword/Rsword.gd
+player.gd::GDScript::-1::1696811431::0::1::::<>CharacterBody2D<>::
 tutorial_character.gd::GDScript::-1::1696730581::0::1::::<>Node2D<>::
 tutorial_character.tscn::PackedScene::7634047903559368607::1696730581::0::1::::<><>::uid://chpuyugmtxpaq
-<<<<<<< Updated upstream
-::res://Enemies/::1696786239
-turret_enemy.gd::GDScript::-1::1696786239::0::1::::<>CharacterBody2D<>::
-turret_enemy.tscn::PackedScene::8896132814796147634::1696786239::0::1::::<><>::res://Enemies/turret_enemy.gd<>uid://burh3kiis7taf::::res://assets/visuals/virus_assets/virus1_neutral_animation/1.png<>uid://cebd51visa1ub::::res://assets/visuals/virus_assets/virus1_death_animation/Virus1.png<>uid://s3eonwoqw77x::::res://assets/visuals/virus_assets/virus1_neutral_animation/2.png<>uid://b66uadol47l7::::res://assets/visuals/virus_assets/virus1_neutral_animation/3.png<>uid://b2v3fc1fc2ysi::::res://assets/visuals/virus_assets/virus1_walk_animation/1.png<>uid://dinu1fn41sb7v::::res://assets/visuals/virus_assets/virus1_walk_animation/2.png<>uid://bdwxhem11nxcn::::res://assets/visuals/virus_assets/virus1_walk_animation/3.png<>uid://7nrxv3l5cit3::::res://assets/visuals/virus_assets/virus1_walk_animation/4.png
-=======
->>>>>>> Stashed changes
+::res://Enemies/::1696811454
+Damage.gd::GDScript::-1::1696811431::0::1::::Damage<>Node<>::
+turret_enemy.gd::GDScript::-1::1696811431::0::1::::<>CharacterBody2D<>::
+turret_enemy.tscn::PackedScene::8896132814796147634::1696811454::0::1::::<><>::res://Enemies/turret_enemy.gd<>uid://burh3kiis7taf::::res://assets/visuals/virus_assets/virus1_neutral_animation/1.png<>uid://cebd51visa1ub::::res://assets/visuals/virus_assets/virus1_death_animation/Virus1.png<>uid://s3eonwoqw77x::::res://assets/visuals/virus_assets/virus1_neutral_animation/2.png<>uid://b66uadol47l7::::res://assets/visuals/virus_assets/virus1_neutral_animation/3.png<>uid://b2v3fc1fc2ysi::::res://assets/visuals/virus_assets/virus1_walk_animation/1.png<>uid://dinu1fn41sb7v::::res://assets/visuals/virus_assets/virus1_walk_animation/2.png<>uid://bdwxhem11nxcn::::res://assets/visuals/virus_assets/virus1_walk_animation/3.png<>uid://7nrxv3l5cit3::::res://assets/visuals/virus_assets/virus1_walk_animation/4.png<>res://Enemies/Damage.gd
 ::res://global_variables/::1696730581
 globalVars.gd::GDScript::-1::1696730581::0::1::::<>Node<>::
-::res://HUD/::1696780307
+::res://HUD/::1696811579
 cyberknight main menu.png::CompressedTexture2D::4356991279091555179::1696730586::1696730586::1::::<><>::
-HUD.tscn::PackedScene::1130593307264020462::1696780307::0::1::::<><>::uid://lgsd5irt1dgo::::res://assets/visuals/cyberknight main menu.png<>uid://br132hkl31nbh::::res://assets/visuals/pop_ups/main_popup.png
-::res://levels/::1696780307
+HUD.gd::GDScript::-1::1696811561::0::1::::<>CanvasLayer<>::
+HUD.tscn::PackedScene::1130593307264020462::1696811579::0::1::::<><>::uid://lgsd5irt1dgo::::res://assets/visuals/cyberknight main menu.png<>res://HUD/HUD.gd<>uid://br132hkl31nbh::::res://assets/visuals/pop_ups/main_popup.png
+::res://levels/::1696811454
 progressCheckpoint.tscn::PackedScene::4621930985794692725::1696730581::0::1::::<><>::res://progressCheckpoint.gd
-testing_stage.tscn::PackedScene::2375228459384364680::1696780307::0::1::::<><>::uid://cvjsfoj623loy
+testing_stage.tscn::PackedScene::2375228459384364680::1696811454::0::1::::<><>::uid://cvjsfoj623loy::::res://characters/cyber_knight_player.tscn<>uid://cvpdskgj5sf3r::::res://assets/visuals/background.png<>uid://ou0rirff13hn::::res://icon.svg<>uid://b101xq2s7qgkm::::res://assets/visuals/pop_ups/cyberknight_popup.png<>uid://cuwoidya6ql1a::::res://assets/visuals/pop_ups/cyberknight_popup_v2.png<>uid://cbf44ty5pfwey::::res://assets/visuals/pop_ups/cyberknight_popup_long.png<>uid://lebkd4iov1um::::res://assets/visuals/pop_ups/cyberknight_popup_longv2.png<>uid://bcavhvrnapfxt::::res://assets/visuals/placeholder_icon_assets/cs-network - Copy.png<>uid://dpfti5nybngge::::res://assets/visuals/placeholder_icon_assets/cs-login - Copy.png<>uid://yykhoewljvme::::res://assets/visuals/placeholder_icon_assets/cs-display - Copy.png<>uid://ec2i8grh2fd::::res://assets/visuals/placeholder_icon_assets/cs-desktop-effects - Copy.png<>uid://d4ldb70oles4s::::res://assets/visuals/placeholder_icon_assets/gconf-editor - Copy.png<>uid://buxcn046y4g1y::::res://assets/visuals/placeholder_icon_assets/firestarter - Copy.png<>uid://bwwa36xhxnylm::::res://assets/visuals/placeholder_icon_assets/gmahjongg - Copy.png<>uid://dy0mai6mn1ppy::::res://Enemies/turret_enemy.tscn
 tutorial_level.gd::GDScript::-1::1696730581::0::1::::<>Node2D<>::
-tutorial_level.tscn::PackedScene::6989507179879732971::1696780307::0::1::::<><>::res://levels/tutorial_level.gd<>uid://ctaf87ptc1am3::::res://assets/visuals/placeholder_icon_assets/testroom.png<>uid://cvjsfoj623loy::::res://characters/cyber_knight_player.tscn<>uid://dg08whuakg7gd::::res://characters/tutorial_character.tscn<>uid://b635r7pahxgwj::::res://levels/progressCheckpoint.tscn
-<<<<<<< Updated upstream
-::res://projectiles/::1696786293
+tutorial_level.tscn::PackedScene::6989507179879732971::1696780307::0::1::::<><>::res://levels/tutorial_level.gd<>uid://ctaf87ptc1am3
+::res://player_sword/::1696811431
+Lsword.gd::GDScript::-1::1696811431::0::1::::<>Area2D<>::
+Rsword.gd::GDScript::-1::1696811431::0::1::::<>Area2D<>::
+::res://projectiles/::1696811454
+bullet.gd::GDScript::-1::1696811431::0::1::::<>Area2D<>::
+bullet.tscn::PackedScene::430184765432898664::1696811454::0::1::::<><>::res://projectiles/bullet.gd<>uid://t5dhgn6lu58::::res://assets/visuals/virus_assets/Single laser.png
 cyberknight main menu.png::CompressedTexture2D::4914728482546258755::1696730586::1696730586::1::::<><>::
-laser.tscn::PackedScene::3094927605346359780::1696780307::0::1::::<><>::res://laser.gd<>uid://bjev2fc1ed8ll::::res://assets/placeholder/laserRed01.png
-bullet.tscn::PackedScene::430184765432898664::1696786293::0::1::::<><>::
-=======
-::res://projectiles/::1696780307
-cyberknight main menu.png::CompressedTexture2D::4914728482546258755::1696730586::1696730586::1::::<><>::
-laser.tscn::PackedScene::3094927605346359780::1696780307::0::1::::<><>::res://laser.gd<>uid://bjev2fc1ed8ll::::res://assets/placeholder/laserRed01.png
->>>>>>> Stashed changes
+laser.tscn::PackedScene::3094927605346359780::1696811454::0::1::::<><>::res://laser.gd<>uid://bjev2fc1ed8ll::::res://assets/placeholder/laserRed01.png
 ::res://ui_stuff/::1696730581
 dialogueManager.gd::GDScript::-1::1696730581::0::1::::<>Node<>::
 dialog_box.tscn::PackedScene::6551998622958142314::1696730581::0::1::::<><>::res://DialogBox.gd<>uid://dnbsmp8gn1j1s

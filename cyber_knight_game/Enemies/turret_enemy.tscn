@@ -62,7 +62,7 @@ size = Vector2(126, 166)
 [sub_resource type="CircleShape2D" id="CircleShape2D_e0mlb"]
 radius = 223.02
 
-[node name="TurretEnemy" type="CharacterBody2D"]
+[node name="TurretEnemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_c2i3d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

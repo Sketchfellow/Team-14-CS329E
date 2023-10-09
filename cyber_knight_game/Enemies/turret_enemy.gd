@@ -39,12 +39,6 @@ func _physics_process(delta):
 		#part of the chasing mechanism (do not remove)
 	#	position += (player.position - position)/speed
 	
-	#var angle = global_position.angle_to_point(player.global_position)
-	#if abs(angle) > PI/2:
-	#	scale.x = 1
-	#else:
-	#	scale.x = -1
-	
 	if rest:
 		$AnimatedSprite2D.play("neutral")
 	
@@ -75,9 +69,10 @@ func shoot():
 
 
 func _on_bullet_timer_timeout():
-	shoot()
+	#shoot()
+	pass
 
-
+# Chasing mechanism
 func _on_detection_area_body_entered(body):
 	pass
 	player = body
@@ -89,7 +84,7 @@ func _on_detection_area_body_entered(body):
 		_on_bullet_timer_timeout()
 		$BulletTimer.start()
 
-
+# Chasing mechanism
 func _on_detection_area_body_exited(body):
 	pass
 	player = null
