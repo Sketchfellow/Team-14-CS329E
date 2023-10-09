@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://gency0uedfb1"]
+
+[ext_resource type="Script" path="res://projectiles/bullet.gd" id="1_ol77y"]
+[ext_resource type="Texture2D" uid="uid://t5dhgn6lu58" path="res://assets/visuals/virus_assets/Single laser.png" id="2_clbhe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sf2r7"]
+radius = 19.0
+height = 38.0
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_ol77y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_clbhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_sf2r7")

@@ -1,17 +1,21 @@
+<<<<<<< Updated upstream
+=======
+CharacterBody2D
 CollisionShape2D
+>>>>>>> Stashed changes
 Sprite2D
+CollisionShape2D
 Area2D
-Marker2D
 Node
+Marker2D
+Timer
 AnimatedSprite2D
 StaticBody2D
 TileMap
-Timer
 Label
 MarginContainer
 NinePatchRect
 AudioStreamPlayer
 AudioStreamPlayer2D
 Camera2D
-CharacterBody2D
 Node2D

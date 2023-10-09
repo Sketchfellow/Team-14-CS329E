@@ -32,16 +32,24 @@ func shoot():
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_shooting = false
-
+		
 func slash():
 	if Input.is_action_just_pressed("slash"):
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "slash"
 		is_slashing = true
+		if is_slashing == true:
+			$Lsword/CollisionShape2D.disabled = false
+			$Rsword/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_slashing = false
 
+func _on_animated_sprite_2d_animation_finished():
+	if $AnimatedSprite2D.animation == "slash":
+		$Lsword/CollisionShape2D.disabled = true
+		$Rsword/CollisionShape2D.disabled = true
+		is_slashing = false
 
 func dash():
 	

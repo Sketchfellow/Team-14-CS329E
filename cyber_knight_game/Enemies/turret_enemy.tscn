@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://dy0mai6mn1ppy"]
+
+[ext_resource type="Script" path="res://Enemies/turret_enemy.gd" id="1_c2i3d"]
+[ext_resource type="Texture2D" uid="uid://burh3kiis7taf" path="res://assets/visuals/virus_assets/virus1_neutral_animation/1.png" id="2_cjjxt"]
+[ext_resource type="Texture2D" uid="uid://cebd51visa1ub" path="res://assets/visuals/virus_assets/virus1_death_animation/Virus1.png" id="3_0jlh4"]
+[ext_resource type="Texture2D" uid="uid://s3eonwoqw77x" path="res://assets/visuals/virus_assets/virus1_neutral_animation/2.png" id="4_0ah2p"]
+[ext_resource type="Texture2D" uid="uid://b66uadol47l7" path="res://assets/visuals/virus_assets/virus1_neutral_animation/3.png" id="5_g0708"]
+[ext_resource type="Texture2D" uid="uid://b2v3fc1fc2ysi" path="res://assets/visuals/virus_assets/virus1_walk_animation/1.png" id="6_r5ihh"]
+[ext_resource type="Texture2D" uid="uid://dinu1fn41sb7v" path="res://assets/visuals/virus_assets/virus1_walk_animation/2.png" id="7_gj8pi"]
+[ext_resource type="Texture2D" uid="uid://bdwxhem11nxcn" path="res://assets/visuals/virus_assets/virus1_walk_animation/3.png" id="8_4x2nu"]
+[ext_resource type="Texture2D" uid="uid://7nrxv3l5cit3" path="res://assets/visuals/virus_assets/virus1_walk_animation/4.png" id="9_v73ud"]
+[ext_resource type="Script" path="res://Enemies/Damage.gd" id="10_ue5wu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8ef4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cjjxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0jlh4")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cjjxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0ah2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g0708")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_r5ihh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gj8pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4x2nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v73ud")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acbnr"]
+size = Vector2(126, 166)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e0mlb"]
+radius = 223.02
+
+[node name="TurretEnemy" type="CharacterBody2D"]
+script = ExtResource("1_c2i3d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u8ef4")
+animation = &"death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 17)
+shape = SubResource("RectangleShape2D_acbnr")
+
+[node name="BulletTimer" type="Timer" parent="."]
+
+[node name="BulletSpawn" type="Marker2D" parent="."]
+position = Vector2(1, -68)
+
+[node name="Detection_area" type="Area2D" parent="."]
+position = Vector2(0, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_area"]
+position = Vector2(1, -20)
+shape = SubResource("CircleShape2D_e0mlb")
+
+[node name="Damage" type="Node" parent="."]
+script = ExtResource("10_ue5wu")
+
+[connection signal="timeout" from="BulletTimer" to="." method="_on_bullet_timer_timeout"]
+[connection signal="body_entered" from="Detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_area" to="." method="_on_detection_area_body_exited"]
