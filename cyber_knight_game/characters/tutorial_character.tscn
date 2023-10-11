@@ -43,7 +43,7 @@ script = ExtResource("1_q61uv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l7o75")
-animation = &"1"
+animation = &"2"
 
 [node name="Area2D" type="Area2D" parent="."]
 
