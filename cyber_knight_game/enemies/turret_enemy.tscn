@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnlcnwwrskwl2"]
+
+[ext_resource type="Script" path="res://enemies/turret_enemy.gd" id="1_ugnbm"]
+[ext_resource type="Texture2D" uid="uid://burh3kiis7taf" path="res://assets/visuals/virus_assets/virus1_neutral_animation/1.png" id="2_pnpcf"]
+[ext_resource type="Texture2D" uid="uid://cebd51visa1ub" path="res://assets/visuals/virus_assets/virus1_death_animation/Virus1.png" id="3_1x0vh"]
+[ext_resource type="Texture2D" uid="uid://s3eonwoqw77x" path="res://assets/visuals/virus_assets/virus1_neutral_animation/2.png" id="4_chxkf"]
+[ext_resource type="Texture2D" uid="uid://b66uadol47l7" path="res://assets/visuals/virus_assets/virus1_neutral_animation/3.png" id="5_h8dkc"]
+[ext_resource type="Script" path="res://enemies/damage.gd" id="6_obalp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ta2fx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pnpcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1x0vh")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pnpcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_chxkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h8dkc")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgjmp"]
+size = Vector2(124, 163)
+
+[node name="turret_enemy" type="CharacterBody2D"]
+script = ExtResource("1_ugnbm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ta2fx")
+animation = &"neutral"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 18.5)
+shape = SubResource("RectangleShape2D_wgjmp")
+
+[node name="bullet_timer" type="Timer" parent="."]
+
+[node name="bullet_spawn" type="Marker2D" parent="."]
+position = Vector2(1, -66)
+
+[node name="damage" type="Node" parent="."]
+script = ExtResource("6_obalp")
+
+[connection signal="timeout" from="bullet_timer" to="." method="_on_bullet_timer_timeout"]

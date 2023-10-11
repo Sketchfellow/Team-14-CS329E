@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cvjsfoj623loy"]
+[gd_scene load_steps=38 format=3 uid="uid://cvjsfoj623loy"]
 
 [ext_resource type="Script" path="res://characters/player.gd" id="1_vwpwm"]
 [ext_resource type="Texture2D" uid="uid://cdbjg1sq6umym" path="res://assets/visuals/player_jump_animation/3.png" id="2_22qob"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://c71a3t64v3ijx" path="res://assets/visuals/player_walk_animation/7.png" id="21_5j20y"]
 [ext_resource type="AudioStream" uid="uid://3vckm6sb5j43" path="res://assets/sound/8bit-SFX-Library/Player/jump-10.wav" id="24_tnbkp"]
 [ext_resource type="AudioStream" uid="uid://c1cka6lwwr1bj" path="res://assets/sound/8bit-SFX-Library/Player/jump-2.wav" id="25_m4ffy"]
+[ext_resource type="Script" path="res://player_weapons/Lsword.gd" id="30_pfcoc"]
+[ext_resource type="Script" path="res://player_weapons/Rsword.gd" id="31_01bw1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r74gs"]
 radius = 49.0
@@ -204,6 +206,7 @@ pitch_scale = 0.5
 
 [node name="Lsword" type="Area2D" parent="."]
 position = Vector2(-77, 9)
+script = ExtResource("30_pfcoc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lsword"]
 position = Vector2(0, -2)
@@ -211,6 +214,7 @@ shape = SubResource("CapsuleShape2D_7d2w2")
 
 [node name="Rsword" type="Area2D" parent="."]
 position = Vector2(89, 9)
+script = ExtResource("31_01bw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rsword"]
 position = Vector2(2, 1)
@@ -218,3 +222,7 @@ shape = SubResource("CapsuleShape2D_54b04")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-61, 3)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Lsword" to="Lsword" method="_on_body_entered"]
+[connection signal="body_entered" from="Rsword" to="Rsword" method="_on_body_entered"]

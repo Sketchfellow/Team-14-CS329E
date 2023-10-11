@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6t1frmd1hget"]
+[gd_scene load_steps=9 format=3 uid="uid://c6t1frmd1hget"]
 
 [ext_resource type="Script" path="res://levels/tutorial_level.gd" id="1_6kmgm"]
 [ext_resource type="Texture2D" uid="uid://ctaf87ptc1am3" path="res://assets/visuals/placeholder_icon_assets/testroom.png" id="1_y8lwm"]
 [ext_resource type="PackedScene" uid="uid://cvjsfoj623loy" path="res://characters/cyber_knight_player.tscn" id="2_1fg8l"]
 [ext_resource type="PackedScene" uid="uid://dg08whuakg7gd" path="res://characters/tutorial_character.tscn" id="3_07gmp"]
 [ext_resource type="PackedScene" uid="uid://b635r7pahxgwj" path="res://levels/progressCheckpoint.tscn" id="5_7jif5"]
+[ext_resource type="PackedScene" uid="uid://bnlcnwwrskwl2" path="res://enemies/turret_enemy.tscn" id="6_glbka"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t823d"]
 texture = ExtResource("1_y8lwm")
@@ -108,3 +109,6 @@ position = Vector2(4213, -58)
 
 [node name="Area2D4" parent="." instance=ExtResource("5_7jif5")]
 position = Vector2(6058, -13)
+
+[node name="turret_enemy" parent="." instance=ExtResource("6_glbka")]
+position = Vector2(7907, 180)

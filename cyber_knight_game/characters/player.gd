@@ -38,10 +38,18 @@ func slash():
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "slash"
 		is_slashing = true
+		if is_slashing == true:
+			$Lsword/CollisionShape2D.disabled = false
+			$Rsword/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_slashing = false
 
+func _on_animated_sprite_2d_animation_finished():
+	if $AnimatedSprite2D.animation == "slash":
+		$Lsword/CollisionShape2D.disabled = true
+		$Rsword/CollisionShape2D.disabled = true
+		is_slashing = false
 
 func dash():
 	
@@ -136,3 +144,9 @@ func _physics_process(delta):
 	
 	# built in function that seems important lol
 	move_and_slide()
+
+
+func _on_rsword_body_entered(body):
+	pass # Replace with function body.
+
+

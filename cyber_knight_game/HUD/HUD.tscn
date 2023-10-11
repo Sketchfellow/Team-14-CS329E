@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://qdwya21f08rq"]
+[gd_scene load_steps=4 format=3 uid="uid://qdwya21f08rq"]
 
 [ext_resource type="Texture2D" uid="uid://lgsd5irt1dgo" path="res://assets/visuals/cyberknight main menu.png" id="1_25hlh"]
+[ext_resource type="Script" path="res://HUD/HUD.gd" id="1_w5ard"]
 [ext_resource type="Texture2D" uid="uid://br132hkl31nbh" path="res://assets/visuals/pop_ups/main_popup.png" id="2_bscmm"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_w5ard")
 
 [node name="main_desktop" type="TextureRect" parent="."]
 offset_right = 1366.0
@@ -39,3 +41,7 @@ offset_left = 709.0
 offset_top = 375.0
 offset_right = 809.0
 offset_bottom = 402.0
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="StartGame2" to="." method="_on_start_game_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
