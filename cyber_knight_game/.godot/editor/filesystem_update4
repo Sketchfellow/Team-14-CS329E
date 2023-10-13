@@ -1,11 +1,6 @@
 res://levels/testing_stage.tscn
-res://projectiles/bullet.tscn
-res://characters/player.gd
-res://projectiles/bullet.gd
 res://levels/tutorial_level.tscn
 res://characters/cyber_knight_player.tscn
 res://projectiles/laser.tscn
-res://laser.gd
 res://enemies/turret_enemy.tscn
-res://player_weapons/Lsword.gd
-res://player_weapons/Rsword.gd
+res://characters/player.gd

@@ -28,8 +28,9 @@ func shoot():
 		is_shooting = true
 		var b = Bullet.instantiate()
 		if facing == 'r':
-			b.position = get_position_delta() + Vector2(75, 0) #gets position of CharacterBody2d
+			b.position = get_position_delta() + Vector2(100, 0) #gets position of CharacterBody2d
 		else:
+			b.position = get_position_delta() + Vector2(-100, 0) #gets position of CharacterBody2d
 			b.rotation_degrees = -180
 		add_child(b)
 		await get_tree().create_timer(0.2).timeout
