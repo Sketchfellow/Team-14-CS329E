@@ -27,7 +27,8 @@ func shoot():
 		$AnimatedSprite2D.animation = "shoot"
 		is_shooting = true
 		var b = Bullet.instantiate()
-		add_child(b)
+		get_tree().get_root().add_child(b)
+		#add_child(b)
 		b.transform = $Marker2D.global_transform
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
@@ -100,7 +101,6 @@ func _physics_process(delta):
 	slash()
 	
 	dash()
-	
 	
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():

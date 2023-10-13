@@ -54,12 +54,13 @@ animation = &"death"
 position = Vector2(-1, 18.5)
 shape = SubResource("RectangleShape2D_wgjmp")
 
-[node name="bullet_timer" type="Timer" parent="."]
+[node name="BulletTimer" type="Timer" parent="."]
+autostart = true
 
-[node name="bullet_spawn" type="Marker2D" parent="."]
+[node name="BulletSpawn" type="Marker2D" parent="."]
 position = Vector2(1, -66)
 
 [node name="Damage" type="Node" parent="."]
 script = ExtResource("6_obalp")
 
-[connection signal="timeout" from="bullet_timer" to="." method="_on_bullet_timer_timeout"]
+[connection signal="timeout" from="BulletTimer" to="." method="_on_bullet_timer_timeout"]

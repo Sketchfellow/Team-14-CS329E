@@ -70,6 +70,8 @@ func shoot():
 
 
 func _on_bullet_timer_timeout():
-	shoot()
+	pass
+	#shoot()
+	
 
 

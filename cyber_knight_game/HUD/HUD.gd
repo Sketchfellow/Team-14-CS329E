@@ -17,6 +17,5 @@ func _on_start_game_pressed():
 func _on_start_game_2_pressed():
 	get_tree().change_scene_to_file("res://levels/tutorial_level.tscn")
 
-
 func _on_button_pressed():
 	get_tree().quit()
