@@ -1,19 +1,11 @@
+res://levels/testing_stage.tscn
+res://projectiles/bullet.tscn
+res://characters/player.gd
+res://projectiles/bullet.gd
+res://levels/tutorial_level.tscn
 res://characters/cyber_knight_player.tscn
 res://projectiles/laser.tscn
-res://HUD/HUD.tscn
-res://levels/tutorial_level.tscn
-res://levels/testing_stage.tscn
-<<<<<<< Updated upstream
-res://characters/tutorial_character.tscn
-res://enemies/turret_enemy.gd
-res://projectiles/bullet.tscn
-res://projectiles/bullet.gd
+res://laser.gd
 res://enemies/turret_enemy.tscn
 res://player_weapons/Lsword.gd
-res://enemies/damage.gd
-res://characters/player.gd
 res://player_weapons/Rsword.gd
-res://HUD/HUD.gd
-=======
-res://levels/progressCheckpoint.tscn
->>>>>>> Stashed changes

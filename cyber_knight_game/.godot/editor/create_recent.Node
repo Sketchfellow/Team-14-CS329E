@@ -1,6 +1,7 @@
+CollisionShape2D
+RigidBody2D
 Node
 Sprite2D
-CollisionShape2D
 Area2D
 Marker2D
 Timer

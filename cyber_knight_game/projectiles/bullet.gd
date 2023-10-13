@@ -10,7 +10,8 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	translate(velocity)
+	#translate(velocity)
+	pass
 
 func die():
 	queue_free()

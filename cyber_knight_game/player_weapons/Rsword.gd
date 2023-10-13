@@ -11,3 +11,5 @@ func _on_body_entered(body):
 		if child is Damage:
 			child.hit(damage)
 			print(damage)
+			print("LEFT")
+			print(damage)
