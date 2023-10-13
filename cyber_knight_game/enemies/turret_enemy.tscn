@@ -46,7 +46,7 @@ size = Vector2(124, 163)
 [node name="turret_enemy" type="CharacterBody2D"]
 script = ExtResource("1_ugnbm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 sprite_frames = SubResource("SpriteFrames_ta2fx")
 animation = &"neutral"
 
