@@ -48,7 +48,7 @@ script = ExtResource("1_ugnbm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 sprite_frames = SubResource("SpriteFrames_ta2fx")
-animation = &"neutral"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 18.5)
@@ -59,7 +59,7 @@ shape = SubResource("RectangleShape2D_wgjmp")
 [node name="bullet_spawn" type="Marker2D" parent="."]
 position = Vector2(1, -66)
 
-[node name="damage" type="Node" parent="."]
+[node name="Damage" type="Node" parent="."]
 script = ExtResource("6_obalp")
 
 [connection signal="timeout" from="bullet_timer" to="." method="_on_bullet_timer_timeout"]

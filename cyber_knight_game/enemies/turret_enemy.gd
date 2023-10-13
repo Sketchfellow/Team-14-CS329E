@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var player_instance = preload("res://characters/cyber_knight_player.tscn").instantiate()
 @export var speed = 40
 
-var player_chase = false
+#var player_chase = false
 var player = null
 var gravity = 1000
 var rest = true
@@ -39,16 +39,17 @@ func _physics_process(delta):
 		#part of the chasing mechanism (do not remove)
 	#	position += (player.position - position)/speed
 	
-	if rest:
-		$AnimatedSprite2D.play("neutral")
+	#if rest:
+	#	$AnimatedSprite2D.play("neutral")
 	
 	move_and_slide()
 	
-
 func _ready():
 	
-	if rest:
-		$AnimatedSprite2D.play("neutral")
+	#if rest:
+	#	$AnimatedSprite2D.play("neutral")
+	
+	$AnimatedSprite2D.play("neutral")
 
 func shoot():
 	var bullet_instance = bullet_object.instantiate()

@@ -13,8 +13,8 @@ func hit(damage:int):
 		var animated_sprite = enemy.get_node("AnimatedSprite2D")
 		
 		if animated_sprite:
-			print("Enemy died")
 			animated_sprite.play("death")
+			print("Enemy died")
 			await get_tree().create_timer(.5).timeout
 		
 		get_parent().queue_free()

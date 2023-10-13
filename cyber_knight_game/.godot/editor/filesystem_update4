@@ -1,6 +1,6 @@
 res://levels/testing_stage.tscn
 res://levels/tutorial_level.tscn
-res://enemies/damage.gd
 res://HUD/HUD.tscn
 res://enemies/turret_enemy.tscn
-res://levels/tutorial_level.gd
+res://enemies/damage.gd
+res://enemies/turret_enemy.gd
