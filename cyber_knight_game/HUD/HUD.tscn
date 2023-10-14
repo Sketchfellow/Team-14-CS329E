@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lgsd5irt1dgo" path="res://assets/visuals/cyberknight main menu.png" id="1_25hlh"]
 [ext_resource type="Script" path="res://HUD/HUD.gd" id="1_w5ard"]
-[ext_resource type="Texture2D" uid="uid://br132hkl31nbh" path="res://assets/visuals/pop_ups/main_popup.png" id="2_bscmm"]
+[ext_resource type="Texture2D" uid="uid://br132hkl31nbh" path="res://assets/visuals/pop_ups_glitches/main_popup.png" id="3_0mgid"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_w5ard")
@@ -17,7 +17,7 @@ offset_left = 464.0
 offset_top = 248.0
 offset_right = 912.0
 offset_bottom = 424.0
-texture = ExtResource("2_bscmm")
+texture = ExtResource("3_0mgid")
 
 [node name="StartGame" type="Button" parent="."]
 modulate = Color(0, 0.34902, 100, 0.309804)

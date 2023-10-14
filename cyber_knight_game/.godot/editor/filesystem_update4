@@ -3,3 +3,4 @@ res://levels/tutorial_level.tscn
 res://HUD/HUD.tscn
 res://enemies/turret_enemy.tscn
 res://characters/cyber_knight_player.tscn
+res://characters/player.gd

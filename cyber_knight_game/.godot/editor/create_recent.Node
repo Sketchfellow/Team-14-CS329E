@@ -1,12 +1,13 @@
+CollisionShape2D
+StaticBody2D
+TextureRect
 Node
 Sprite2D
-CollisionShape2D
 Area2D
 Marker2D
 Timer
 AnimatedSprite2D
 CharacterBody2D
-StaticBody2D
 TileMap
 Label
 MarginContainer
