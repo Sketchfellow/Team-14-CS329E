@@ -39,6 +39,7 @@ func shoot():
 
 func slash():
 	if Input.is_action_just_pressed("slash"):
+		$SwordSlash.play()
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "slash"
 		is_slashing = true
