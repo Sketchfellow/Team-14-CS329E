@@ -16,3 +16,4 @@ res://ui_stuff/battery_gui.gd
 res://projectiles/bullet.tscn
 res://ui_stuff/game_over.tscn
 res://ui_stuff/game_over.gd
+res://HUD/HUD.tscn

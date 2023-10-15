@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://01xbx753fhai"]
+[gd_scene load_steps=6 format=3 uid="uid://01xbx753fhai"]
 
 [ext_resource type="Texture2D" uid="uid://qrsvc43sjjlw" path="res://assets/visuals/game_over_background.jpg" id="1_dh8yd"]
 [ext_resource type="Script" path="res://ui_stuff/game_over.gd" id="1_e3d43"]
 [ext_resource type="FontFile" uid="uid://6lyov12pekd0" path="res://assets/Fonts/GlitchGoblin.woff" id="2_5j3ph"]
 [ext_resource type="AudioStream" uid="uid://c5yikot36ps1l" path="res://assets/sound/8bit-SFX-Library/Lose/glitch-sound-effect-12796 (1).mp3" id="4_abggy"]
+[ext_resource type="FontFile" uid="uid://6lyov12pekd0" path="res://assets/fonts/GlitchGoblin.woff" id="5_lqqbc"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -16,19 +17,19 @@ script = ExtResource("1_e3d43")
 
 [node name="ColorRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -198.0
-offset_top = -75.0
-offset_right = 1722.0
-offset_bottom = 1005.0
+offset_left = -225.0
+offset_top = -117.0
+offset_right = 1695.0
+offset_bottom = 963.0
 texture = ExtResource("1_dh8yd")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
 offset_left = 236.0
-offset_top = 188.0
+offset_top = 174.0
 offset_right = 323.0
-offset_bottom = 211.0
+offset_bottom = 197.0
 scale = Vector2(10, 10)
 theme_override_fonts/font = ExtResource("2_5j3ph")
 text = "Game Over"
@@ -39,3 +40,26 @@ vertical_alignment = 1
 stream = ExtResource("4_abggy")
 volume_db = -5.538
 autoplay = true
+
+[node name="TryAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 409.0
+offset_right = 598.0
+offset_bottom = 436.0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("5_lqqbc")
+text = "Try Again"
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 547.0
+offset_right = 600.0
+offset_bottom = 574.0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("5_lqqbc")
+text = "Main Menu"
+
+[connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_quit_pressed"]
