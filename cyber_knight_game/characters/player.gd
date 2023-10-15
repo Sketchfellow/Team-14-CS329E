@@ -7,7 +7,7 @@ var JUMP_VELOCITY = -700.0# Y movement speed. In Godot going up is negative
 var DASH_VELOCITY = 4500.0 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
+var player_alive = true
 var can_dash = true
 var is_dashing = false
 var is_jumping = false
@@ -16,6 +16,7 @@ var facing = 'l'
 var screen_size 
 var is_shooting = false
 var is_slashing = false
+
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -154,3 +155,18 @@ func _on_rsword_body_entered(body):
 	pass # Replace with function body.
 
 
+
+
+#func _on_death_floor_body_entered(body):
+#	player_alive = false
+#	print("ddeath floor entered")
+#	hide() # Player disappears after being hit.
+#	queue_free() # Replace with function body.
+
+
+func _on_death_floor_area_entered(area):
+	if not is_on_floor():
+		player_alive = false
+		print("death floor entered")
+		hide() # Player disappears after falling on floor.
+		queue_free() # Replace with function body.
