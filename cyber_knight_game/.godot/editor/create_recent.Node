@@ -1,8 +1,11 @@
+CanvasLayer
+HBoxContainer
+Sprite2D
+Panel
 CollisionShape2D
 Area2D
 Timer
 Node
-Sprite2D
 AnimatedSprite2D
 CharacterBody2D
 RigidBody2D

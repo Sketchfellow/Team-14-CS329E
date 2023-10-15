@@ -73,11 +73,8 @@ func shoot():
 
 
 func _on_bullet_timer_timeout():
-	pass
-	#shoot()
-	
-
-
+	if attack:
+		shoot()
 
 
 func _on_damage_is_hit():
@@ -86,7 +83,6 @@ func _on_damage_is_hit():
 	await get_tree().create_timer(0.5).timeout
 	is_hit = false
 	
-
 
 func _on_knockbacklogic_area_entered(area):
 	if area.name == "Lsword":
@@ -98,3 +94,19 @@ func _on_knockbacklogic_area_entered(area):
 		
 		self.velocity.x = 500
 		await get_tree().create_timer(0.1).timeout
+
+
+func _on_detection_area_body_entered(body):
+	if body.is_in_group("player"):
+		player = body
+		attack = true
+		if attack:
+			_on_bullet_timer_timeout()
+			$BulletTimer.start()
+
+
+func _on_detection_area_body_exited(body):
+	if body.is_in_group("player"):
+		player = null
+		attack = false
+		$BulletTimer.stop()

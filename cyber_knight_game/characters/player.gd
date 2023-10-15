@@ -18,6 +18,9 @@ var is_shooting = false
 var is_slashing = false
 var can_slash = true
 
+@export var max_health = 3
+var current_health: int = max_health
+signal health_changed
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -163,8 +166,6 @@ func _on_rsword_body_entered(body):
 	pass # Replace with function body.
 
 
-
-
 #func _on_death_floor_body_entered(body):
 #	player_alive = false
 #	print("ddeath floor entered")
@@ -178,3 +179,15 @@ func _on_death_floor_area_entered(area):
 		print("death floor entered")
 		hide() # Player disappears after falling on floor.
 		queue_free() # Replace with function body.
+	
+
+func _on_hurt_box_area_entered(area):
+	if area.is_in_group("enemy"):
+		current_health -= 1
+		
+		health_changed.emit(current_health)
+		
+		if current_health == 0:
+			get_tree().change_scene_to_file("res://ui_stuff/game_over.tscn")
+	
+	

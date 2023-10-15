@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppfqkf30xck8"]
+
+[ext_resource type="Script" path="res://ui_stuff/battery_gui.gd" id="1_q07uu"]
+[ext_resource type="Texture2D" uid="uid://be4xa4r1wdv6x" path="res://assets/visuals/health/battery_sprite_sheet.png" id="2_08cg1"]
+
+[node name="batteryGui" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(16, 32)
+offset_right = 24.0
+offset_bottom = 32.0
+scale = Vector2(2, 2)
+script = ExtResource("1_q07uu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 32)
+rotation = 4.71239
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_08cg1")
+centered = false
+hframes = 6

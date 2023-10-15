@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5yikot36ps1l"
+path="res://.godot/imported/glitch-sound-effect-12796 (1).mp3-5b33ea725076efe7c0243e68e0817980.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/8bit-SFX-Library/Lose/glitch-sound-effect-12796 (1).mp3"
+dest_files=["res://.godot/imported/glitch-sound-effect-12796 (1).mp3-5b33ea725076efe7c0243e68e0817980.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

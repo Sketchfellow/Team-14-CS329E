@@ -7,7 +7,7 @@
 radius = 18.0
 height = 36.0
 
-[node name="bullet" type="Area2D"]
+[node name="bullet" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_8gcxb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
