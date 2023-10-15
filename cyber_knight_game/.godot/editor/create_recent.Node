@@ -1,7 +1,12 @@
+CanvasLayer
 Button
+Label
+GridContainer
+ColorRect
+VBoxContainer
+MarginContainer
 CollisionShape2D
 Area2D
-CanvasLayer
 HBoxContainer
 Sprite2D
 Panel
@@ -15,8 +20,6 @@ StaticBody2D
 TextureRect
 Marker2D
 TileMap
-Label
-MarginContainer
 NinePatchRect
 AudioStreamPlayer
 Camera2D

@@ -17,3 +17,6 @@ res://projectiles/bullet.tscn
 res://ui_stuff/game_over.tscn
 res://ui_stuff/game_over.gd
 res://HUD/HUD.tscn
+res://ui_stuff/pause_menu.tscn
+res://ui_stuff/pause_menu.gd
+res://HUD/HUD.gd

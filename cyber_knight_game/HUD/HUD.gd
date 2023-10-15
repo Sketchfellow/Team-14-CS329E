@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 
 func _on_start_game_pressed():
-		get_tree().change_scene_to_file("res://levels/tutorial_level.tscn")
+	get_tree().change_scene_to_file("res://levels/tutorial_level.tscn")
 
 
 func _on_start_game_2_pressed():

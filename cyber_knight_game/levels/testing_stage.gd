@@ -2,6 +2,9 @@ extends Node
 
 @onready var heartsContainer = $CanvasLayer/HeartsContainer
 @onready var player = $player
+@onready var pause_menu = $PauseMenu
+
+var paused = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
