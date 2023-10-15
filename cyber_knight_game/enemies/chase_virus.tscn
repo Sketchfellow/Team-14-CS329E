@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://crwehyo40egp2"]
+[gd_scene load_steps=13 format=3 uid="uid://crwehyo40egp2"]
 
 [ext_resource type="Texture2D" uid="uid://bbafmpdmdygm1" path="res://assets/visuals/virus_assets/virus2/trojan3.png" id="1_6p8br"]
 [ext_resource type="Script" path="res://enemies/chase_virus.gd" id="1_nx0dm"]
@@ -55,6 +55,9 @@ size = Vector2(946, 632.75)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ec8kf"]
 radius = 62.1289
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ah7by"]
+radius = 65.1153
+
 [node name="chaseVirus" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_nx0dm")
 
@@ -64,7 +67,7 @@ shape = SubResource("CircleShape2D_hn5o5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_umjtu")
-animation = &"neutral"
+animation = &"evil"
 autoplay = "neutral"
 
 [node name="trigger" type="Area2D" parent="."]
@@ -80,6 +83,11 @@ script = ExtResource("7_l8tom")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="knockbacklogic"]
 shape = SubResource("CircleShape2D_ec8kf")
+
+[node name="HitBox" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_ah7by")
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
 [connection signal="is_hit" from="damage" to="." method="_on_damage_is_hit"]

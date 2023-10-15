@@ -184,6 +184,7 @@ func _on_death_floor_area_entered(area):
 func _on_hurt_box_area_entered(area):
 	if area.is_in_group("enemy"):
 		current_health -= 1
+		print("enemy")
 		
 		health_changed.emit(current_health)
 		
