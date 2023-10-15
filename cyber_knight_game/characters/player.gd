@@ -16,11 +16,14 @@ var facing = 'l'
 var screen_size 
 var is_shooting = false
 var is_slashing = false
+var can_slash = true
 
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	$dashCollisionShape.disabled=false
+	$dashCollisionShape.disabled=true
+	$Lsword/CollisionShape2D.disabled = true
+	$Rsword/CollisionShape2D.disabled = true
 
 func shoot():
 	if Input.is_action_just_pressed("shoot"):
@@ -39,7 +42,8 @@ func shoot():
 		is_shooting = false
 
 func slash():
-	if Input.is_action_just_pressed("slash"):
+	if Input.is_action_just_pressed("slash") and can_slash:
+		can_slash = false
 		$SwordSlash.play()
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "slash"
@@ -50,6 +54,8 @@ func slash():
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_slashing = false
+		await get_tree().create_timer(0.3).timeout
+		can_slash = true
 
 func _on_animated_sprite_2d_animation_finished():
 	if $AnimatedSprite2D.animation == "slash":
@@ -93,10 +99,12 @@ func dash():
 		can_dash = true
 
 		
+func _process(delta):
+	GlobalVars.playerPosition = self.position
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor() and not is_dashing and not is_jumping:
+	if not is_on_floor() and not is_dashing and not is_jumping and not is_shooting and not is_slashing:
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "air"
 		velocity.y += gravity * delta
@@ -128,7 +136,7 @@ func _physics_process(delta):
 	if direction and not is_dashing:
 		facing = "l" if direction == -1 else "r"
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
-		if is_on_floor():
+		if is_on_floor() and not is_shooting and not is_slashing:
 			$AnimatedSprite2D.animation = "run"
 			# this makes sure that the audio doesn't play on top of itself
 			# basically, this makes sure that the sound effect finishes playing once, before playing again

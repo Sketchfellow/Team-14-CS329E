@@ -14,10 +14,13 @@ var attack = false
 var chase = false
 var bullet_speed = 25
 
+var is_hit = false
 var dead = false
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
+	if not is_hit:
+		velocity.x = 0
 	
 	#var direction_to_player = player_instance.position - position
 	#print(player_instance.global_position)
@@ -75,3 +78,23 @@ func _on_bullet_timer_timeout():
 	
 
 
+
+
+func _on_damage_is_hit():
+	is_hit = true
+	
+	await get_tree().create_timer(0.5).timeout
+	is_hit = false
+	
+
+
+func _on_knockbacklogic_area_entered(area):
+	if area.name == "Lsword":
+		
+		self.velocity.x = -500
+		await get_tree().create_timer(0.1).timeout
+		
+	if area.name == "Rsword":
+		
+		self.velocity.x = 500
+		await get_tree().create_timer(0.1).timeout

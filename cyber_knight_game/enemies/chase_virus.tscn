@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://crwehyo40egp2"]
+
+[ext_resource type="Texture2D" uid="uid://bbafmpdmdygm1" path="res://assets/visuals/virus_assets/virus2/trojan3.png" id="1_6p8br"]
+[ext_resource type="Script" path="res://enemies/chase_virus.gd" id="1_nx0dm"]
+[ext_resource type="Texture2D" uid="uid://drydh1jx10icw" path="res://assets/visuals/virus_assets/virus2/trojan4.png" id="2_4rpxn"]
+[ext_resource type="Texture2D" uid="uid://brs2tdmpa4iib" path="res://assets/visuals/virus_assets/virus2/trojan2.png" id="3_u5rj0"]
+[ext_resource type="Texture2D" uid="uid://ccvakmqjjjby3" path="res://assets/visuals/virus_assets/virus2/trojan5.png" id="4_11bhk"]
+[ext_resource type="Texture2D" uid="uid://c1h048v5kcce8" path="res://assets/visuals/virus_assets/virus2/trojan.png" id="4_s38o6"]
+[ext_resource type="Script" path="res://enemies/damage.gd" id="7_l8tom"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hn5o5"]
+radius = 62.0081
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_umjtu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6p8br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4rpxn")
+}],
+"loop": true,
+"name": &"chase",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_11bhk")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u5rj0")
+}],
+"loop": true,
+"name": &"evil",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_s38o6")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8milk"]
+size = Vector2(946, 632.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ec8kf"]
+radius = 62.1289
+
+[node name="chaseVirus" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_nx0dm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 3.14159
+shape = SubResource("CircleShape2D_hn5o5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_umjtu")
+animation = &"neutral"
+autoplay = "neutral"
+
+[node name="trigger" type="Area2D" parent="."]
+
+[node name="triggerRange" type="CollisionShape2D" parent="trigger"]
+position = Vector2(-5, 3)
+shape = SubResource("RectangleShape2D_8milk")
+
+[node name="damage" type="Node" parent="."]
+script = ExtResource("7_l8tom")
+
+[node name="knockbacklogic" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="knockbacklogic"]
+shape = SubResource("CircleShape2D_ec8kf")
+
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="is_hit" from="damage" to="." method="_on_damage_is_hit"]
+[connection signal="area_entered" from="knockbacklogic" to="." method="_on_knockbacklogic_area_entered"]
+[connection signal="body_entered" from="knockbacklogic" to="." method="_on_knockbacklogic_body_entered"]

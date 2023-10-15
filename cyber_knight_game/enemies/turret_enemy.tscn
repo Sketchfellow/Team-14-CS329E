@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnlcnwwrskwl2"]
+[gd_scene load_steps=10 format=3 uid="uid://bnlcnwwrskwl2"]
 
 [ext_resource type="Script" path="res://enemies/turret_enemy.gd" id="1_ugnbm"]
 [ext_resource type="Texture2D" uid="uid://burh3kiis7taf" path="res://assets/visuals/virus_assets/virus1_neutral_animation/1.png" id="2_pnpcf"]
@@ -43,7 +43,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgjmp"]
 size = Vector2(124, 163)
 
-[node name="turret_enemy" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv27u"]
+size = Vector2(126, 160)
+
+[node name="turret_enemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_ugnbm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
@@ -63,4 +66,12 @@ position = Vector2(1, -66)
 [node name="Damage" type="Node" parent="."]
 script = ExtResource("6_obalp")
 
+[node name="knockbacklogic" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="knockbacklogic"]
+position = Vector2(-1, 16)
+shape = SubResource("RectangleShape2D_hv27u")
+
 [connection signal="timeout" from="BulletTimer" to="." method="_on_bullet_timer_timeout"]
+[connection signal="is_hit" from="Damage" to="." method="_on_damage_is_hit"]
+[connection signal="area_entered" from="knockbacklogic" to="." method="_on_knockbacklogic_area_entered"]

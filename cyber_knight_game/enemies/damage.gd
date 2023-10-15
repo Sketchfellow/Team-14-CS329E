@@ -4,8 +4,11 @@ class_name Damage
 
 @export var health : float = 20
 
+signal is_hit
 
 func hit(damage:int):
+	
+	is_hit.emit()
 	health -= damage
 	
 	if (health <= 0):

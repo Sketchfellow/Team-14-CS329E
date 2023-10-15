@@ -7,7 +7,8 @@ func _ready():
 	pass
 
 func _on_body_entered(body):
-	for child in body.get_children():
-		if child is Damage:
-			child.hit(damage)
-			print(damage)
+	if body.is_in_group("Enemy"):
+		for child in body.get_children():
+			if child is Damage:
+				child.hit(damage)
+				print(damage)
