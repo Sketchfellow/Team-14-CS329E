@@ -29,7 +29,7 @@ animations = [{
 "texture": ExtResource("4_11bhk")
 }],
 "loop": true,
-"name": &"dead",
+"name": &"death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -67,7 +67,7 @@ shape = SubResource("CircleShape2D_hn5o5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_umjtu")
-animation = &"evil"
+animation = &"death"
 autoplay = "neutral"
 
 [node name="trigger" type="Area2D" parent="."]

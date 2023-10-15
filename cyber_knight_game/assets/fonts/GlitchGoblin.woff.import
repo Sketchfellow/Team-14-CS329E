@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://6lyov12pekd0"
-path="res://.godot/imported/GlitchGoblin.woff-42ab8d0ea2c7597dbd5b28d1177c58b9.fontdata"
+path="res://.godot/imported/GlitchGoblin.woff-7a589489a2fc1b6478b6fa15647d362d.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/GlitchGoblin.woff"
-dest_files=["res://.godot/imported/GlitchGoblin.woff-42ab8d0ea2c7597dbd5b28d1177c58b9.fontdata"]
+source_file="res://assets/fonts/GlitchGoblin.woff"
+dest_files=["res://.godot/imported/GlitchGoblin.woff-7a589489a2fc1b6478b6fa15647d362d.fontdata"]
 
 [params]
 

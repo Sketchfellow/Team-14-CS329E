@@ -59,7 +59,7 @@ func shoot():
 	bullet_instance.global_position = bullet_spawn.global_position
 	get_tree().get_root().add_child(bullet_instance)
 	
-	bullet_instance.look_at(player_instance.global_position)
+	bullet_instance.look_at(GlobalVars.playerPosition)
 	
 	if $AnimatedSprite2D.flip_h:
 		bullet_instance.velocity.x = 10
@@ -67,7 +67,7 @@ func shoot():
 		bullet_instance.velocity.x = -10
 	
 	if player:
-		bullet_instance.look_at(player.global_position)
+		bullet_instance.look_at(GlobalVars.playerPosition)
 	
 	bullet_instance.speed = bullet_speed
 

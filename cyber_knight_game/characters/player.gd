@@ -18,6 +18,8 @@ var is_shooting = false
 var is_slashing = false
 var can_slash = true
 
+var is_vulnerable = true
+
 @export var max_health = 3
 var current_health: int = max_health
 signal health_changed
@@ -182,13 +184,33 @@ func _on_death_floor_area_entered(area):
 	
 
 func _on_hurt_box_area_entered(area):
-	if area.is_in_group("enemy"):
+	if area.is_in_group("enemy") and is_vulnerable:
 		current_health -= 1
+		is_vulnerable = false
 		print("enemy")
 		
 		health_changed.emit(current_health)
 		
 		if current_health == 0:
 			get_tree().change_scene_to_file("res://ui_stuff/game_over.tscn")
+		else:
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			is_vulnerable = true
+		
+		
 	
 	

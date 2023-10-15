@@ -175,7 +175,7 @@ radius = 30.0
 height = 148.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vm36u"]
-radius = 82.0
+radius = 51.0
 height = 192.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]

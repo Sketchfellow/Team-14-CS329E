@@ -21,7 +21,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 		
 	if chase:
-		if $AnimatedSprite2D.animation != "dead" and is_on_floor():
+		if $AnimatedSprite2D.animation != "death" and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			$AnimatedSprite2D.play("chase")
 		
@@ -37,7 +37,7 @@ func _physics_process(delta):
 			velocity.x = direction.x * SPEED
 	
 	else:
-		if $AnimatedSprite2D.animation != "dead":
+		if $AnimatedSprite2D.animation != "death":
 			$AnimatedSprite2D.play("neutral")
 		velocity.x = 0
 	move_and_slide()
