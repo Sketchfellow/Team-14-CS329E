@@ -1,3 +1,4 @@
+Sprite2D
 AudioStreamPlayer2D
 CanvasLayer
 Button
@@ -9,7 +10,6 @@ MarginContainer
 CollisionShape2D
 Area2D
 HBoxContainer
-Sprite2D
 Panel
 Timer
 Node

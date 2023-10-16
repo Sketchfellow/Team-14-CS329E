@@ -176,12 +176,12 @@ func _on_rsword_body_entered(body):
 #	queue_free() # Replace with function body.
 
 
-func _on_death_floor_area_entered(area):
-	if not is_on_floor():
-		player_alive = false
-		print("death floor entered")
-		hide() # Player disappears after falling on floor.
-		queue_free() # Replace with function body.
+#func _on_death_floor_area_entered(area):
+#	if not is_on_floor():
+#		player_alive = false
+#		print("death floor entered")
+#		hide() # Player disappears after falling on floor.
+#		queue_free() # Replace with function body.
 	
 
 func _on_hurt_box_area_entered(area):
