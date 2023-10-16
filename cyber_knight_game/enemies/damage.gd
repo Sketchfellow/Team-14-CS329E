@@ -16,6 +16,7 @@ func hit(damage:int):
 		var animated_sprite = enemy.get_node("AnimatedSprite2D")
 		
 		if animated_sprite:
+			$"../DeathSound".play()
 			animated_sprite.play("death")
 			print("Enemy died")
 			await get_tree().create_timer(.5).timeout

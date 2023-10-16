@@ -32,6 +32,7 @@ func _ready():
 
 func shoot():
 	if Input.is_action_just_pressed("shoot"):
+		$GunSound.play()
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "shoot"
 		is_shooting = true

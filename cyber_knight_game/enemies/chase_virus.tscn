@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://crwehyo40egp2"]
+[gd_scene load_steps=14 format=3 uid="uid://crwehyo40egp2"]
 
 [ext_resource type="Texture2D" uid="uid://bbafmpdmdygm1" path="res://assets/visuals/virus_assets/virus2/trojan3.png" id="1_6p8br"]
 [ext_resource type="Script" path="res://enemies/chase_virus.gd" id="1_nx0dm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ccvakmqjjjby3" path="res://assets/visuals/virus_assets/virus2/trojan5.png" id="4_11bhk"]
 [ext_resource type="Texture2D" uid="uid://c1h048v5kcce8" path="res://assets/visuals/virus_assets/virus2/trojan.png" id="4_s38o6"]
 [ext_resource type="Script" path="res://enemies/damage.gd" id="7_l8tom"]
+[ext_resource type="AudioStream" uid="uid://bni8m0p5q6csf" path="res://assets/sound/8bit-SFX-Library/Enemy/enemy_death_sound.mp3" id="8_230r4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hn5o5"]
 radius = 62.0081
@@ -88,6 +89,9 @@ shape = SubResource("CircleShape2D_ec8kf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 shape = SubResource("CircleShape2D_ah7by")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_230r4")
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
 [connection signal="is_hit" from="damage" to="." method="_on_damage_is_hit"]

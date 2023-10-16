@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnlcnwwrskwl2"]
+[gd_scene load_steps=13 format=3 uid="uid://bnlcnwwrskwl2"]
 
 [ext_resource type="Script" path="res://enemies/turret_enemy.gd" id="1_ugnbm"]
 [ext_resource type="Texture2D" uid="uid://burh3kiis7taf" path="res://assets/visuals/virus_assets/virus1_neutral_animation/1.png" id="2_pnpcf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://s3eonwoqw77x" path="res://assets/visuals/virus_assets/virus1_neutral_animation/2.png" id="4_chxkf"]
 [ext_resource type="Texture2D" uid="uid://b66uadol47l7" path="res://assets/visuals/virus_assets/virus1_neutral_animation/3.png" id="5_h8dkc"]
 [ext_resource type="Script" path="res://enemies/damage.gd" id="6_obalp"]
+[ext_resource type="AudioStream" uid="uid://bni8m0p5q6csf" path="res://assets/sound/8bit-SFX-Library/Enemy/enemy_death_sound.mp3" id="7_k76b6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta2fx"]
 animations = [{
@@ -71,6 +72,9 @@ position = Vector2(1, -66)
 
 [node name="Damage" type="Node" parent="."]
 script = ExtResource("6_obalp")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_k76b6")
 
 [node name="knockbacklogic" type="Area2D" parent="."]
 

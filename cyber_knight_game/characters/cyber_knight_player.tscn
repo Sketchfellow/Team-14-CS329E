@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cvjsfoj623loy"]
+[gd_scene load_steps=41 format=3 uid="uid://cvjsfoj623loy"]
 
 [ext_resource type="Script" path="res://characters/player.gd" id="1_vwpwm"]
 [ext_resource type="Texture2D" uid="uid://cdbjg1sq6umym" path="res://assets/visuals/player_jump_animation/3.png" id="2_22qob"]
@@ -32,6 +32,7 @@
 [ext_resource type="Script" path="res://player_weapons/Lsword.gd" id="30_pfcoc"]
 [ext_resource type="AudioStream" uid="uid://goys3aaltw2e" path="res://assets/sound/8bit-SFX-Library/Player/sword sound.wav" id="30_rn0xm"]
 [ext_resource type="Script" path="res://player_weapons/Rsword.gd" id="31_01bw1"]
+[ext_resource type="AudioStream" uid="uid://b3w22i1g3q7j" path="res://assets/sound/8bit-SFX-Library/Shoot/laser-1.wav" id="31_dybsn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r74gs"]
 radius = 49.0
@@ -213,6 +214,9 @@ pitch_scale = 0.5
 [node name="SwordSlash" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("30_rn0xm")
 volume_db = -15.036
+
+[node name="GunSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("31_dybsn")
 
 [node name="Lsword" type="Area2D" parent="."]
 position = Vector2(-77, 9)

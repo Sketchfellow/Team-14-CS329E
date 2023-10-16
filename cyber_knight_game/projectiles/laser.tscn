@@ -19,3 +19,5 @@ texture = ExtResource("2_s8kxc")
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_lbc3e")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

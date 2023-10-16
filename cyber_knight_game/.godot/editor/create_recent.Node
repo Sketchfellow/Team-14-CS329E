@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 CanvasLayer
 Button
 Label
@@ -15,7 +16,6 @@ Node
 AnimatedSprite2D
 CharacterBody2D
 RigidBody2D
-AudioStreamPlayer2D
 StaticBody2D
 TextureRect
 Marker2D
