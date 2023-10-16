@@ -5,7 +5,7 @@ var dialogue_lines: Array[String] = [
 	"Use the left and right arrow keys or A and D to navigate horizontally.",
 	"Press the up arrow key or W to jump.",
 	"While in the air press the jump button again to perform a quick dash.",
-	"Gah! A virus has invaded this directory! Use the mouse buttons to attack!"	
+	"Gah! A virus has invaded this directory! Use the mouse buttons or Z and X to attack!"	
 ]
 
 var line = 0

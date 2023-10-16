@@ -110,9 +110,10 @@ func _process(delta):
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor() and not is_dashing and not is_jumping and not is_shooting and not is_slashing:
-		$AnimatedSprite2D.flip_h = true if facing == "r" else false
-		$AnimatedSprite2D.animation = "air"
+	if not is_on_floor():
+		if not is_dashing and not is_jumping and not is_shooting and not is_slashing:
+			$AnimatedSprite2D.flip_h = true if facing == "r" else false
+			$AnimatedSprite2D.animation = "air"
 		velocity.y += gravity * delta
 	
 	shoot()
