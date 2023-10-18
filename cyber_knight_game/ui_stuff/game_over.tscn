@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://01xbx753fhai"]
+[gd_scene load_steps=5 format=3 uid="uid://01xbx753fhai"]
 
 [ext_resource type="Texture2D" uid="uid://qrsvc43sjjlw" path="res://assets/visuals/game_over_background.jpg" id="1_dh8yd"]
 [ext_resource type="Script" path="res://ui_stuff/game_over.gd" id="1_e3d43"]
-[ext_resource type="FontFile" uid="uid://6lyov12pekd0" path="res://assets/Fonts/GlitchGoblin.woff" id="2_5j3ph"]
 [ext_resource type="AudioStream" uid="uid://c5yikot36ps1l" path="res://assets/sound/8bit-SFX-Library/Lose/glitch-sound-effect-12796 (1).mp3" id="4_abggy"]
 [ext_resource type="FontFile" uid="uid://6lyov12pekd0" path="res://assets/fonts/GlitchGoblin.woff" id="5_lqqbc"]
 
@@ -31,7 +30,7 @@ offset_top = 174.0
 offset_right = 323.0
 offset_bottom = 197.0
 scale = Vector2(10, 10)
-theme_override_fonts/font = ExtResource("2_5j3ph")
+theme_override_fonts/font = ExtResource("5_lqqbc")
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1

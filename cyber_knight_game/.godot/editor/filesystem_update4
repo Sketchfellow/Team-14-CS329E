@@ -1,2 +1,2 @@
-res://levels/testing_stage.tscn
-res://characters/tutorial_character.gd
+res://ui_stuff/game_over.tscn
+res://ui_stuff/game_over.gd
