@@ -1,2 +1,15 @@
-res://characters/cyber_knight_player.tscn::ad57563d6c0bd7a8409b1b0ad6a469b8::1696272787::res://.godot/exported/133200997/export-cc25b4bf240db3f10ab36b2e404b8cb8-cyber_knight_player.scn
-res://levels/testing_stage.tscn::9526e7d60f76057250ad5e691abcf3ff::1696272792::res://.godot/exported/133200997/export-d2db76411ee62070d951d3fc9daf717d-testing_stage.scn
+res://characters/cyber_knight_player.tscn::72c6cb5c0bffbe7ee470dd153eb5565f::1697766171::res://.godot/exported/133200997/export-cc25b4bf240db3f10ab36b2e404b8cb8-cyber_knight_player.scn
+res://levels/testing_stage.tscn::780dd07c69f903db72137af79e7df698::1697770019::res://.godot/exported/133200997/export-d2db76411ee62070d951d3fc9daf717d-testing_stage.scn
+res://characters/tutorial_character.tscn::d27224e9c9ae2ccb72e27fea33a4951d::1697172365::res://.godot/exported/133200997/export-d755cc71078c07e6693b0590e81426f6-tutorial_character.scn
+res://enemies/chase_virus.tscn::885b46d410ae14c355fd3466085d2816::1697766171::res://.godot/exported/133200997/export-52dfebe25d349e84a706f48f32664827-chase_virus.scn
+res://enemies/turret_enemy.tscn::07a649b43ae8e74ed52abb7e025bb635::1697766171::res://.godot/exported/133200997/export-9505af24c3c12ccbaf3a9f3ab73e0aac-turret_enemy.scn
+res://HUD/HUD.tscn::7da4eccd48d294c0d47a4869d684a91c::1697769897::res://.godot/exported/133200997/export-00ec45ea1f31fb52755c1ca74bb7047d-HUD.scn
+res://levels/progressCheckpoint.tscn::c48fd1002341cc7ce6f58505352ee6b7::1696703358::res://.godot/exported/133200997/export-d740e70608900dc0ec642d1d865c2799-progressCheckpoint.scn
+res://levels/tutorial_level.tscn::d2f0c9adb7252b4729ea35647aeeee65::1697766171::res://.godot/exported/133200997/export-ecf704f28fc3283492f18ffb63c4f5bd-tutorial_level.scn
+res://projectiles/bullet.tscn::bc7a47971e64b445b656ca1c62f9aac3::1697419206::res://.godot/exported/133200997/export-bb37de050d32236cc96b957f0e4e463b-bullet.scn
+res://projectiles/laser.tscn::7b35a85ad09d6af65a98d6f2544ce4d3::1697769897::res://.godot/exported/133200997/export-18a2714c9c8112bfd65c59f4532f4e46-laser.scn
+res://ui_stuff/battery_gui.tscn::85ac1f973b31bc485d188bb0ee475b0a::1697419206::res://.godot/exported/133200997/export-55715cc637c12ceeac0dc32a5db57b5e-battery_gui.scn
+res://ui_stuff/dialog_box.tscn::6b78fb8371568da31f8dea05afd75fbc::1696703358::res://.godot/exported/133200997/export-28602a79411eb6c8710ea92f8e653b8e-dialog_box.scn
+res://ui_stuff/game_over.tscn::2ac0dc82b921272094e340e1620357c5::1697769897::res://.godot/exported/133200997/export-ec4f7c1145e0e72bea0796403ee2ce3a-game_over.scn
+res://ui_stuff/hearts_container.tscn::ef1d4f5afafa68f1973246729f326959::1697419206::res://.godot/exported/133200997/export-d7ba8f02b60b58d37e1e39d69f2071bc-hearts_container.scn
+res://ui_stuff/pause_menu.tscn::e5ecfef12c18dd03f13d757c8926a8c6::1697769897::res://.godot/exported/133200997/export-1f113fbafc4bc7e804edfb64a27abbbb-pause_menu.scn

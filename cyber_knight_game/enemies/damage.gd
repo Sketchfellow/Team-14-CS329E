@@ -1,6 +1,6 @@
 extends Node
 
-class_name Damage
+class_name DamageClass
 
 @export var health : float = 20
 

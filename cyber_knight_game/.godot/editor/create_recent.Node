@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Sprite2D
 AudioStreamPlayer2D
 CanvasLayer
@@ -21,6 +22,5 @@ TextureRect
 Marker2D
 TileMap
 NinePatchRect
-AudioStreamPlayer
 Camera2D
 Node2D
