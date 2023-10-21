@@ -3,8 +3,6 @@ res://ui_stuff/pause_menu.tscn
 res://projectiles/laser.tscn
 res://ui_stuff/game_over.tscn
 res://levels/testing_stage.tscn
-res://HUD/HUD.gd
-res://enemies/damage.gd
-res://laser.gd
-res://player_weapons/Lsword.gd
-res://player_weapons/Rsword.gd
+res://levels/tutorial_level.tscn
+res://characters/player.gd
+res://levels/popup-ad.gd

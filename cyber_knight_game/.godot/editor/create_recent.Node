@@ -1,8 +1,9 @@
+Timer
+Button
 AudioStreamPlayer
 Sprite2D
 AudioStreamPlayer2D
 CanvasLayer
-Button
 Label
 GridContainer
 ColorRect
@@ -12,7 +13,6 @@ CollisionShape2D
 Area2D
 HBoxContainer
 Panel
-Timer
 Node
 AnimatedSprite2D
 CharacterBody2D
