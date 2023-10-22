@@ -20,3 +20,4 @@ func _process(delta):
 func _on_death_floor_body_entered(body):
 	if body.name == 'player':
 		get_tree().change_scene_to_file("res://ui_stuff/game_over.tscn")
+

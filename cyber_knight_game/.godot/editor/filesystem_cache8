@@ -1,358 +1,365 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697995213
-DeathFloor.gd::GDScript::-1::1697995193::0::1::::<>Area2D<>::
-DialogBox.gd::GDScript::-1::1697995193::0::1::::<>MarginContainer<>::
-export_presets.cfg::TextFile::-1::1697995195::0::1::::<><>::
-icon.svg::CompressedTexture2D::1025480096012583275::1697995195::1697995195::1::::<><>::
-laser.gd::GDScript::-1::1697995195::0::1::::<>Area2D<>::
-progressCheckpoint.gd::GDScript::-1::1697995196::0::1::::<>Area2D<>::
-::res://assets/::1697995193
-::res://assets/bullets/::1697995643
-48.png::CompressedTexture2D::206271869217060439::1697995193::1697995193::1::::<><>::
-52.png::CompressedTexture2D::6493466988107264254::1697995193::1697995193::1::::<><>::
-binary_projectile.png::CompressedTexture2D::1025565112819724653::1697222166::1697995643::1::::<><>::
-::res://assets/fonts/::1697995193
-GlitchGoblin.woff::FontFile::2200045661416963351::1697995193::1697995193::1::::<><>::
-::res://assets/placeholder/::1697999178
-arrow.png::CompressedTexture2D::4911435241411602029::1697999178::1697999183::1::::<><>::
-laserRed01.png::CompressedTexture2D::3027701327628341917::1697995193::1697995193::1::::<><>::
-playerGrey_walk1.png::CompressedTexture2D::746570269040930530::1697995193::1697995193::1::::<><>::
-playerGrey_walk2.png::CompressedTexture2D::1253313233842893967::1697995193::1697995193::1::::<><>::
-Screenshot 2023-10-15 234442.png::CompressedTexture2D::1177451476707508064::1697995193::1697995193::1::::<><>::
-::res://assets/sound/::1697995193
-::res://assets/sound/8bit-SFX-Library/::1697995193
-::res://assets/sound/8bit-SFX-Library/Collect/::1697995193
-coin-1.wav::AudioStreamWAV::7172573229021336905::1697995193::1697995193::1::::<><>::
-coin-2.wav::AudioStreamWAV::2797761704263425048::1697995193::1697995193::1::::<><>::
-coin-3.wav::AudioStreamWAV::6391891218278135865::1697995193::1697995193::1::::<><>::
-coin-4.wav::AudioStreamWAV::2729676165855334616::1697995193::1697995193::1::::<><>::
-coin-5.wav::AudioStreamWAV::8600148363662080333::1697995193::1697995193::1::::<><>::
-coin-6.wav::AudioStreamWAV::6661683505965526673::1697995193::1697995193::1::::<><>::
-collect-1.wav::AudioStreamWAV::8789593696343993440::1697995193::1697995193::1::::<><>::
-collect-2.wav::AudioStreamWAV::8111104228248438060::1697995193::1697995193::1::::<><>::
-collect-3.wav::AudioStreamWAV::4487612645389150118::1697995193::1697995193::1::::<><>::
-collect-4.wav::AudioStreamWAV::1896195231257190287::1697995193::1697995193::1::::<><>::
-collect-5.wav::AudioStreamWAV::2131318413781200530::1697995193::1697995193::1::::<><>::
-collect-6.wav::AudioStreamWAV::5791079019219987468::1697995193::1697995193::1::::<><>::
-collect-7.wav::AudioStreamWAV::1666544643843372612::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Collide/::1697995193
-bonk-1.wav::AudioStreamWAV::1207011118961082405::1697995193::1697995193::1::::<><>::
-bonk-2.wav::AudioStreamWAV::1182676465801110677::1697995193::1697995193::1::::<><>::
-bonk-3.wav::AudioStreamWAV::5723706104680902095::1697995193::1697995193::1::::<><>::
-bonk-4.wav::AudioStreamWAV::3569821803230856411::1697995193::1697995193::1::::<><>::
-bonk-5.wav::AudioStreamWAV::4697427267751473954::1697995193::1697995193::1::::<><>::
-bonk-6.wav::AudioStreamWAV::4693429286405222899::1697995193::1697995193::1::::<><>::
-explode-1.wav::AudioStreamWAV::2149577587946337168::1697995193::1697995193::1::::<><>::
-explode-2.wav::AudioStreamWAV::1350990628047176768::1697995193::1697995193::1::::<><>::
-explode-3.wav::AudioStreamWAV::598149858413160469::1697995193::1697995193::1::::<><>::
-explode-4.wav::AudioStreamWAV::4295479189116095768::1697995193::1697995193::1::::<><>::
-explode-5.wav::AudioStreamWAV::7778504778624515107::1697995193::1697995193::1::::<><>::
-explode-6.wav::AudioStreamWAV::371812176274538424::1697995193::1697995193::1::::<><>::
-explode-7.wav::AudioStreamWAV::2353182708836587447::1697995193::1697995193::1::::<><>::
-hit-1.wav::AudioStreamWAV::7337349384182030917::1697995193::1697995193::1::::<><>::
-hit-2.wav::AudioStreamWAV::4876921248973635886::1697995193::1697995193::1::::<><>::
-hit-3.wav::AudioStreamWAV::5268158960669048222::1697995193::1697995193::1::::<><>::
-hit-4.wav::AudioStreamWAV::1862857438335902956::1697995193::1697995193::1::::<><>::
-hit-5.wav::AudioStreamWAV::6892037874280981496::1697995193::1697995193::1::::<><>::
-hit-6.wav::AudioStreamWAV::2613666572810227821::1697995193::1697995193::1::::<><>::
-hit-7.wav::AudioStreamWAV::1124991271976770442::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Enemy/::1697995193
-enemy_death_sound.mp3::AudioStreamMP3::3317417100949637609::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Environment/::1697995193
-birds.wav::AudioStreamWAV::597444290970598427::1697995193::1697995193::1::::<><>::
-computing.wav::AudioStreamWAV::3927927104817929653::1697995193::1697995193::1::::<><>::
-eery-1.wav::AudioStreamWAV::5690865408479417399::1697995193::1697995193::1::::<><>::
-eery-2.wav::AudioStreamWAV::2018312913847958985::1697995193::1697995193::1::::<><>::
-eery-3.wav::AudioStreamWAV::8599198407375292161::1697995193::1697995193::1::::<><>::
-falling-star.wav::AudioStreamWAV::3040450078949088501::1697995193::1697995193::1::::<><>::
-fire.wav::AudioStreamWAV::3194769101346901720::1697995193::1697995193::1::::<><>::
-flashback-2.wav::AudioStreamWAV::3441320023994602691::1697995193::1697995193::1::::<><>::
-flashback.wav::AudioStreamWAV::1853587921586311747::1697995193::1697995193::1::::<><>::
-going-up.wav::AudioStreamWAV::5311163417045157507::1697995193::1697995193::1::::<><>::
-machine.wav::AudioStreamWAV::951297027859757487::1697995193::1697995193::1::::<><>::
-radio.wav::AudioStreamWAV::2369903490283239679::1697995193::1697995193::1::::<><>::
-robot.wav::AudioStreamWAV::7906015097377636587::1697995193::1697995193::1::::<><>::
-secret-area-2.wav::AudioStreamWAV::3208485351988968145::1697995193::1697995193::1::::<><>::
-secret-area-3.wav::AudioStreamWAV::7448530033200620863::1697995193::1697995193::1::::<><>::
-secret-area.wav::AudioStreamWAV::6391748830285640496::1697995193::1697995193::1::::<><>::
-shut-down-2.wav::AudioStreamWAV::6215529347796548363::1697995193::1697995193::1::::<><>::
-shut-down.wav::AudioStreamWAV::2906814031330730876::1697995193::1697995193::1::::<><>::
-ufo-2.wav::AudioStreamWAV::9182773183925010257::1697995193::1697995193::1::::<><>::
-ufo.wav::AudioStreamWAV::7548012984213609623::1697995193::1697995193::1::::<><>::
-water.wav::AudioStreamWAV::328642671339077035::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Lose/::1697995193
-glitch-sound-effect-12796 (1).mp3::AudioStreamMP3::6928556102498204399::1697995193::1697995193::1::::<><>::
-lose-1.wav::AudioStreamWAV::7311856136395351421::1697995193::1697995193::1::::<><>::
-lose-2.wav::AudioStreamWAV::8348993288492509299::1697995193::1697995193::1::::<><>::
-lose-3.wav::AudioStreamWAV::1760990581290649330::1697995193::1697995193::1::::<><>::
-lose-4.wav::AudioStreamWAV::1862951231765156707::1697995193::1697995193::1::::<><>::
-lose-5.wav::AudioStreamWAV::3986964573423870574::1697995193::1697995193::1::::<><>::
-lose-6.wav::AudioStreamWAV::3766687668360113783::1697995193::1697995193::1::::<><>::
-lose-7.wav::AudioStreamWAV::9191077183227104057::1697995193::1697995193::1::::<><>::
-lose-8.wav::AudioStreamWAV::2407365547631854494::1697995193::1697995193::1::::<><>::
-lose-9.wav::AudioStreamWAV::4849242349601876810::1697995193::1697995193::1::::<><>::
-lose-10.wav::AudioStreamWAV::7247470583620073803::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Player/::1697995193
-blast-off-2.wav::AudioStreamWAV::1733812441265125653::1697995193::1697995193::1::::<><>::
-blast-off.wav::AudioStreamWAV::1588402315245513329::1697995193::1697995193::1::::<><>::
-footstep.wav::AudioStreamWAV::5247588073449248731::1697995193::1697995193::1::::<><>::
-jump-1.wav::AudioStreamWAV::5052964091449942406::1697995193::1697995193::1::::<><>::
-jump-2.wav::AudioStreamWAV::6602488873657208315::1697995193::1697995193::1::::<><>::
-jump-3.wav::AudioStreamWAV::2175781040671205965::1697995193::1697995193::1::::<><>::
-jump-4.wav::AudioStreamWAV::7354497668300096912::1697995193::1697995193::1::::<><>::
-jump-5.wav::AudioStreamWAV::5318989216048147093::1697995193::1697995193::1::::<><>::
-jump-6.wav::AudioStreamWAV::2941914618426864094::1697995193::1697995193::1::::<><>::
-jump-7.wav::AudioStreamWAV::1268912516012573271::1697995193::1697995193::1::::<><>::
-jump-8.wav::AudioStreamWAV::4536699314568769427::1697995193::1697995193::1::::<><>::
-jump-9.wav::AudioStreamWAV::5361168368767967500::1697995193::1697995193::1::::<><>::
-jump-10.wav::AudioStreamWAV::2008779525614247066::1697995193::1697995193::1::::<><>::
-landing.wav::AudioStreamWAV::7031818126766058193::1697995193::1697995193::1::::<><>::
-sword sound.wav::AudioStreamWAV::451525173170991290::1697995193::1697995193::1::::<><>::
-teleport.wav::AudioStreamWAV::6616836677739308461::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Shoot/::1697995193
-gun-1.wav::AudioStreamWAV::6478437135786055906::1697995193::1697995193::1::::<><>::
-gun-2.wav::AudioStreamWAV::7612546049824254702::1697995193::1697995193::1::::<><>::
-gun-3.wav::AudioStreamWAV::8905133379728515275::1697995193::1697995193::1::::<><>::
-gun-4.wav::AudioStreamWAV::8876896952910509284::1697995193::1697995193::1::::<><>::
-gun-5.wav::AudioStreamWAV::4454774883559746453::1697995193::1697995193::1::::<><>::
-laser-1.wav::AudioStreamWAV::129376842707348873::1697995193::1697995193::1::::<><>::
-laser-2.wav::AudioStreamWAV::8897812050040641602::1697995193::1697995193::1::::<><>::
-laser-3.wav::AudioStreamWAV::1676839958257358233::1697995193::1697995193::1::::<><>::
-laser-4.wav::AudioStreamWAV::6286208058664577838::1697995193::1697995193::1::::<><>::
-laser-5.wav::AudioStreamWAV::8234740591105545614::1697995193::1697995193::1::::<><>::
-laser-6.wav::AudioStreamWAV::3965242920304258684::1697995193::1697995193::1::::<><>::
-laser-7.wav::AudioStreamWAV::1261211372753442041::1697995193::1697995193::1::::<><>::
-laser-8.wav::AudioStreamWAV::8110268343768508147::1697995193::1697995193::1::::<><>::
-laser-9.wav::AudioStreamWAV::6756190689618626644::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/UI/::1697995193
-blip-1.wav::AudioStreamWAV::6853737970980571206::1697995193::1697995193::1::::<><>::
-blip-2.wav::AudioStreamWAV::1291150878664159130::1697995193::1697995193::1::::<><>::
-cancel-1.wav::AudioStreamWAV::5218513452847024647::1697995193::1697995193::1::::<><>::
-cancel-2.wav::AudioStreamWAV::4344764061781264040::1697995193::1697995193::1::::<><>::
-cancel-3.wav::AudioStreamWAV::7242444718302354603::1697995193::1697995193::1::::<><>::
-ok-1.wav::AudioStreamWAV::3003044277178269877::1697995193::1697995193::1::::<><>::
-ok-2.wav::AudioStreamWAV::459877143692495972::1697995193::1697995193::1::::<><>::
-ok-3.wav::AudioStreamWAV::196674829872235910::1697995193::1697995193::1::::<><>::
-::res://assets/sound/8bit-SFX-Library/Win/::1697995193
-win-1.wav::AudioStreamWAV::2069343280170573544::1697995193::1697995193::1::::<><>::
-win-2.wav::AudioStreamWAV::3504415898943780107::1697995193::1697995193::1::::<><>::
-win-3.wav::AudioStreamWAV::1374244126718532579::1697995193::1697995193::1::::<><>::
-win-4.wav::AudioStreamWAV::4311240260177573282::1697995193::1697995193::1::::<><>::
-win-5.wav::AudioStreamWAV::8115721639940144972::1697995193::1697995193::1::::<><>::
-win-6.wav::AudioStreamWAV::4208166467138514991::1697995193::1697995193::1::::<><>::
-win-7.wav::AudioStreamWAV::5768717867257632309::1697995193::1697995193::1::::<><>::
-win-8.wav::AudioStreamWAV::2543265996669334699::1697995193::1697995193::1::::<><>::
-win-9.wav::AudioStreamWAV::987406192903600638::1697995193::1697995193::1::::<><>::
-win-10.wav::AudioStreamWAV::7710260752747039238::1697995193::1697995193::1::::<><>::
-::res://assets/sound/music/::1697995193
-Abstract Vision 6 (Looped).ogg::AudioStreamOggVorbis::9202551563204776295::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/::1697995194
-arrow keys.png::CompressedTexture2D::6816098730315010495::1697995193::1697995193::1::::<><>::
-background.png::CompressedTexture2D::6277987580316417389::1697995193::1697995193::1::::<><>::
-cyberknight_bg_long.png::CompressedTexture2D::2795407686863290741::1697995193::1697995193::1::::<><>::
-cyberknight_bg_mountains.png::CompressedTexture2D::8181137501090732436::1697995193::1697995193::1::::<><>::
-cyberknight_bg_sky.png::CompressedTexture2D::4831855353502796673::1697995193::1697995193::1::::<><>::
-cyberknight_bg_v2mountains.png::CompressedTexture2D::409684091170515236::1697995193::1697995193::1::::<><>::
-Cyber_Knight.png::CompressedTexture2D::1900190669189303620::1697995193::1697995193::1::::<><>::
-game_over_background.jpg::CompressedTexture2D::1159246478711972312::1697995193::1697995193::1::::<><>::
-long_bg.png::CompressedTexture2D::6010073273397473082::1697995193::1697995193::1::::<><>::
-long_bg_2.png::CompressedTexture2D::667494511521815559::1697995193::1697995193::1::::<><>::
-wasd.png::CompressedTexture2D::2248975399813191843::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/ad-popups/::1697995193
-chat-ad.png::CompressedTexture2D::5943596861049946877::1697995193::1697995193::1::::<><>::
-christian-ad.png::CompressedTexture2D::7637741343714502291::1697995193::1697995193::1::::<><>::
-congrats-ad.png::CompressedTexture2D::1170263121199835002::1697995193::1697995193::1::::<><>::
-dating-ad.png::CompressedTexture2D::4690016205348679723::1697995193::1697995193::1::::<><>::
-desktop-ad.png::CompressedTexture2D::8977314920831169348::1697995193::1697995193::1::::<><>::
-edge-ad.png::CompressedTexture2D::649311692570730020::1697995193::1697995193::1::::<><>::
-emoji-ad.png::CompressedTexture2D::1513311571968998072::1697995193::1697995193::1::::<><>::
-existential-ad.png::CompressedTexture2D::7408292186287238730::1697995193::1697995193::1::::<><>::
-fed-ad.png::CompressedTexture2D::8660309153531293713::1697995193::1697995193::1::::<><>::
-graduating-ad.png::CompressedTexture2D::3176421283410812664::1697995193::1697995193::1::::<><>::
-hit-ad.png::CompressedTexture2D::5600345230824891776::1697995193::1697995193::1::::<><>::
-internet-citizen-ad.png::CompressedTexture2D::215622382406187918::1697995193::1697995193::1::::<><>::
-messenger-ad.png::CompressedTexture2D::1041498426091747137::1697995193::1697995193::1::::<><>::
-mortgage-ad.png::CompressedTexture2D::5320634368748027038::1697995193::1697995193::1::::<><>::
-music-ad.png::CompressedTexture2D::3477487323888367964::1697995193::1697995193::1::::<><>::
-people-ad.png::CompressedTexture2D::2985184364270978824::1697995193::1697995193::1::::<><>::
-phone-bills-ad.png::CompressedTexture2D::6167539191692926068::1697995193::1697995193::1::::<><>::
-prize-ad.png::CompressedTexture2D::7594162012332982387::1697995193::1697995193::1::::<><>::
-run-of-mill-ad.png::CompressedTexture2D::5347783002854630887::1697995193::1697995193::1::::<><>::
-self-destruct-ad.png::CompressedTexture2D::5611421518373147107::1697995193::1697995193::1::::<><>::
-skull-ad.png::CompressedTexture2D::8157445935414455511::1697995193::1697995193::1::::<><>::
-spamton-ad.png::CompressedTexture2D::7607953779489594800::1697995193::1697995193::1::::<><>::
-win-ad.png::CompressedTexture2D::2403750135366926967::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/health/::1697995193
-battery_sprite_sheet.png::CompressedTexture2D::2728441054596285697::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/placeholder_icon_assets/::1697995193
-blender - Copy.png::CompressedTexture2D::7031592814006437168::1697995193::1697995193::1::::<><>::
-brasero - Copy.png::CompressedTexture2D::2278553910877677765::1697995193::1697995193::1::::<><>::
-brasero.png::CompressedTexture2D::5575591350324097072::1697995193::1697995193::1::::<><>::
-checkbox - Copy.png::CompressedTexture2D::3611618140079911381::1697995193::1697995193::1::::<><>::
-cs-accessibility - Copy.png::CompressedTexture2D::2199702893654117925::1697995193::1697995193::1::::<><>::
-cs-applets - Copy.png::CompressedTexture2D::6780462388305035291::1697995193::1697995193::1::::<><>::
-cs-bluetooth - Copy.png::CompressedTexture2D::7884971124570231000::1697995193::1697995193::1::::<><>::
-cs-color - Copy.png::CompressedTexture2D::3511819783068848122::1697995193::1697995193::1::::<><>::
-cs-date-time - Copy.png::CompressedTexture2D::5474539564698687923::1697995193::1697995193::1::::<><>::
-cs-default-applications - Copy.png::CompressedTexture2D::2833278260163669053::1697995193::1697995193::1::::<><>::
-cs-desktop-effects - Copy.png::CompressedTexture2D::8427632898187873::1697995193::1697995193::1::::<><>::
-cs-details - Copy.png::CompressedTexture2D::893688964136453407::1697995193::1697995193::1::::<><>::
-cs-display - Copy.png::CompressedTexture2D::1734697726415987880::1697995193::1697995193::1::::<><>::
-cs-login - Copy.png::CompressedTexture2D::8223586100509156128::1697995193::1697995193::1::::<><>::
-cs-network - Copy.png::CompressedTexture2D::2528087058217880589::1697995193::1697995193::1::::<><>::
-cs-panel - Copy.png::CompressedTexture2D::6763309878804898640::1697995193::1697995193::1::::<><>::
-cs-privacy - Copy.png::CompressedTexture2D::1198944734739492236::1697995193::1697995193::1::::<><>::
-cs-screensaver - Copy.png::CompressedTexture2D::5043350770670367570::1697995193::1697995193::1::::<><>::
-cs-startup-programs - Copy.png::CompressedTexture2D::1270740068947912675::1697995193::1697995193::1::::<><>::
-cs-themes - Copy.png::CompressedTexture2D::3562899828845171216::1697995193::1697995193::1::::<><>::
-cs-tiling - Copy.png::CompressedTexture2D::2857311508449391911::1697995193::1697995193::1::::<><>::
-firestarter - Copy.png::CompressedTexture2D::3837824253428219692::1697995193::1697995193::1::::<><>::
-gconf-editor - Copy.png::CompressedTexture2D::9217632328667393796::1697995193::1697995193::1::::<><>::
-gmahjongg - Copy.png::CompressedTexture2D::3976043220652144474::1697995193::1697995193::1::::<><>::
-gnome-do - Copy.png::CompressedTexture2D::1268247403495654642::1697995193::1697995193::1::::<><>::
-gnome-glchess - Copy.png::CompressedTexture2D::7482427048335307297::1697995193::1697995193::1::::<><>::
-gnome-glines - Copy.png::CompressedTexture2D::9028792478229691506::1697995193::1697995193::1::::<><>::
-testroom.png::CompressedTexture2D::6106793617457750212::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_dash_animation/::1697995193
-1.png::CompressedTexture2D::1292101158032622286::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_idle_animation/::1697995193
-1.png::CompressedTexture2D::329789404141026665::1697995193::1697995193::1::::<><>::
-2.png::CompressedTexture2D::8874320904559435809::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_jump_animation/::1697995193
-1.png::CompressedTexture2D::2158583873117956725::1697995193::1697995193::1::::<><>::
-2.png::CompressedTexture2D::3713595756237615955::1697995193::1697995193::1::::<><>::
-3.png::CompressedTexture2D::4986030837935463804::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_run_animation/::1697995193
-1.png::CompressedTexture2D::4894184497301809810::1697995193::1697995193::1::::<><>::
-2.png::CompressedTexture2D::9206634998412220333::1697995193::1697995193::1::::<><>::
-3.png::CompressedTexture2D::4362626807879276383::1697995193::1697995193::1::::<><>::
-4.png::CompressedTexture2D::3692858990590689327::1697995193::1697995193::1::::<><>::
-5.png::CompressedTexture2D::2306776118628386261::1697995193::1697995193::1::::<><>::
-6.png::CompressedTexture2D::8649790201092218978::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_shoot_animation/::1697995193
-1.png::CompressedTexture2D::1284506519717790654::1697995193::1697995193::1::::<><>::
-2.png::CompressedTexture2D::4228089679584934571::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_sword_slash_animation/::1697995193
-1.png::CompressedTexture2D::5177718878994747213::1697995193::1697995193::1::::<><>::
-2.png::CompressedTexture2D::955000148761598534::1697995193::1697995193::1::::<><>::
-3.png::CompressedTexture2D::1940811489258918427::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/player_walk_animation/::1697995193
-1.png::CompressedTexture2D::2253703656230637096::1697995193::1697995193::1::::<><>::
-2.png::CompressedTexture2D::1007616743905767510::1697995193::1697995193::1::::<><>::
-3.png::CompressedTexture2D::9114992146482272153::1697995193::1697995193::1::::<><>::
-4.png::CompressedTexture2D::6136407414360589424::1697995193::1697995193::1::::<><>::
-5.png::CompressedTexture2D::7191782696347329428::1697995193::1697995193::1::::<><>::
-6.png::CompressedTexture2D::3786069263767946418::1697995193::1697995193::1::::<><>::
-7.png::CompressedTexture2D::7072609234817519737::1697995193::1697995193::1::::<><>::
-::res://assets/visuals/pop_ups_glitches/::1697995194
-blue_screen_of_death_windows_xp.png::CompressedTexture2D::7232815341487095385::1697995193::1697995193::1::::<><>::
-color_glitch.jpg::CompressedTexture2D::5776738389405675354::1697995193::1697995193::1::::<><>::
-cyberknight_popup.png::CompressedTexture2D::4264560660149736184::1697995193::1697995193::1::::<><>::
-cyberknight_popup_long.png::CompressedTexture2D::4855165717010291408::1697995193::1697995193::1::::<><>::
-cyberknight_popup_longv2.png::CompressedTexture2D::780413568718837476::1697995193::1697995193::1::::<><>::
-cyberknight_popup_small.png::CompressedTexture2D::7689340878706780348::1697995193::1697995193::1::::<><>::
-cyberknight_popup_v2.png::CompressedTexture2D::6222899069673559824::1697995193::1697995193::1::::<><>::
-dog_pics_virus.png::CompressedTexture2D::6483098039525394730::1697995193::1697995193::1::::<><>::
-empty_popup.png::CompressedTexture2D::491330579038472583::1697995193::1697995193::1::::<><>::
-encryvirus.png::CompressedTexture2D::7621469180797858852::1697995193::1697995193::1::::<><>::
-explorer_alert.png::CompressedTexture2D::1676455399989832701::1697995193::1697995193::1::::<><>::
-flame.png::CompressedTexture2D::243515523424423592::1697995193::1697995193::1::::<><>::
-fortune.png::CompressedTexture2D::6580211834502343156::1697995193::1697995193::1::::<><>::
-frog.png::CompressedTexture2D::3379561629787644807::1697995193::1697995193::1::::<><>::
-hacker_glitch.png::CompressedTexture2D::2844407973624207032::1697995193::1697995193::1::::<><>::
-main_popup.png::CompressedTexture2D::3635053523027838157::1697995193::1697995193::1::::<><>::
-malware.png::CompressedTexture2D::5867695344773220325::1697995193::1697995193::1::::<><>::
-q-walker.png::CompressedTexture2D::2262779881069151180::1697995193::1697995193::1::::<><>::
-screen_glitch.png::CompressedTexture2D::2002604764479021399::1697995193::1697995193::1::::<><>::
-spyware_popup.png::CompressedTexture2D::5753942151360761704::1697995193::1697995193::1::::<><>::
-stolen_info.png::CompressedTexture2D::5844774233146821412::1697995193::1697995193::1::::<><>::
-trust.png::CompressedTexture2D::7341960005317001048::1697995194::1697995194::1::::<><>::
-zohra.png::CompressedTexture2D::3676832756979931793::1697995194::1697995194::1::::<><>::
-zohrav2.png::CompressedTexture2D::6348980230871774393::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/textbox/::1697995194
-interaction_prompt.png::CompressedTexture2D::5631527714660546721::1697995194::1697995194::1::::<><>::
-textbox.png::CompressedTexture2D::8074896570644255050::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/tutorial_bot/::1697995194
-rita1.png::CompressedTexture2D::5296387198379738420::1697995194::1697995194::1::::<><>::
-rita2.png::CompressedTexture2D::1896088365066585197::1697995194::1697995194::1::::<><>::
-rita3.png::CompressedTexture2D::1964662674864334210::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/virus_assets/::1697997393
-::res://assets/visuals/virus_assets/error_message/::1697997400
-troll_message2.png::CompressedTexture2D::6237556290238195038::1697997338::1697997400::1::::<><>::
-troll_message.png::CompressedTexture2D::7462872118185965538::1697997095::1697997400::1::::<><>::
-::res://assets/visuals/virus_assets/virus1_death_animation/::1697995194
-Virus1.png::CompressedTexture2D::5055898242923402353::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/virus_assets/virus1_neutral_animation/::1697995194
-1.png::CompressedTexture2D::3825767537432221169::1697995194::1697995194::1::::<><>::
-2.png::CompressedTexture2D::1321470349131620167::1697995194::1697995194::1::::<><>::
-3.png::CompressedTexture2D::136102501954129838::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/virus_assets/virus1_walk_animation/::1697995194
-1.png::CompressedTexture2D::4326580544964770660::1697995194::1697995194::1::::<><>::
-2.png::CompressedTexture2D::7748870765535485801::1697995194::1697995194::1::::<><>::
-3.png::CompressedTexture2D::2643812746435133173::1697995194::1697995194::1::::<><>::
-4.png::CompressedTexture2D::2273954316141500818::1697995194::1697995194::1::::<><>::
-::res://assets/visuals/virus_assets/virus2/::1697995194
-trojan2.png::CompressedTexture2D::3618463290791999225::1697995194::1697995194::1::::<><>::
-trojan3.png::CompressedTexture2D::2456935334856674682::1697995194::1697995194::1::::<><>::
-trojan4.png::CompressedTexture2D::8402213491150016898::1697995194::1697995194::1::::<><>::
-trojan5.png::CompressedTexture2D::4956589500854945096::1697995194::1697995194::1::::<><>::
-trojan.png::CompressedTexture2D::6613773426183820769::1697995194::1697995194::1::::<><>::
-::res://builds/::1697995195
-::res://builds/mac/::1697995194
-::res://builds/web/::1697995195
-index.apple-touch-icon.png::CompressedTexture2D::5166549417331964802::1697995194::1697995194::1::::<><>::
-index.icon.png::CompressedTexture2D::2414295361072224074::1697995194::1697995194::1::::<><>::
-index.png::CompressedTexture2D::4556053515609814096::1697995194::1697995194::1::::<><>::
-::res://builds/web/team14_sprint4_web/::1697995195
-index.apple-touch-icon.png::CompressedTexture2D::8385984980118834143::1697995195::1697995195::1::::<><>::
-index.icon.png::CompressedTexture2D::8116755103885484434::1697995195::1697995195::1::::<><>::
-index.png::CompressedTexture2D::533655437043830460::1697995195::1697995195::1::::<><>::
-::res://builds/windows/::1697995195
-::res://characters/::1697998908
-cyber_knight_player.tscn::PackedScene::6266489069086575696::1697998908::0::1::::<><>::res://characters/player.gd<>uid://cdbjg1sq6umym::::res://assets/visuals/player_jump_animation/3.png<>uid://bkdhagluo1bsm::::res://projectiles/laser.tscn<>uid://sn5yngsnyquw::::res://assets/visuals/player_dash_animation/1.png<>uid://50vtcshqpc50::::res://assets/visuals/player_jump_animation/1.png<>uid://bs55m50r1nlux::::res://assets/visuals/player_jump_animation/2.png<>uid://2cp4ljtmelma::::res://assets/visuals/Cyber_Knight.png<>uid://ex0t3kfj3m2t::::res://assets/visuals/player_idle_animation/1.png<>uid://dyo11ewxywmc4::::res://assets/visuals/player_idle_animation/2.png<>uid://cby1reglhlwpu::::res://assets/visuals/player_run_animation/1.png<>uid://d4f06y6d7143r::::res://assets/visuals/player_run_animation/2.png<>uid://b3fj3dar8ewbv::::res://assets/visuals/player_run_animation/3.png<>uid://bsu333loqwo3p::::res://assets/visuals/player_run_animation/4.png<>uid://74ojbddeik10::::res://assets/visuals/player_run_animation/5.png<>uid://dvia1sw81c8ao::::res://assets/visuals/player_run_animation/6.png<>uid://skhvtyxfo6t3::::res://assets/visuals/player_shoot_animation/1.png<>uid://7dyf1pvqur0s::::res://assets/visuals/player_walk_animation/1.png<>uid://b1ieawkhoyafb::::res://assets/visuals/player_shoot_animation/2.png<>uid://omdkhpd1rkok::::res://assets/visuals/player_walk_animation/2.png<>uid://d24mua2r1fcsf::::res://assets/visuals/player_walk_animation/3.png<>uid://cf1ejkegipghp::::res://assets/visuals/player_sword_slash_animation/1.png<>uid://nuuyieypkymo::::res://assets/visuals/player_sword_slash_animation/2.png<>uid://ctory7antxypk::::res://assets/visuals/player_walk_animation/4.png<>uid://2we48hiateul::::res://assets/visuals/player_sword_slash_animation/3.png<>uid://dap0u0qkdwpqy::::res://assets/visuals/player_walk_animation/5.png<>uid://bt7aai2um11le::::res://assets/visuals/player_walk_animation/6.png<>uid://c71a3t64v3ijx::::res://assets/visuals/player_walk_animation/7.png<>uid://3vckm6sb5j43::::res://assets/sound/8bit-SFX-Library/Player/jump-10.wav<>uid://c1cka6lwwr1bj::::res://assets/sound/8bit-SFX-Library/Player/jump-2.wav<>res://player_weapons/Lsword.gd<>uid://goys3aaltw2e::::res://assets/sound/8bit-SFX-Library/Player/sword sound.wav<>res://player_weapons/Rsword.gd<>uid://b3w22i1g3q7j::::res://assets/sound/8bit-SFX-Library/Shoot/laser-1.wav
-player.gd::GDScript::-1::1697996711::0::1::::<>CharacterBody2D<>::
-tutorial_character.gd::GDScript::-1::1697995195::0::1::::<>Node2D<>::
-tutorial_character.tscn::PackedScene::7634047903559368607::1697995195::0::1::::<><>::uid://chpuyugmtxpaq::::res://assets/visuals/tutorial_bot/rita1.png<>res://characters/tutorial_character.gd<>uid://2aqke5m0f5uv::::res://assets/visuals/tutorial_bot/rita2.png<>uid://28xybsl2lhhq::::res://assets/visuals/tutorial_bot/rita3.png<>uid://cmh7o6ebf4lmf::::res://assets/visuals/textbox/interaction_prompt.png<>uid://c0l3pv3ijbkuc::::res://ui_stuff/dialog_box.tscn
-::res://enemies/::1697998908
-chase_virus.gd::GDScript::-1::1697995195::0::1::::<>CharacterBody2D<>::
-chase_virus.tscn::PackedScene::6011724671889333505::1697998908::0::1::::<><>::uid://bbafmpdmdygm1::::res://assets/visuals/virus_assets/virus2/trojan3.png<>res://enemies/chase_virus.gd<>uid://drydh1jx10icw::::res://assets/visuals/virus_assets/virus2/trojan4.png<>uid://brs2tdmpa4iib::::res://assets/visuals/virus_assets/virus2/trojan2.png<>uid://ccvakmqjjjby3::::res://assets/visuals/virus_assets/virus2/trojan5.png<>uid://c1h048v5kcce8::::res://assets/visuals/virus_assets/virus2/trojan.png<>res://enemies/damage.gd<>uid://bni8m0p5q6csf::::res://assets/sound/8bit-SFX-Library/Enemy/enemy_death_sound.mp3
-damage.gd::GDScript::-1::1697995195::0::1::::DamageClass<>Node<>::
-troll_message_enemy.gd::GDScript::-1::1697998729::0::1::::<>Node2D<>::
-troll_message_enemy.tscn::PackedScene::5707566564229536239::1697998908::0::1::::<><>::res://enemies/troll_message_enemy.gd<>uid://cu4rv10j31f4a::::res://assets/visuals/virus_assets/error_message/troll_message2.png<>uid://delcob7epuija::::res://assets/visuals/virus_assets/error_message/troll_message.png
-turret_enemy.gd::GDScript::-1::1697995195::0::1::::<>CharacterBody2D<>::
-turret_enemy.tscn::PackedScene::3321729645884751609::1697995195::0::1::::<><>::res://enemies/turret_enemy.gd<>uid://burh3kiis7taf::::res://assets/visuals/virus_assets/virus1_neutral_animation/1.png<>uid://cebd51visa1ub::::res://assets/visuals/virus_assets/virus1_death_animation/Virus1.png<>uid://s3eonwoqw77x::::res://assets/visuals/virus_assets/virus1_neutral_animation/2.png<>uid://b66uadol47l7::::res://assets/visuals/virus_assets/virus1_neutral_animation/3.png<>res://enemies/damage.gd<>uid://bni8m0p5q6csf::::res://assets/sound/8bit-SFX-Library/Enemy/enemy_death_sound.mp3
-::res://global_variables/::1697995195
-globalVars.gd::GDScript::-1::1697995195::0::1::::<>Node<>::
-::res://HUD/::1697995770
-cyberknight_main_menu.png::CompressedTexture2D::4356991279091555179::1697995193::1697995193::1::::<><>::
-HUD.gd::GDScript::-1::1697995193::0::1::::<>CanvasLayer<>::
-HUD.tscn::PackedScene::1130593307264020462::1697995770::0::1::::<><>::res://HUD/HUD.gd<>uid://b3ctalljdgbbf::::res://HUD/cyberknight_main_menu.png<>uid://br132hkl31nbh::::res://assets/visuals/pop_ups_glitches/main_popup.png
-::res://levels/::1697998934
-popup-ad.gd::GDScript::-1::1697995195::0::1::::<>Sprite2D<>::
-progressCheckpoint.tscn::PackedScene::4621930985794692725::1697995195::0::1::::<><>::res://progressCheckpoint.gd
-testing_stage.gd::GDScript::-1::1697995196::0::1::::<>Node<>::
-testing_stage.tscn::PackedScene::2375228459384364680::1697995365::0::1::::<><>::res://levels/testing_stage.gd<>uid://cvjsfoj623loy::::res://characters/cyber_knight_player.tscn<>uid://cvpdskgj5sf3r::::res://assets/visuals/background.png<>uid://q1mpot5w04rc::::res://assets/placeholder/Screenshot 2023-10-15 234442.png<>uid://dbbvoahfjctef::::res://assets/visuals/pop_ups_glitches/blue_screen_of_death_windows_xp.png<>uid://3scuwym7kpnr::::res://assets/visuals/pop_ups_glitches/screen_glitch.png<>uid://crvla8hhfdayc::::res://assets/visuals/long_bg.png<>uid://b101xq2s7qgkm::::res://assets/visuals/pop_ups_glitches/cyberknight_popup.png<>uid://cpjitv2o50053::::res://assets/visuals/pop_ups_glitches/stolen_info.png<>uid://jrlsi4q2ptcp::::res://assets/visuals/long_bg_2.png<>uid://b3ctalljdgbbf::::res://HUD/cyberknight_main_menu.png<>uid://cuwoidya6ql1a::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_v2.png<>uid://cbf44ty5pfwey::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_long.png<>uid://c00relotklew7::::res://assets/visuals/pop_ups_glitches/fortune.png<>uid://x5c8fxh7vkef::::res://assets/visuals/pop_ups_glitches/explorer_alert.png<>uid://lebkd4iov1um::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_longv2.png<>uid://bofc5espf06el::::res://assets/visuals/pop_ups_glitches/frog.png<>uid://7idwict10qu3::::res://assets/visuals/pop_ups_glitches/q-walker.png<>uid://cokkbjdktn3co::::res://assets/visuals/pop_ups_glitches/color_glitch.jpg<>uid://dgt5qpndgskoq::::res://assets/visuals/pop_ups_glitches/encryvirus.png<>res://DeathFloor.gd<>uid://dhs1k55rpc5e3::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_small.png<>uid://bgr38phnyymdc::::res://assets/visuals/pop_ups_glitches/hacker_glitch.png<>uid://bnlcnwwrskwl2::::res://enemies/turret_enemy.tscn<>uid://cpumc5kx5rhab::::res://assets/visuals/pop_ups_glitches/malware.png<>uid://cympxbhgmtkqk::::res://assets/visuals/pop_ups_glitches/dog_pics_virus.png<>uid://dp7wu32mrg8g::::res://assets/visuals/pop_ups_glitches/flame.png<>uid://bsnc5spnkkeqr::::res://assets/visuals/pop_ups_glitches/zohra.png<>uid://cwpq1n8sjfl34::::res://assets/visuals/pop_ups_glitches/zohrav2.png<>uid://cln5pq4v14yf7::::res://ui_stuff/hearts_container.tscn<>uid://dcuraj7s6gnf1::::res://assets/visuals/pop_ups_glitches/trust.png<>uid://bnbq4yiry7faa::::res://ui_stuff/pause_menu.tscn<>uid://haae4ew5o5d0::::res://assets/visuals/pop_ups_glitches/empty_popup.png<>uid://crwehyo40egp2::::res://enemies/chase_virus.tscn<>uid://bainocbwwf5o2::::res://assets/visuals/ad-popups/win-ad.png<>res://levels/popup-ad.gd<>uid://dgnl5fu8wdovw::::res://assets/visuals/ad-popups/spamton-ad.png<>uid://dohr7b2nn5k5t::::res://assets/visuals/ad-popups/skull-ad.png<>uid://cl7hj7hebgo6n::::res://assets/visuals/ad-popups/self-destruct-ad.png<>uid://dggw0ecwwqvlj::::res://assets/visuals/ad-popups/prize-ad.png<>uid://ct4up7viawxmq::::res://assets/visuals/ad-popups/phone-bills-ad.png<>uid://bisbsygrl4oii::::res://assets/visuals/ad-popups/people-ad.png<>uid://dg21qps3dbk6v::::res://assets/visuals/ad-popups/christian-ad.png<>uid://o3rld58qr5e0::::res://assets/visuals/ad-popups/messenger-ad.png<>uid://b72448hvukimd::::res://assets/visuals/ad-popups/dating-ad.png<>uid://ddsvqwmyvid6q::::res://assets/visuals/ad-popups/existential-ad.png<>uid://dvnea5upbagh2::::res://assets/visuals/ad-popups/fed-ad.png<>uid://cl134rdkgiuxc::::res://assets/visuals/ad-popups/hit-ad.png<>uid://ch2mcny0pe2ac::::res://assets/visuals/ad-popups/mortgage-ad.png<>uid://cigrg7w7jmpnb::::res://assets/visuals/ad-popups/run-of-mill-ad.png<>uid://dcpjfedljb23::::res://assets/visuals/ad-popups/internet-citizen-ad.png<>uid://bpsrycvn67rno::::res://assets/visuals/ad-popups/music-ad.png<>uid://blixgu16wadmu::::res://assets/visuals/ad-popups/graduating-ad.png<>uid://vtcaxxpgn4r1::::res://assets/visuals/ad-popups/emoji-ad.png<>uid://jisclovacp3a::::res://assets/visuals/ad-popups/edge-ad.png<>uid://d05xchkohwmye::::res://assets/visuals/ad-popups/desktop-ad.png<>uid://cqxef30t0q6y8::::res://assets/visuals/ad-popups/chat-ad.png
-tutorial_level.gd::GDScript::-1::1697995196::0::1::::<>Node2D<>::
-tutorial_level.tscn::PackedScene::6989507179879732971::1697998934::0::1::::<><>::res://levels/tutorial_level.gd<>uid://ctaf87ptc1am3::::res://assets/visuals/placeholder_icon_assets/testroom.png<>uid://cvjsfoj623loy::::res://characters/cyber_knight_player.tscn<>uid://dg08whuakg7gd::::res://characters/tutorial_character.tscn<>uid://b635r7pahxgwj::::res://levels/progressCheckpoint.tscn<>uid://bnlcnwwrskwl2::::res://enemies/turret_enemy.tscn<>uid://c4d1fdxgg13p8::::res://assets/visuals/arrow keys.png<>uid://bnbq4yiry7faa::::res://ui_stuff/pause_menu.tscn<>uid://7bokcqa5qw4r::::res://assets/visuals/wasd.png
-::res://player_weapons/::1697995196
-Lsword.gd::GDScript::-1::1697995196::0::1::::<>Area2D<>::
-Rsword.gd::GDScript::-1::1697995196::0::1::::<>Area2D<>::
-::res://projectiles/::1697998908
-bullet.gd::GDScript::-1::1697995196::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::3660920400547319995::1697998908::0::1::::<><>::res://projectiles/bullet.gd<>uid://dv4esu2op4byb::::res://projectiles/turret_bullet.png
-cyberknight main menu.png::CompressedTexture2D::4914728482546258755::1697995196::1697995196::1::::<><>::
-laser.tscn::PackedScene::3094927605346359780::1697995770::0::1::::<><>::res://laser.gd<>uid://ou154fgcnys8::::res://assets/bullets/binary_projectile.png
-troll_message.png::CompressedTexture2D::7199411866636527790::1697997479::1697997472::1::::<><>::
-turret_bullet.png::CompressedTexture2D::8693370827441075597::1697995196::1697995196::1::::<><>::
-::res://ui_stuff/::1697995770
-battery_gui.gd::GDScript::-1::1697995196::0::1::::<>Panel<>::
-battery_gui.tscn::PackedScene::1084131012811723525::1697995196::0::1::::<><>::res://ui_stuff/battery_gui.gd<>uid://be4xa4r1wdv6x::::res://assets/visuals/health/battery_sprite_sheet.png
-dialogueManager.gd::GDScript::-1::1697995196::0::1::::<>Node<>::
-dialog_box.tscn::PackedScene::6551998622958142314::1697995196::0::1::::<><>::res://DialogBox.gd<>uid://dnbsmp8gn1j1s::::res://assets/visuals/textbox/textbox.png
-game_over.gd::GDScript::-1::1697995196::0::1::::<>Control<>::
-game_over.tscn::PackedScene::1809794448055376716::1697995770::0::1::::<><>::uid://qrsvc43sjjlw::::res://assets/visuals/game_over_background.jpg<>res://ui_stuff/game_over.gd<>uid://c5yikot36ps1l::::res://assets/sound/8bit-SFX-Library/Lose/glitch-sound-effect-12796 (1).mp3<>uid://6lyov12pekd0::::res://assets/fonts/GlitchGoblin.woff
-hearts_container.gd::GDScript::-1::1697995196::0::1::::<>HBoxContainer<>::
-hearts_container.tscn::PackedScene::5573604741061889554::1697995196::0::1::::<><>::
-pause_menu.gd::GDScript::-1::1697995196::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::3301964562373663796::1697995770::0::1::::<><>::res://ui_stuff/pause_menu.gd
-testroom.png::CompressedTexture2D::2803188596360152165::1697995196::1697995196::1::::<><>::
+::res://::1698002225
+DeathFloor.gd::GDScript::-1::1697335027::0::1::::<>Area2D<>::
+DialogBox.gd::GDScript::-1::1696730581::0::1::::<>MarginContainer<>::
+export_presets.cfg::TextFile::-1::1697916634::0::1::::<><>::
+icon.svg::CompressedTexture2D::1025480096012583275::1695068493::1696686822::1::::<><>::
+laser.gd::GDScript::-1::1697916634::0::1::::<>Area2D<>::
+progressCheckpoint.gd::GDScript::-1::1696730581::0::1::::<>Area2D<>::
+::res://assets/::1697393150
+::res://assets/bullets/::1698002156
+48.png::CompressedTexture2D::206271869217060439::1697054927::1697054927::1::::<><>::
+52.png::CompressedTexture2D::6493466988107264254::1697054927::1697054927::1::::<><>::
+binary_projectile.png::CompressedTexture2D::1025565112819724653::1698002156::1698002156::1::::<><>::
+::res://assets/fonts/::1697415709
+GlitchGoblin.woff::FontFile::2200045661416963351::1697389845::1697415709::1::::<><>::
+::res://assets/placeholder/::1698002156
+arrow.png::CompressedTexture2D::4911435241411602029::1698002156::1698002156::1::::<><>::
+laserRed01.png::CompressedTexture2D::3027701327628341917::1696730581::1696730581::1::::<><>::
+playerGrey_walk1.png::CompressedTexture2D::746570269040930530::1695068493::1695068493::1::::<><>::
+playerGrey_walk2.png::CompressedTexture2D::1253313233842893967::1695068493::1695068493::1::::<><>::
+Screenshot 2023-10-15 234442.png::CompressedTexture2D::1177451476707508064::1697463452::1697463452::1::::<><>::
+::res://assets/sound/::1696617155
+::res://assets/sound/8bit-SFX-Library/::1697416512
+::res://assets/sound/8bit-SFX-Library/Collect/::1696458741
+coin-1.wav::AudioStreamWAV::7172573229021336905::1696458741::1696458741::1::::<><>::
+coin-2.wav::AudioStreamWAV::2797761704263425048::1696458741::1696458741::1::::<><>::
+coin-3.wav::AudioStreamWAV::6391891218278135865::1696458741::1696458741::1::::<><>::
+coin-4.wav::AudioStreamWAV::2729676165855334616::1696458741::1696458741::1::::<><>::
+coin-5.wav::AudioStreamWAV::8600148363662080333::1696458741::1696458741::1::::<><>::
+coin-6.wav::AudioStreamWAV::6661683505965526673::1696458741::1696458741::1::::<><>::
+collect-1.wav::AudioStreamWAV::8789593696343993440::1696458741::1696458741::1::::<><>::
+collect-2.wav::AudioStreamWAV::8111104228248438060::1696458741::1696458741::1::::<><>::
+collect-3.wav::AudioStreamWAV::4487612645389150118::1696458741::1696458741::1::::<><>::
+collect-4.wav::AudioStreamWAV::1896195231257190287::1696458741::1696458741::1::::<><>::
+collect-5.wav::AudioStreamWAV::2131318413781200530::1696458741::1696458741::1::::<><>::
+collect-6.wav::AudioStreamWAV::5791079019219987468::1696458741::1696458741::1::::<><>::
+collect-7.wav::AudioStreamWAV::1666544643843372612::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Collide/::1696458741
+bonk-1.wav::AudioStreamWAV::1207011118961082405::1696458741::1696458741::1::::<><>::
+bonk-2.wav::AudioStreamWAV::1182676465801110677::1696458741::1696458741::1::::<><>::
+bonk-3.wav::AudioStreamWAV::5723706104680902095::1696458741::1696458741::1::::<><>::
+bonk-4.wav::AudioStreamWAV::3569821803230856411::1696458741::1696458741::1::::<><>::
+bonk-5.wav::AudioStreamWAV::4697427267751473954::1696458741::1696458741::1::::<><>::
+bonk-6.wav::AudioStreamWAV::4693429286405222899::1696458741::1696458741::1::::<><>::
+explode-1.wav::AudioStreamWAV::2149577587946337168::1696458741::1696458741::1::::<><>::
+explode-2.wav::AudioStreamWAV::1350990628047176768::1696458741::1696458741::1::::<><>::
+explode-3.wav::AudioStreamWAV::598149858413160469::1696458741::1696458741::1::::<><>::
+explode-4.wav::AudioStreamWAV::4295479189116095768::1696458741::1696458741::1::::<><>::
+explode-5.wav::AudioStreamWAV::7778504778624515107::1696458741::1696458741::1::::<><>::
+explode-6.wav::AudioStreamWAV::371812176274538424::1696458741::1696458741::1::::<><>::
+explode-7.wav::AudioStreamWAV::2353182708836587447::1696458741::1696458741::1::::<><>::
+hit-1.wav::AudioStreamWAV::7337349384182030917::1696458741::1696458741::1::::<><>::
+hit-2.wav::AudioStreamWAV::4876921248973635886::1696458741::1696458741::1::::<><>::
+hit-3.wav::AudioStreamWAV::5268158960669048222::1696458741::1696458741::1::::<><>::
+hit-4.wav::AudioStreamWAV::1862857438335902956::1696458741::1696458741::1::::<><>::
+hit-5.wav::AudioStreamWAV::6892037874280981496::1696458741::1696458741::1::::<><>::
+hit-6.wav::AudioStreamWAV::2613666572810227821::1696458741::1696458741::1::::<><>::
+hit-7.wav::AudioStreamWAV::1124991271976770442::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Enemy/::1697419264
+enemy_death_sound.mp3::AudioStreamMP3::3317417100949637609::1697416446::1697419264::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Environment/::1696458741
+birds.wav::AudioStreamWAV::597444290970598427::1696458741::1696458741::1::::<><>::
+computing.wav::AudioStreamWAV::3927927104817929653::1696458741::1696458741::1::::<><>::
+eery-1.wav::AudioStreamWAV::5690865408479417399::1696458741::1696458741::1::::<><>::
+eery-2.wav::AudioStreamWAV::2018312913847958985::1696458741::1696458741::1::::<><>::
+eery-3.wav::AudioStreamWAV::8599198407375292161::1696458741::1696458741::1::::<><>::
+falling-star.wav::AudioStreamWAV::3040450078949088501::1696458741::1696458741::1::::<><>::
+fire.wav::AudioStreamWAV::3194769101346901720::1696458741::1696458741::1::::<><>::
+flashback-2.wav::AudioStreamWAV::3441320023994602691::1696458741::1696458741::1::::<><>::
+flashback.wav::AudioStreamWAV::1853587921586311747::1696458741::1696458741::1::::<><>::
+going-up.wav::AudioStreamWAV::5311163417045157507::1696458741::1696458741::1::::<><>::
+machine.wav::AudioStreamWAV::951297027859757487::1696458741::1696458741::1::::<><>::
+radio.wav::AudioStreamWAV::2369903490283239679::1696458741::1696458741::1::::<><>::
+robot.wav::AudioStreamWAV::7906015097377636587::1696458741::1696458741::1::::<><>::
+secret-area-2.wav::AudioStreamWAV::3208485351988968145::1696458741::1696458741::1::::<><>::
+secret-area-3.wav::AudioStreamWAV::7448530033200620863::1696458741::1696458741::1::::<><>::
+secret-area.wav::AudioStreamWAV::6391748830285640496::1696458741::1696458741::1::::<><>::
+shut-down-2.wav::AudioStreamWAV::6215529347796548363::1696458741::1696458741::1::::<><>::
+shut-down.wav::AudioStreamWAV::2906814031330730876::1696458741::1696458741::1::::<><>::
+ufo-2.wav::AudioStreamWAV::9182773183925010257::1696458741::1696458741::1::::<><>::
+ufo.wav::AudioStreamWAV::7548012984213609623::1696458741::1696458741::1::::<><>::
+water.wav::AudioStreamWAV::328642671339077035::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Lose/::1697393161
+glitch-sound-effect-12796 (1).mp3::AudioStreamMP3::6928556102498204399::1697392071::1697393161::1::::<><>::
+lose-1.wav::AudioStreamWAV::7311856136395351421::1696458741::1696458741::1::::<><>::
+lose-2.wav::AudioStreamWAV::8348993288492509299::1696458741::1696458741::1::::<><>::
+lose-3.wav::AudioStreamWAV::1760990581290649330::1696458741::1696458741::1::::<><>::
+lose-4.wav::AudioStreamWAV::1862951231765156707::1696458741::1696458741::1::::<><>::
+lose-5.wav::AudioStreamWAV::3986964573423870574::1696458741::1696458741::1::::<><>::
+lose-6.wav::AudioStreamWAV::3766687668360113783::1696458741::1696458741::1::::<><>::
+lose-7.wav::AudioStreamWAV::9191077183227104057::1696458741::1696458741::1::::<><>::
+lose-8.wav::AudioStreamWAV::2407365547631854494::1696458741::1696458741::1::::<><>::
+lose-9.wav::AudioStreamWAV::4849242349601876810::1696458741::1696458741::1::::<><>::
+lose-10.wav::AudioStreamWAV::7247470583620073803::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Player/::1697294143
+blast-off-2.wav::AudioStreamWAV::1733812441265125653::1696458741::1696458741::1::::<><>::
+blast-off.wav::AudioStreamWAV::1588402315245513329::1696458741::1696458741::1::::<><>::
+footstep.wav::AudioStreamWAV::5247588073449248731::1696458741::1696458741::1::::<><>::
+jump-1.wav::AudioStreamWAV::5052964091449942406::1696458741::1696458741::1::::<><>::
+jump-2.wav::AudioStreamWAV::6602488873657208315::1696458741::1696458741::1::::<><>::
+jump-3.wav::AudioStreamWAV::2175781040671205965::1696458741::1696458741::1::::<><>::
+jump-4.wav::AudioStreamWAV::7354497668300096912::1696458741::1696458741::1::::<><>::
+jump-5.wav::AudioStreamWAV::5318989216048147093::1696458741::1696458741::1::::<><>::
+jump-6.wav::AudioStreamWAV::2941914618426864094::1696458741::1696458741::1::::<><>::
+jump-7.wav::AudioStreamWAV::1268912516012573271::1696458741::1696458741::1::::<><>::
+jump-8.wav::AudioStreamWAV::4536699314568769427::1696458741::1696458741::1::::<><>::
+jump-9.wav::AudioStreamWAV::5361168368767967500::1696458741::1696458741::1::::<><>::
+jump-10.wav::AudioStreamWAV::2008779525614247066::1696458741::1696458741::1::::<><>::
+landing.wav::AudioStreamWAV::7031818126766058193::1696458741::1696458741::1::::<><>::
+sword sound.wav::AudioStreamWAV::451525173170991290::1697294139::1697294143::1::::<><>::
+teleport.wav::AudioStreamWAV::6616836677739308461::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Shoot/::1696458741
+gun-1.wav::AudioStreamWAV::6478437135786055906::1696458741::1696458741::1::::<><>::
+gun-2.wav::AudioStreamWAV::7612546049824254702::1696458741::1696458741::1::::<><>::
+gun-3.wav::AudioStreamWAV::8905133379728515275::1696458741::1696458741::1::::<><>::
+gun-4.wav::AudioStreamWAV::8876896952910509284::1696458741::1696458741::1::::<><>::
+gun-5.wav::AudioStreamWAV::4454774883559746453::1696458741::1696458741::1::::<><>::
+laser-1.wav::AudioStreamWAV::129376842707348873::1696458741::1696458741::1::::<><>::
+laser-2.wav::AudioStreamWAV::8897812050040641602::1696458741::1696458741::1::::<><>::
+laser-3.wav::AudioStreamWAV::1676839958257358233::1696458741::1696458741::1::::<><>::
+laser-4.wav::AudioStreamWAV::6286208058664577838::1696458741::1696458741::1::::<><>::
+laser-5.wav::AudioStreamWAV::8234740591105545614::1696458741::1696458741::1::::<><>::
+laser-6.wav::AudioStreamWAV::3965242920304258684::1696458741::1696458741::1::::<><>::
+laser-7.wav::AudioStreamWAV::1261211372753442041::1696458741::1696458741::1::::<><>::
+laser-8.wav::AudioStreamWAV::8110268343768508147::1696458741::1696458741::1::::<><>::
+laser-9.wav::AudioStreamWAV::6756190689618626644::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/UI/::1696458741
+blip-1.wav::AudioStreamWAV::6853737970980571206::1696458741::1696458741::1::::<><>::
+blip-2.wav::AudioStreamWAV::1291150878664159130::1696458741::1696458741::1::::<><>::
+cancel-1.wav::AudioStreamWAV::5218513452847024647::1696458741::1696458741::1::::<><>::
+cancel-2.wav::AudioStreamWAV::4344764061781264040::1696458741::1696458741::1::::<><>::
+cancel-3.wav::AudioStreamWAV::7242444718302354603::1696458741::1696458741::1::::<><>::
+ok-1.wav::AudioStreamWAV::3003044277178269877::1696458741::1696458741::1::::<><>::
+ok-2.wav::AudioStreamWAV::459877143692495972::1696458741::1696458741::1::::<><>::
+ok-3.wav::AudioStreamWAV::196674829872235910::1696458741::1696458741::1::::<><>::
+::res://assets/sound/8bit-SFX-Library/Win/::1696458741
+win-1.wav::AudioStreamWAV::2069343280170573544::1696458741::1696458741::1::::<><>::
+win-2.wav::AudioStreamWAV::3504415898943780107::1696458741::1696458741::1::::<><>::
+win-3.wav::AudioStreamWAV::1374244126718532579::1696458741::1696458741::1::::<><>::
+win-4.wav::AudioStreamWAV::4311240260177573282::1696458741::1696458741::1::::<><>::
+win-5.wav::AudioStreamWAV::8115721639940144972::1696458741::1696458741::1::::<><>::
+win-6.wav::AudioStreamWAV::4208166467138514991::1696458741::1696458741::1::::<><>::
+win-7.wav::AudioStreamWAV::5768717867257632309::1696458741::1696458741::1::::<><>::
+win-8.wav::AudioStreamWAV::2543265996669334699::1696458741::1696458741::1::::<><>::
+win-9.wav::AudioStreamWAV::987406192903600638::1696458741::1696458741::1::::<><>::
+win-10.wav::AudioStreamWAV::7710260752747039238::1696458741::1696458741::1::::<><>::
+::res://assets/sound/music/::1696617155
+Abstract Vision 6 (Looped).ogg::AudioStreamOggVorbis::9202551563204776295::1696617155::1696617155::1::::<><>::
+::res://assets/visuals/::1697916633
+arrow keys.png::CompressedTexture2D::6816098730315010495::1697916633::1697916633::1::::<><>::
+background.png::CompressedTexture2D::6277987580316417389::1695068493::1695068493::1::::<><>::
+cyberknight_bg_long.png::CompressedTexture2D::2795407686863290741::1697292546::1697292546::1::::<><>::
+cyberknight_bg_mountains.png::CompressedTexture2D::8181137501090732436::1697292546::1697292546::1::::<><>::
+cyberknight_bg_sky.png::CompressedTexture2D::4831855353502796673::1697292546::1697292546::1::::<><>::
+cyberknight_bg_v2mountains.png::CompressedTexture2D::409684091170515236::1697292546::1697292546::1::::<><>::
+Cyber_Knight.png::CompressedTexture2D::1900190669189303620::1695575430::1695575430::1::::<><>::
+game_over_background.jpg::CompressedTexture2D::1159246478711972312::1697391581::1697393161::1::::<><>::
+long_bg.png::CompressedTexture2D::6010073273397473082::1697916633::1697916633::1::::<><>::
+long_bg_2.png::CompressedTexture2D::667494511521815559::1697916633::1697916633::1::::<><>::
+wasd.png::CompressedTexture2D::2248975399813191843::1697916633::1697916633::1::::<><>::
+::res://assets/visuals/ad-popups/::1697916633
+chat-ad.png::CompressedTexture2D::5943596861049946877::1697916633::1697916633::1::::<><>::
+christian-ad.png::CompressedTexture2D::7637741343714502291::1697916633::1697916633::1::::<><>::
+congrats-ad.png::CompressedTexture2D::1170263121199835002::1697916633::1697916633::1::::<><>::
+dating-ad.png::CompressedTexture2D::4690016205348679723::1697916633::1697916633::1::::<><>::
+desktop-ad.png::CompressedTexture2D::8977314920831169348::1697916633::1697916633::1::::<><>::
+edge-ad.png::CompressedTexture2D::649311692570730020::1697916633::1697916633::1::::<><>::
+emoji-ad.png::CompressedTexture2D::1513311571968998072::1697916633::1697916633::1::::<><>::
+existential-ad.png::CompressedTexture2D::7408292186287238730::1697916633::1697916633::1::::<><>::
+fed-ad.png::CompressedTexture2D::8660309153531293713::1697916633::1697916633::1::::<><>::
+graduating-ad.png::CompressedTexture2D::3176421283410812664::1697916633::1697916633::1::::<><>::
+hit-ad.png::CompressedTexture2D::5600345230824891776::1697916633::1697916633::1::::<><>::
+internet-citizen-ad.png::CompressedTexture2D::215622382406187918::1697916633::1697916633::1::::<><>::
+messenger-ad.png::CompressedTexture2D::1041498426091747137::1697916633::1697916633::1::::<><>::
+mortgage-ad.png::CompressedTexture2D::5320634368748027038::1697916633::1697916633::1::::<><>::
+music-ad.png::CompressedTexture2D::3477487323888367964::1697916633::1697916633::1::::<><>::
+people-ad.png::CompressedTexture2D::2985184364270978824::1697916633::1697916633::1::::<><>::
+phone-bills-ad.png::CompressedTexture2D::6167539191692926068::1697916633::1697916633::1::::<><>::
+prize-ad.png::CompressedTexture2D::7594162012332982387::1697916633::1697916633::1::::<><>::
+run-of-mill-ad.png::CompressedTexture2D::5347783002854630887::1697916633::1697916633::1::::<><>::
+self-destruct-ad.png::CompressedTexture2D::5611421518373147107::1697916633::1697916633::1::::<><>::
+skull-ad.png::CompressedTexture2D::8157445935414455511::1697916633::1697916633::1::::<><>::
+spamton-ad.png::CompressedTexture2D::7607953779489594800::1697916633::1697916633::1::::<><>::
+win-ad.png::CompressedTexture2D::2403750135366926967::1697916633::1697916633::1::::<><>::
+::res://assets/visuals/health/::1697397795
+battery_sprite_sheet.png::CompressedTexture2D::2728441054596285697::1697386924::1697397795::1::::<><>::
+::res://assets/visuals/placeholder_icon_assets/::1696730581
+blender - Copy.png::CompressedTexture2D::7031592814006437168::1696458741::1696458741::1::::<><>::
+brasero - Copy.png::CompressedTexture2D::2278553910877677765::1696458741::1696458741::1::::<><>::
+brasero.png::CompressedTexture2D::5575591350324097072::1696458741::1696458741::1::::<><>::
+checkbox - Copy.png::CompressedTexture2D::3611618140079911381::1696458741::1696458741::1::::<><>::
+cs-accessibility - Copy.png::CompressedTexture2D::2199702893654117925::1696458741::1696458741::1::::<><>::
+cs-applets - Copy.png::CompressedTexture2D::6780462388305035291::1696458741::1696458741::1::::<><>::
+cs-bluetooth - Copy.png::CompressedTexture2D::7884971124570231000::1696458741::1696458741::1::::<><>::
+cs-color - Copy.png::CompressedTexture2D::3511819783068848122::1696458741::1696458741::1::::<><>::
+cs-date-time - Copy.png::CompressedTexture2D::5474539564698687923::1696458741::1696458741::1::::<><>::
+cs-default-applications - Copy.png::CompressedTexture2D::2833278260163669053::1696458741::1696458741::1::::<><>::
+cs-desktop-effects - Copy.png::CompressedTexture2D::8427632898187873::1696458741::1696458741::1::::<><>::
+cs-details - Copy.png::CompressedTexture2D::893688964136453407::1696458741::1696458741::1::::<><>::
+cs-display - Copy.png::CompressedTexture2D::1734697726415987880::1696458741::1696458741::1::::<><>::
+cs-login - Copy.png::CompressedTexture2D::8223586100509156128::1696458741::1696458741::1::::<><>::
+cs-network - Copy.png::CompressedTexture2D::2528087058217880589::1696458741::1696458741::1::::<><>::
+cs-panel - Copy.png::CompressedTexture2D::6763309878804898640::1696458741::1696458741::1::::<><>::
+cs-privacy - Copy.png::CompressedTexture2D::1198944734739492236::1696458741::1696458741::1::::<><>::
+cs-screensaver - Copy.png::CompressedTexture2D::5043350770670367570::1696458741::1696458741::1::::<><>::
+cs-startup-programs - Copy.png::CompressedTexture2D::1270740068947912675::1696458741::1696458741::1::::<><>::
+cs-themes - Copy.png::CompressedTexture2D::3562899828845171216::1696458741::1696458741::1::::<><>::
+cs-tiling - Copy.png::CompressedTexture2D::2857311508449391911::1696458741::1696458741::1::::<><>::
+firestarter - Copy.png::CompressedTexture2D::3837824253428219692::1696458741::1696458741::1::::<><>::
+gconf-editor - Copy.png::CompressedTexture2D::9217632328667393796::1696458741::1696458741::1::::<><>::
+gmahjongg - Copy.png::CompressedTexture2D::3976043220652144474::1696458741::1696458741::1::::<><>::
+gnome-do - Copy.png::CompressedTexture2D::1268247403495654642::1696458741::1696458741::1::::<><>::
+gnome-glchess - Copy.png::CompressedTexture2D::7482427048335307297::1696458741::1696458741::1::::<><>::
+gnome-glines - Copy.png::CompressedTexture2D::9028792478229691506::1696458741::1696458741::1::::<><>::
+testroom.png::CompressedTexture2D::6106793617457750212::1696730581::1696730581::1::::<><>::
+::res://assets/visuals/player_dash_animation/::1696212025
+1.png::CompressedTexture2D::1292101158032622286::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/player_idle_animation/::1696212025
+1.png::CompressedTexture2D::329789404141026665::1696212025::1696212025::1::::<><>::
+2.png::CompressedTexture2D::8874320904559435809::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/player_jump_animation/::1696212025
+1.png::CompressedTexture2D::2158583873117956725::1696212025::1696212025::1::::<><>::
+2.png::CompressedTexture2D::3713595756237615955::1696212025::1696212025::1::::<><>::
+3.png::CompressedTexture2D::4986030837935463804::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/player_run_animation/::1695575430
+1.png::CompressedTexture2D::4894184497301809810::1695575430::1695575430::1::::<><>::
+2.png::CompressedTexture2D::9206634998412220333::1695575430::1695575430::1::::<><>::
+3.png::CompressedTexture2D::4362626807879276383::1695575430::1695575430::1::::<><>::
+4.png::CompressedTexture2D::3692858990590689327::1695575430::1695575430::1::::<><>::
+5.png::CompressedTexture2D::2306776118628386261::1695575430::1695575430::1::::<><>::
+6.png::CompressedTexture2D::8649790201092218978::1695575430::1695575430::1::::<><>::
+::res://assets/visuals/player_shoot_animation/::1696212025
+1.png::CompressedTexture2D::1284506519717790654::1696212025::1696212025::1::::<><>::
+2.png::CompressedTexture2D::4228089679584934571::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/player_sword_slash_animation/::1697381157
+1.png::CompressedTexture2D::5177718878994747213::1697381157::1696617155::1::::<><>::
+2.png::CompressedTexture2D::955000148761598534::1697381157::1696617155::1::::<><>::
+3.png::CompressedTexture2D::1940811489258918427::1697381157::1696617155::1::::<><>::
+::res://assets/visuals/player_walk_animation/::1695575430
+1.png::CompressedTexture2D::2253703656230637096::1695575430::1695575430::1::::<><>::
+2.png::CompressedTexture2D::1007616743905767510::1695575430::1695575430::1::::<><>::
+3.png::CompressedTexture2D::9114992146482272153::1695575430::1695575430::1::::<><>::
+4.png::CompressedTexture2D::6136407414360589424::1695575430::1695575430::1::::<><>::
+5.png::CompressedTexture2D::7191782696347329428::1695575430::1695575430::1::::<><>::
+6.png::CompressedTexture2D::3786069263767946418::1695575430::1695575430::1::::<><>::
+7.png::CompressedTexture2D::7072609234817519737::1695575430::1695575430::1::::<><>::
+::res://assets/visuals/pop_ups_glitches/::1698001762
+Antivurs_detected.png::CompressedTexture2D::3348880331402867650::1697990241::1698002227::1::::<><>::
+blue_screen_of_death_windows_xp.png::CompressedTexture2D::7232815341487095385::1697292546::1697292546::1::::<><>::
+color_glitch.jpg::CompressedTexture2D::5776738389405675354::1697292546::1697292546::1::::<><>::
+cyberknight_popup.png::CompressedTexture2D::4264560660149736184::1697292546::1697292546::1::::<><>::
+cyberknight_popup_long.png::CompressedTexture2D::4855165717010291408::1697292546::1697292546::1::::<><>::
+cyberknight_popup_longv2.png::CompressedTexture2D::780413568718837476::1697292546::1697292546::1::::<><>::
+cyberknight_popup_small.png::CompressedTexture2D::7689340878706780348::1697292546::1697292546::1::::<><>::
+cyberknight_popup_v2.png::CompressedTexture2D::6222899069673559824::1697292546::1697292546::1::::<><>::
+despair.png::CompressedTexture2D::8777271879648992249::1698000006::1698002227::1::::<><>::
+dog_pics_virus.png::CompressedTexture2D::6483098039525394730::1697335027::1697335027::1::::<><>::
+downfall.png::CompressedTexture2D::7672432596300601022::1697999195::1698002227::1::::<><>::
+empty_popup.png::CompressedTexture2D::491330579038472583::1697335027::1697335027::1::::<><>::
+encryvirus.png::CompressedTexture2D::7621469180797858852::1697292546::1697292546::1::::<><>::
+explorer_alert.png::CompressedTexture2D::1676455399989832701::1697292546::1697292546::1::::<><>::
+flame.png::CompressedTexture2D::243515523424423592::1697335027::1697335027::1::::<><>::
+fortune.png::CompressedTexture2D::6580211834502343156::1697335027::1697335027::1::::<><>::
+frog.png::CompressedTexture2D::3379561629787644807::1697335027::1697335027::1::::<><>::
+hacker_glitch.png::CompressedTexture2D::2844407973624207032::1697335027::1697335027::1::::<><>::
+leave2.png::CompressedTexture2D::5516305842588647323::1697999620::1698002227::1::::<><>::
+Leave.png::CompressedTexture2D::2154896298784121624::1697991292::1698002227::1::::<><>::
+main_popup.png::CompressedTexture2D::3635053523027838157::1697292546::1697292546::1::::<><>::
+malware.png::CompressedTexture2D::5867695344773220325::1697292546::1697292546::1::::<><>::
+Now.png::CompressedTexture2D::622173397914929291::1697991328::1698002227::1::::<><>::
+q-walker.png::CompressedTexture2D::2262779881069151180::1697335027::1697335027::1::::<><>::
+screen_glitch.png::CompressedTexture2D::2002604764479021399::1697292546::1697292546::1::::<><>::
+spyware_popup.png::CompressedTexture2D::5753942151360761704::1697292546::1697292546::1::::<><>::
+stolen_info.png::CompressedTexture2D::5844774233146821412::1697335027::1697335027::1::::<><>::
+struggle.png::CompressedTexture2D::3568460183703525971::1698001721::1698002227::1::::<><>::
+trust.png::CompressedTexture2D::7341960005317001048::1697335027::1697335027::1::::<><>::
+zohra.png::CompressedTexture2D::3676832756979931793::1697335027::1697335027::1::::<><>::
+zohrav2.png::CompressedTexture2D::6348980230871774393::1697335027::1697335027::1::::<><>::
+::res://assets/visuals/textbox/::1696730581
+interaction_prompt.png::CompressedTexture2D::5631527714660546721::1696730581::1696730581::1::::<><>::
+textbox.png::CompressedTexture2D::8074896570644255050::1696730581::1696730581::1::::<><>::
+::res://assets/visuals/tutorial_bot/::1696730581
+rita1.png::CompressedTexture2D::5296387198379738420::1696730581::1696730581::1::::<><>::
+rita2.png::CompressedTexture2D::1896088365066585197::1696730581::1696730581::1::::<><>::
+rita3.png::CompressedTexture2D::1964662674864334210::1696730581::1696730581::1::::<><>::
+::res://assets/visuals/virus_assets/::1698002156
+::res://assets/visuals/virus_assets/error_message/::1698002156
+troll_message2.png::CompressedTexture2D::6237556290238195038::1698002156::1698002156::1::::<><>::
+troll_message.png::CompressedTexture2D::7462872118185965538::1698002156::1698002156::1::::<><>::
+::res://assets/visuals/virus_assets/virus1_death_animation/::1696212025
+Virus1.png::CompressedTexture2D::5055898242923402353::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/virus_assets/virus1_neutral_animation/::1696212025
+1.png::CompressedTexture2D::3825767537432221169::1696212025::1696212025::1::::<><>::
+2.png::CompressedTexture2D::1321470349131620167::1696212025::1696212025::1::::<><>::
+3.png::CompressedTexture2D::136102501954129838::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/virus_assets/virus1_walk_animation/::1696212025
+1.png::CompressedTexture2D::4326580544964770660::1696212025::1696212025::1::::<><>::
+2.png::CompressedTexture2D::7748870765535485801::1696212025::1696212025::1::::<><>::
+3.png::CompressedTexture2D::2643812746435133173::1696212025::1696212025::1::::<><>::
+4.png::CompressedTexture2D::2273954316141500818::1696212025::1696212025::1::::<><>::
+::res://assets/visuals/virus_assets/virus2/::1697381157
+trojan2.png::CompressedTexture2D::3618463290791999225::1697381157::1697381157::1::::<><>::
+trojan3.png::CompressedTexture2D::2456935334856674682::1697381157::1697381157::1::::<><>::
+trojan4.png::CompressedTexture2D::8402213491150016898::1697381157::1697381157::1::::<><>::
+trojan5.png::CompressedTexture2D::4956589500854945096::1697381157::1697381157::1::::<><>::
+trojan.png::CompressedTexture2D::6613773426183820769::1697381157::1697381157::1::::<><>::
+::res://builds/::1696617155
+::res://builds/mac/::1697916633
+::res://builds/web/::1697916633
+index.apple-touch-icon.png::CompressedTexture2D::5166549417331964802::1696617155::1696212025::1::::<><>::
+index.icon.png::CompressedTexture2D::2414295361072224074::1696617155::1696212025::1::::<><>::
+index.png::CompressedTexture2D::4556053515609814096::1696212025::1696212025::1::::<><>::
+::res://builds/web/team14_sprint4_web/::1697916634
+index.apple-touch-icon.png::CompressedTexture2D::8385984980118834143::1697916633::1697916633::1::::<><>::
+index.icon.png::CompressedTexture2D::8116755103885484434::1697916633::1697916633::1::::<><>::
+index.png::CompressedTexture2D::533655437043830460::1697916634::1697916634::1::::<><>::
+::res://builds/windows/::1697916634
+::res://characters/::1698002156
+cyber_knight_player.tscn::PackedScene::6266489069086575696::1697599350::0::1::::<><>::res://characters/player.gd<>uid://cdbjg1sq6umym::::res://assets/visuals/player_jump_animation/3.png<>uid://bkdhagluo1bsm::::res://projectiles/laser.tscn<>uid://sn5yngsnyquw::::res://assets/visuals/player_dash_animation/1.png<>uid://50vtcshqpc50::::res://assets/visuals/player_jump_animation/1.png<>uid://bs55m50r1nlux::::res://assets/visuals/player_jump_animation/2.png<>uid://2cp4ljtmelma::::res://assets/visuals/Cyber_Knight.png<>uid://ex0t3kfj3m2t::::res://assets/visuals/player_idle_animation/1.png<>uid://dyo11ewxywmc4::::res://assets/visuals/player_idle_animation/2.png<>uid://cby1reglhlwpu::::res://assets/visuals/player_run_animation/1.png<>uid://d4f06y6d7143r::::res://assets/visuals/player_run_animation/2.png<>uid://b3fj3dar8ewbv::::res://assets/visuals/player_run_animation/3.png<>uid://bsu333loqwo3p::::res://assets/visuals/player_run_animation/4.png<>uid://74ojbddeik10::::res://assets/visuals/player_run_animation/5.png<>uid://dvia1sw81c8ao::::res://assets/visuals/player_run_animation/6.png<>uid://skhvtyxfo6t3::::res://assets/visuals/player_shoot_animation/1.png<>uid://7dyf1pvqur0s::::res://assets/visuals/player_walk_animation/1.png<>uid://b1ieawkhoyafb::::res://assets/visuals/player_shoot_animation/2.png<>uid://omdkhpd1rkok::::res://assets/visuals/player_walk_animation/2.png<>uid://d24mua2r1fcsf::::res://assets/visuals/player_walk_animation/3.png<>uid://cf1ejkegipghp::::res://assets/visuals/player_sword_slash_animation/1.png<>uid://nuuyieypkymo::::res://assets/visuals/player_sword_slash_animation/2.png<>uid://ctory7antxypk::::res://assets/visuals/player_walk_animation/4.png<>uid://2we48hiateul::::res://assets/visuals/player_sword_slash_animation/3.png<>uid://dap0u0qkdwpqy::::res://assets/visuals/player_walk_animation/5.png<>uid://bt7aai2um11le::::res://assets/visuals/player_walk_animation/6.png<>uid://c71a3t64v3ijx::::res://assets/visuals/player_walk_animation/7.png<>uid://3vckm6sb5j43::::res://assets/sound/8bit-SFX-Library/Player/jump-10.wav<>uid://c1cka6lwwr1bj::::res://assets/sound/8bit-SFX-Library/Player/jump-2.wav<>res://player_weapons/Lsword.gd<>uid://goys3aaltw2e::::res://assets/sound/8bit-SFX-Library/Player/sword sound.wav<>res://player_weapons/Rsword.gd<>uid://b3w22i1g3q7j::::res://assets/sound/8bit-SFX-Library/Shoot/laser-1.wav
+player.gd::GDScript::-1::1698002156::0::1::::<>CharacterBody2D<>::
+tutorial_character.gd::GDScript::-1::1697480510::0::1::::<>Node2D<>::
+tutorial_character.tscn::PackedScene::7634047903559368607::1697057397::0::1::::<><>::uid://chpuyugmtxpaq::::res://assets/visuals/tutorial_bot/rita1.png<>res://characters/tutorial_character.gd<>uid://2aqke5m0f5uv::::res://assets/visuals/tutorial_bot/rita2.png<>uid://28xybsl2lhhq::::res://assets/visuals/tutorial_bot/rita3.png<>uid://cmh7o6ebf4lmf::::res://assets/visuals/textbox/interaction_prompt.png<>uid://c0l3pv3ijbkuc::::res://ui_stuff/dialog_box.tscn
+::res://enemies/::1698002156
+chase_virus.gd::GDScript::-1::1697415709::0::1::::<>CharacterBody2D<>::
+chase_virus.tscn::PackedScene::6011724671889333505::1697599350::0::1::::<><>::uid://bbafmpdmdygm1::::res://assets/visuals/virus_assets/virus2/trojan3.png<>res://enemies/chase_virus.gd<>uid://drydh1jx10icw::::res://assets/visuals/virus_assets/virus2/trojan4.png<>uid://brs2tdmpa4iib::::res://assets/visuals/virus_assets/virus2/trojan2.png<>uid://ccvakmqjjjby3::::res://assets/visuals/virus_assets/virus2/trojan5.png<>uid://c1h048v5kcce8::::res://assets/visuals/virus_assets/virus2/trojan.png<>res://enemies/damage.gd<>uid://bni8m0p5q6csf::::res://assets/sound/8bit-SFX-Library/Enemy/enemy_death_sound.mp3
+damage.gd::GDScript::-1::1697916634::0::1::::DamageClass<>Node<>::
+troll_message_enemy.gd::GDScript::-1::1698002156::0::1::::<>Node2D<>::
+troll_message_enemy.tscn::PackedScene::5707566564229536239::1698002156::0::1::::<><>::res://enemies/troll_message_enemy.gd<>uid://cu4rv10j31f4a::::res://assets/visuals/virus_assets/error_message/troll_message2.png<>uid://delcob7epuija::::res://assets/visuals/virus_assets/error_message/troll_message.png
+turret_enemy.gd::GDScript::-1::1697415709::0::1::::<>CharacterBody2D<>::
+turret_enemy.tscn::PackedScene::3321729645884751609::1697599350::0::1::::<><>::res://enemies/turret_enemy.gd<>uid://burh3kiis7taf::::res://assets/visuals/virus_assets/virus1_neutral_animation/1.png<>uid://cebd51visa1ub::::res://assets/visuals/virus_assets/virus1_death_animation/Virus1.png<>uid://s3eonwoqw77x::::res://assets/visuals/virus_assets/virus1_neutral_animation/2.png<>uid://b66uadol47l7::::res://assets/visuals/virus_assets/virus1_neutral_animation/3.png<>res://enemies/damage.gd<>uid://bni8m0p5q6csf::::res://assets/sound/8bit-SFX-Library/Enemy/enemy_death_sound.mp3
+::res://global_variables/::1697381157
+globalVars.gd::GDScript::-1::1697381157::0::1::::<>Node<>::
+::res://HUD/::1697916633
+cyberknight_main_menu.png::CompressedTexture2D::4356991279091555179::1697916633::1697916633::1::::<><>::
+HUD.gd::GDScript::-1::1697916633::0::1::::<>CanvasLayer<>::
+HUD.tscn::PackedScene::1130593307264020462::1697916633::0::1::::<><>::res://HUD/HUD.gd<>uid://b3ctalljdgbbf::::res://HUD/cyberknight_main_menu.png<>uid://br132hkl31nbh::::res://assets/visuals/pop_ups_glitches/main_popup.png
+::res://levels/::1698002156
+popup-ad.gd::GDScript::-1::1697916634::0::1::::<>Sprite2D<>::
+progressCheckpoint.tscn::PackedScene::4621930985794692725::1697055437::0::1::::<><>::res://progressCheckpoint.gd
+testing_stage.gd::GDScript::-1::1697463452::0::1::::<>Node<>::
+testing_stage.tscn::PackedScene::2375228459384364680::1698002156::0::1::::<><>::res://levels/testing_stage.gd<>uid://cvjsfoj623loy::::res://characters/cyber_knight_player.tscn<>uid://cvpdskgj5sf3r::::res://assets/visuals/background.png<>uid://q1mpot5w04rc::::res://assets/placeholder/Screenshot 2023-10-15 234442.png<>uid://dbbvoahfjctef::::res://assets/visuals/pop_ups_glitches/blue_screen_of_death_windows_xp.png<>uid://3scuwym7kpnr::::res://assets/visuals/pop_ups_glitches/screen_glitch.png<>uid://crvla8hhfdayc::::res://assets/visuals/long_bg.png<>uid://b101xq2s7qgkm::::res://assets/visuals/pop_ups_glitches/cyberknight_popup.png<>uid://cpjitv2o50053::::res://assets/visuals/pop_ups_glitches/stolen_info.png<>uid://jrlsi4q2ptcp::::res://assets/visuals/long_bg_2.png<>uid://b3ctalljdgbbf::::res://HUD/cyberknight_main_menu.png<>uid://cuwoidya6ql1a::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_v2.png<>uid://cbf44ty5pfwey::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_long.png<>uid://c00relotklew7::::res://assets/visuals/pop_ups_glitches/fortune.png<>uid://x5c8fxh7vkef::::res://assets/visuals/pop_ups_glitches/explorer_alert.png<>uid://lebkd4iov1um::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_longv2.png<>uid://bofc5espf06el::::res://assets/visuals/pop_ups_glitches/frog.png<>uid://7idwict10qu3::::res://assets/visuals/pop_ups_glitches/q-walker.png<>uid://cokkbjdktn3co::::res://assets/visuals/pop_ups_glitches/color_glitch.jpg<>uid://dgt5qpndgskoq::::res://assets/visuals/pop_ups_glitches/encryvirus.png<>res://DeathFloor.gd<>uid://dhs1k55rpc5e3::::res://assets/visuals/pop_ups_glitches/cyberknight_popup_small.png<>uid://bgr38phnyymdc::::res://assets/visuals/pop_ups_glitches/hacker_glitch.png<>uid://bnlcnwwrskwl2::::res://enemies/turret_enemy.tscn<>uid://cpumc5kx5rhab::::res://assets/visuals/pop_ups_glitches/malware.png<>uid://cympxbhgmtkqk::::res://assets/visuals/pop_ups_glitches/dog_pics_virus.png<>uid://dp7wu32mrg8g::::res://assets/visuals/pop_ups_glitches/flame.png<>uid://bsnc5spnkkeqr::::res://assets/visuals/pop_ups_glitches/zohra.png<>uid://cwpq1n8sjfl34::::res://assets/visuals/pop_ups_glitches/zohrav2.png<>uid://cln5pq4v14yf7::::res://ui_stuff/hearts_container.tscn<>uid://dcuraj7s6gnf1::::res://assets/visuals/pop_ups_glitches/trust.png<>uid://bnbq4yiry7faa::::res://ui_stuff/pause_menu.tscn<>uid://haae4ew5o5d0::::res://assets/visuals/pop_ups_glitches/empty_popup.png<>uid://crwehyo40egp2::::res://enemies/chase_virus.tscn<>uid://bainocbwwf5o2::::res://assets/visuals/ad-popups/win-ad.png<>res://levels/popup-ad.gd<>uid://dgnl5fu8wdovw::::res://assets/visuals/ad-popups/spamton-ad.png<>uid://dohr7b2nn5k5t::::res://assets/visuals/ad-popups/skull-ad.png<>uid://cl7hj7hebgo6n::::res://assets/visuals/ad-popups/self-destruct-ad.png<>uid://dggw0ecwwqvlj::::res://assets/visuals/ad-popups/prize-ad.png<>uid://ct4up7viawxmq::::res://assets/visuals/ad-popups/phone-bills-ad.png<>uid://bisbsygrl4oii::::res://assets/visuals/ad-popups/people-ad.png<>uid://dg21qps3dbk6v::::res://assets/visuals/ad-popups/christian-ad.png<>uid://o3rld58qr5e0::::res://assets/visuals/ad-popups/messenger-ad.png<>uid://b72448hvukimd::::res://assets/visuals/ad-popups/dating-ad.png<>uid://ddsvqwmyvid6q::::res://assets/visuals/ad-popups/existential-ad.png<>uid://dvnea5upbagh2::::res://assets/visuals/ad-popups/fed-ad.png<>uid://cl134rdkgiuxc::::res://assets/visuals/ad-popups/hit-ad.png<>uid://ch2mcny0pe2ac::::res://assets/visuals/ad-popups/mortgage-ad.png<>uid://cigrg7w7jmpnb::::res://assets/visuals/ad-popups/run-of-mill-ad.png<>uid://dcpjfedljb23::::res://assets/visuals/ad-popups/internet-citizen-ad.png<>uid://bpsrycvn67rno::::res://assets/visuals/ad-popups/music-ad.png<>uid://blixgu16wadmu::::res://assets/visuals/ad-popups/graduating-ad.png<>uid://vtcaxxpgn4r1::::res://assets/visuals/ad-popups/emoji-ad.png<>uid://jisclovacp3a::::res://assets/visuals/ad-popups/edge-ad.png<>uid://d05xchkohwmye::::res://assets/visuals/ad-popups/desktop-ad.png<>uid://cqxef30t0q6y8::::res://assets/visuals/ad-popups/chat-ad.png
+tutorial_level.gd::GDScript::-1::1697208864::0::1::::<>Node2D<>::
+tutorial_level.tscn::PackedScene::6989507179879732971::1698002156::0::1::::<><>::res://levels/tutorial_level.gd<>uid://ctaf87ptc1am3::::res://assets/visuals/placeholder_icon_assets/testroom.png<>uid://cvjsfoj623loy::::res://characters/cyber_knight_player.tscn<>uid://cb8evdyey4ocj::::res://assets/placeholder/arrow.png<>uid://dg08whuakg7gd::::res://characters/tutorial_character.tscn<>uid://b635r7pahxgwj::::res://levels/progressCheckpoint.tscn<>uid://bnlcnwwrskwl2::::res://enemies/turret_enemy.tscn<>uid://c4d1fdxgg13p8::::res://assets/visuals/arrow keys.png<>uid://bnbq4yiry7faa::::res://ui_stuff/pause_menu.tscn<>uid://7bokcqa5qw4r::::res://assets/visuals/wasd.png
+::res://player_weapons/::1697916634
+Lsword.gd::GDScript::-1::1697916634::0::1::::<>Area2D<>::
+Rsword.gd::GDScript::-1::1697916634::0::1::::<>Area2D<>::
+::res://projectiles/::1698002156
+bullet.gd::GDScript::-1::1697056474::0::1::::<>Area2D<>::
+bullet.tscn::PackedScene::3660920400547319995::1697403693::0::1::::<><>::res://projectiles/bullet.gd<>uid://dv4esu2op4byb::::res://projectiles/turret_bullet.png
+cyberknight main menu.png::CompressedTexture2D::4914728482546258755::1696730586::1696730586::1::::<><>::
+laser.tscn::PackedScene::3094927605346359780::1698002156::0::1::::<><>::res://laser.gd<>uid://ou154fgcnys8::::res://assets/bullets/binary_projectile.png
+troll_message.png::CompressedTexture2D::7199411866636527790::1698002156::1698002156::1::::<><>::
+turret_bullet.png::CompressedTexture2D::8693370827441075597::1696816393::1697056370::1::::<><>::
+::res://ui_stuff/::1697916634
+battery_gui.gd::GDScript::-1::1697398853::0::1::::<>Panel<>::
+battery_gui.tscn::PackedScene::1084131012811723525::1697399486::0::1::::<><>::res://ui_stuff/battery_gui.gd<>uid://be4xa4r1wdv6x::::res://assets/visuals/health/battery_sprite_sheet.png
+dialogueManager.gd::GDScript::-1::1696730581::0::1::::<>Node<>::
+dialog_box.tscn::PackedScene::6551998622958142314::1696730581::0::1::::<><>::res://DialogBox.gd<>uid://dnbsmp8gn1j1s::::res://assets/visuals/textbox/textbox.png
+game_over.gd::GDScript::-1::1697916634::0::1::::<>Control<>::
+game_over.tscn::PackedScene::1809794448055376716::1697916634::0::1::::<><>::uid://qrsvc43sjjlw::::res://assets/visuals/game_over_background.jpg<>res://ui_stuff/game_over.gd<>uid://c5yikot36ps1l::::res://assets/sound/8bit-SFX-Library/Lose/glitch-sound-effect-12796 (1).mp3<>uid://6lyov12pekd0::::res://assets/fonts/GlitchGoblin.woff
+hearts_container.gd::GDScript::-1::1697398306::0::1::::<>HBoxContainer<>::
+hearts_container.tscn::PackedScene::5573604741061889554::1697399486::0::1::::<><>::
+pause_menu.gd::GDScript::-1::1697403855::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::3301964562373663796::1697599350::0::1::::<><>::res://ui_stuff/pause_menu.gd
+testroom.png::CompressedTexture2D::2803188596360152165::1696730581::1696730581::1::::<><>::
