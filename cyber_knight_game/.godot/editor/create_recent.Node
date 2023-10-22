@@ -1,6 +1,11 @@
+ColorRect
+Node2D
+TextureRect
+Sprite2D
+ParallaxLayer
+ParallaxBackground
 CollisionShape2D
 Area2D
-Sprite2D
 AnimatedSprite2D
 Timer
 Button
@@ -9,7 +14,6 @@ AudioStreamPlayer2D
 CanvasLayer
 Label
 GridContainer
-ColorRect
 VBoxContainer
 MarginContainer
 HBoxContainer
@@ -18,9 +22,7 @@ Node
 CharacterBody2D
 RigidBody2D
 StaticBody2D
-TextureRect
 Marker2D
 TileMap
 NinePatchRect
 Camera2D
-Node2D
