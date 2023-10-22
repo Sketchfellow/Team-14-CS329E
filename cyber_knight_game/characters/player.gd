@@ -14,6 +14,8 @@ var is_jumping = false
 var dash_direction = 0
 var facing = 'l'
 var screen_size 
+
+var bullet_position
 var is_shooting = false
 var is_slashing = false
 var can_slash = true
@@ -38,11 +40,14 @@ func shoot():
 		is_shooting = true
 		var b = Bullet.instantiate()
 		if facing == 'r':
-			b.position = get_position_delta() + Vector2(100, 0) #gets position of CharacterBody2d
+			bullet_position = get_position_delta() + Vector2(100, 0) #gets position of CharacterBody2d
 		else:
-			b.position = get_position_delta() + Vector2(-100, 0) #gets position of CharacterBody2d
+			bullet_position = get_position_delta() + Vector2(-100, 0) #gets position of CharacterBody2d
 			b.rotation_degrees = -180
-		add_child(b)
+		
+		
+		get_tree().get_root().add_child(b)
+		b.position = self.global_position + bullet_position
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_shooting = false

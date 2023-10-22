@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6t1frmd1hget"]
+[gd_scene load_steps=13 format=3 uid="uid://c6t1frmd1hget"]
 
 [ext_resource type="Script" path="res://levels/tutorial_level.gd" id="1_6kmgm"]
 [ext_resource type="Texture2D" uid="uid://ctaf87ptc1am3" path="res://assets/visuals/placeholder_icon_assets/testroom.png" id="1_y8lwm"]
 [ext_resource type="PackedScene" uid="uid://cvjsfoj623loy" path="res://characters/cyber_knight_player.tscn" id="2_1fg8l"]
+[ext_resource type="Texture2D" uid="uid://cb8evdyey4ocj" path="res://assets/placeholder/arrow.png" id="2_xm3wf"]
 [ext_resource type="PackedScene" uid="uid://dg08whuakg7gd" path="res://characters/tutorial_character.tscn" id="3_07gmp"]
 [ext_resource type="PackedScene" uid="uid://b635r7pahxgwj" path="res://levels/progressCheckpoint.tscn" id="5_7jif5"]
 [ext_resource type="PackedScene" uid="uid://bnlcnwwrskwl2" path="res://enemies/turret_enemy.tscn" id="6_glbka"]
@@ -75,8 +76,13 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_t823d")
 
 [node name="tutorialLevel" type="Node2D"]
-position = Vector2(-248, 17)
+position = Vector2(-747, 85)
 script = ExtResource("1_6kmgm")
+
+[node name="direction_arrow" type="Sprite2D" parent="."]
+position = Vector2(-1414, -91)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_xm3wf")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_eo4a0")

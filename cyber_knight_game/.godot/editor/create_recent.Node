@@ -1,7 +1,10 @@
+Sprite2D
+CollisionShape2D
+Area2D
+AnimatedSprite2D
 Timer
 Button
 AudioStreamPlayer
-Sprite2D
 AudioStreamPlayer2D
 CanvasLayer
 Label
@@ -9,12 +12,9 @@ GridContainer
 ColorRect
 VBoxContainer
 MarginContainer
-CollisionShape2D
-Area2D
 HBoxContainer
 Panel
 Node
-AnimatedSprite2D
 CharacterBody2D
 RigidBody2D
 StaticBody2D
