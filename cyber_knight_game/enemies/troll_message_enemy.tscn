@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnk111ja8kvdv"]
+
+[ext_resource type="Script" path="res://enemies/troll_message_enemy.gd" id="1_jd2x3"]
+[ext_resource type="Texture2D" uid="uid://cu4rv10j31f4a" path="res://assets/visuals/virus_assets/error_message/troll_message2.png" id="1_knrvi"]
+[ext_resource type="Texture2D" uid="uid://delcob7epuija" path="res://assets/visuals/virus_assets/error_message/troll_message.png" id="2_nflfk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s4w0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_knrvi")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nflfk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2rir"]
+size = Vector2(331, 230)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2jiy"]
+size = Vector2(330, 1229)
+
+[node name="troll_message_enemy" type="Node2D"]
+script = ExtResource("1_jd2x3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_s4w0b")
+
+[node name="hurtbox" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(-1.5, -3)
+shape = SubResource("RectangleShape2D_e2rir")
+
+[node name="detectbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectbox"]
+position = Vector2(-1, 604.5)
+shape = SubResource("RectangleShape2D_r2jiy")
+
+[connection signal="body_entered" from="detectbox" to="." method="_on_detectbox_body_entered"]
