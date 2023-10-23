@@ -50,7 +50,10 @@ func _on_trigger_body_entered(body):
 	
 func _on_damage_is_hit():
 	is_hit = true
+	chase = true
+	$AnimatedSprite2D.modulate = Color.RED
 	await get_tree().create_timer(0.5).timeout
+	$AnimatedSprite2D.modulate = Color.WHITE
 	is_hit = false
 
 

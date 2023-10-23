@@ -79,8 +79,9 @@ func _on_bullet_timer_timeout():
 
 func _on_damage_is_hit():
 	is_hit = true
-	
+	$AnimatedSprite2D.modulate = Color.RED
 	await get_tree().create_timer(0.5).timeout
+	$AnimatedSprite2D.modulate = Color.WHITE
 	is_hit = false
 	
 
