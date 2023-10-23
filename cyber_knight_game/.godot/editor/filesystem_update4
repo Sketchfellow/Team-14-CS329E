@@ -25,3 +25,4 @@ res://levels/testing_stage.gd
 res://enemies/troll_message_enemy.gd
 res://enemies/turret_enemy.gd
 res://characters/tutorial_character.gd
+res://characters/tutorial_character.tscn

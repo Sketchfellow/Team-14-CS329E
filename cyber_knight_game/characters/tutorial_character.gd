@@ -2,10 +2,10 @@ extends Node2D
 
 var dialogue_lines: Array[String] = [
 	"Hello! I am the OS assistant that will help guide you.",
-	"Use the left and right arrow keys or A and D to navigate horizontally.",
+	"There are virus popups that you can close by clicking its close button.",
 	"Press the up arrow key or W to jump.",
 	"While in the air press the jump button again to perform a quick dash.",
-	"Gah! A virus has invaded this directory! Use the mouse buttons or Z and X to attack!"	
+	"A virus has invaded this directory! Use the mouse buttons or Z and X to attack!"	
 ]
 
 var line = 0
