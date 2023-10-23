@@ -1,3 +1,6 @@
+ColorRect
+Label
+AnimatedSprite2D
 Timer
 Button
 Sprite2D
@@ -5,18 +8,15 @@ TextEdit
 RichTextLabel
 Camera2D
 VideoStreamPlayer
-ColorRect
 Node2D
 TextureRect
 ParallaxLayer
 ParallaxBackground
 CollisionShape2D
 Area2D
-AnimatedSprite2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 CanvasLayer
-Label
 GridContainer
 VBoxContainer
 MarginContainer

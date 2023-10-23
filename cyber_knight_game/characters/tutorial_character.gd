@@ -5,7 +5,8 @@ var dialogue_lines: Array[String] = [
 	"There are virus popups that you can close by clicking its close button.",
 	"Press the up arrow key or W to jump.",
 	"While in the air press the jump button again to perform a quick dash.",
-	"A virus has invaded this directory! Use the mouse buttons or Z and X to attack!"	
+	"A virus has invaded this directory! Use the mouse buttons or Z and X to attack!",
+	"Jump on error messages, close virus ad popups, and make it to the end."	
 ]
 
 var line = 0

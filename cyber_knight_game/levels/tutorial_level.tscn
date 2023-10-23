@@ -168,7 +168,7 @@ position = Vector2(8086, 253)
 position = Vector2(-774, -7)
 
 [node name="Area2D2" parent="." instance=ExtResource("5_7jif5")]
-position = Vector2(864, 18)
+position = Vector2(2045, 84)
 
 [node name="Area2D3" parent="." instance=ExtResource("5_7jif5")]
 position = Vector2(4213, -58)

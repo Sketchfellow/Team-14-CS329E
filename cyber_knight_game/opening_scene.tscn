@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1iguea1yr2mt"]
+
+[ext_resource type="Script" path="res://openingScene.gd" id="1_fyk5a"]
+[ext_resource type="Texture2D" uid="uid://cwlptx7avqth5" path="res://assets/visuals/opening_scene/1.png" id="2_arohr"]
+[ext_resource type="Texture2D" uid="uid://jotyvry05pjh" path="res://assets/visuals/opening_scene/2.png" id="3_v6s8y"]
+[ext_resource type="Texture2D" uid="uid://b6unn8dm3id67" path="res://assets/visuals/opening_scene/3.png" id="4_ksclw"]
+[ext_resource type="Texture2D" uid="uid://bu2kdtap331uh" path="res://assets/visuals/opening_scene/4.png" id="5_i10w7"]
+[ext_resource type="Texture2D" uid="uid://dxaie1lvttaai" path="res://assets/visuals/opening_scene/5.png" id="6_14dif"]
+[ext_resource type="Texture2D" uid="uid://bjtirwtxe3qa7" path="res://assets/visuals/opening_scene/6.png" id="7_1hx2q"]
+[ext_resource type="Texture2D" uid="uid://clvhg0u1jx2pn" path="res://assets/visuals/opening_scene/7.png" id="8_tm3mi"]
+[ext_resource type="Texture2D" uid="uid://biemqmo6u2k0p" path="res://assets/visuals/opening_scene/8.png" id="9_kovcg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4wxv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_arohr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v6s8y")
+}],
+"loop": true,
+"name": &"1",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ksclw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i10w7")
+}],
+"loop": true,
+"name": &"2",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_14dif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1hx2q")
+}],
+"loop": true,
+"name": &"3",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tm3mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kovcg")
+}],
+"loop": true,
+"name": &"4",
+"speed": 3.0
+}]
+
+[node name="openingScene" type="Node2D"]
+script = ExtResource("1_fyk5a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1408.0
+offset_bottom = 781.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(670, 321)
+sprite_frames = SubResource("SpriteFrames_m4wxv")
+animation = &"4"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 660.0
+offset_right = 1435.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 50
+text = "Press spacebar to continue
+"
