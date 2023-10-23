@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 750
+var speed = 1000
 @export var damage : int = 8
 
 func _ready():

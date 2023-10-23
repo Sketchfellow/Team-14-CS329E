@@ -14,4 +14,5 @@ func _process(delta):
 
 func _on_body_entered(body: CharacterBody2D):
 	if enter:
+		GlobalVars.progress=6
 		get_tree().change_scene_to_file("res://levels/level2.tscn")

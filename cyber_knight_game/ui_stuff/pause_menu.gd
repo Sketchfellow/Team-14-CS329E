@@ -16,6 +16,7 @@ func _on_resume_button_pressed():
 	is_paused = false
 
 func _on_main_menu_button_pressed():
+	GlobalVars.progress = 0
 	get_tree().change_scene_to_file("res://HUD/HUD.tscn")
 	is_paused = false
 	

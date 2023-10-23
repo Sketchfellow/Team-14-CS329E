@@ -14,5 +14,6 @@ func _process(delta):
 	for enemy in enemies:
 		enemy_count += 1
 	if enemy_count == 0:
-		await get_tree().create_timer(0.4).timeout
+		await get_tree().create_timer(1).timeout
+		GlobalVars.progress = 5
 		get_tree().change_scene_to_file("res://loading.tscn")
