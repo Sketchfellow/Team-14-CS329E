@@ -84,6 +84,31 @@ position = Vector2(-1414, -91)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_xm3wf")
 
+[node name="direction_arrow2" type="Sprite2D" parent="."]
+position = Vector2(-175, -98)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_xm3wf")
+
+[node name="direction_arrow3" type="Sprite2D" parent="."]
+position = Vector2(1633, -96)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_xm3wf")
+
+[node name="direction_arrow4" type="Sprite2D" parent="."]
+position = Vector2(2918, -457)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_xm3wf")
+
+[node name="direction_arrow5" type="Sprite2D" parent="."]
+position = Vector2(5193, -96)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_xm3wf")
+
+[node name="direction_arrow6" type="Sprite2D" parent="."]
+position = Vector2(7391, -96)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_xm3wf")
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_eo4a0")
 format = 2

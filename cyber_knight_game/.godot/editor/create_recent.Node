@@ -1,3 +1,7 @@
+TextEdit
+RichTextLabel
+Camera2D
+VideoStreamPlayer
 ColorRect
 Node2D
 TextureRect
@@ -25,4 +29,3 @@ StaticBody2D
 Marker2D
 TileMap
 NinePatchRect
-Camera2D
