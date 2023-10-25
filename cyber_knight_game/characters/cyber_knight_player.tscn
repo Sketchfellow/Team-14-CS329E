@@ -168,11 +168,11 @@ data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 201, 233, 189, 233, 208, 236, 231
 format = 1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7d2w2"]
-radius = 30.0
+radius = 52.0
 height = 144.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_54b04"]
-radius = 30.0
+radius = 56.0
 height = 148.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vm36u"]
@@ -195,7 +195,9 @@ shape = SubResource("CapsuleShape2D_cc0sj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8y21m")
-animation = &"neutral"
+animation = &"slash"
+frame = 2
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.7, 0.7)
@@ -224,6 +226,7 @@ script = ExtResource("30_pfcoc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lsword"]
 position = Vector2(0, -2)
+rotation = 3.14159
 shape = SubResource("CapsuleShape2D_7d2w2")
 
 [node name="Rsword" type="Area2D" parent="."]

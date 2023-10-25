@@ -1,5 +1,4 @@
-res://enemies/chase_virus.tscn
-res://enemies/chase_virus.gd
 res://characters/cyber_knight_player.tscn
-res://enemies/turret_enemy.gd
+res://enemies/chase_virus.tscn
 res://enemies/turret_enemy.tscn
+res://levels/testing_stage.tscn
