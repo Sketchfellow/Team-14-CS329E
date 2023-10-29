@@ -13,6 +13,7 @@ var rest = true
 var attack = false
 var chase = false
 var bullet_speed = 25
+var direction
 
 var is_hit = false
 var dead = false
@@ -51,7 +52,7 @@ func _ready():
 	
 	#if rest:
 	#	$AnimatedSprite2D.play("neutral")
-	
+	$AnimatedSprite2D.flip_h = true
 	$AnimatedSprite2D.play("neutral")
 
 func shoot():
@@ -59,19 +60,26 @@ func shoot():
 	bullet_instance.global_position = bullet_spawn.global_position
 	get_tree().get_root().add_child(bullet_instance)
 	
-	bullet_instance.look_at(GlobalVars.playerPosition)
+	#bullet_instance.look_at(GlobalVars.playerPosition)
 	
+	#changes bullet direction
 	if $AnimatedSprite2D.flip_h:
-		bullet_instance.velocity.x = 10
-	else:
 		bullet_instance.velocity.x = -10
+	else:
+		bullet_instance.velocity.x = 10
+		
+	direction = (GlobalVars.playerPosition - self.position).normalized()
+	
+	# turret enemy faces player
+	if direction.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
 	
 	if player:
 		bullet_instance.look_at(GlobalVars.playerPosition)
 	
 	bullet_instance.speed = bullet_speed
-
-
 func _on_bullet_timer_timeout():
 	if attack:
 		shoot()
