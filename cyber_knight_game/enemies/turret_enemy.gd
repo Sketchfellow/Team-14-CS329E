@@ -80,10 +80,10 @@ func shoot():
 		bullet_instance.look_at(GlobalVars.playerPosition)
 	
 	bullet_instance.speed = bullet_speed
+	
 func _on_bullet_timer_timeout():
 	if attack:
 		shoot()
-
 
 func _on_damage_is_hit():
 	is_hit = true
