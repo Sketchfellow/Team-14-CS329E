@@ -1,11 +1,12 @@
-CollisionShape2D
+AnimatedSprite2D
 Area2D
+CollisionShape2D
+Sprite2D
+Timer
+Node
 ColorRect
 Label
-AnimatedSprite2D
-Timer
 Button
-Sprite2D
 TextEdit
 RichTextLabel
 Camera2D
@@ -22,7 +23,6 @@ VBoxContainer
 MarginContainer
 HBoxContainer
 Panel
-Node
 CharacterBody2D
 RigidBody2D
 StaticBody2D

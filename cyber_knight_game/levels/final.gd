@@ -17,7 +17,6 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_deathfloor_body_entered(body):
 	if body.name == 'player':
 		get_tree().change_scene_to_file("res://ui_stuff/game_over.tscn")
@@ -25,3 +24,9 @@ func _on_deathfloor_body_entered(body):
 
 func _on_final_boss_isdead():
 	get_tree().change_scene_to_file("res://HUD/HUD.tscn")
+
+
+func _on_powerup_body_entered(body):
+	if body.is_in_group("player"):
+		$player.powerup = true
+		$powerup.queue_free()

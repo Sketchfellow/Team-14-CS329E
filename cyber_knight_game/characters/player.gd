@@ -22,6 +22,7 @@ var is_slashing = false
 var can_slash = true
 
 var is_vulnerable = true
+var powerup = false
 
 @export var max_health = 3
 var current_health: int = max_health
@@ -41,6 +42,8 @@ func shoot():
 		$AnimatedSprite2D.animation = "shoot"
 		is_shooting = true
 		var b = Bullet.instantiate()
+		if powerup:
+			b.powered = true
 		if facing == 'r':
 			bullet_position = get_position_delta() + Vector2(100, 0) #gets position of CharacterBody2d
 		else:
@@ -225,3 +228,6 @@ func _on_hurt_box_area_entered(area):
 		
 	
 	
+
+
+
