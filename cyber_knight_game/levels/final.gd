@@ -29,4 +29,5 @@ func _on_final_boss_isdead():
 func _on_powerup_body_entered(body):
 	if body.is_in_group("player"):
 		$player.powerup = true
+		$finalBoss.poweredLaser = true
 		$powerup.queue_free()

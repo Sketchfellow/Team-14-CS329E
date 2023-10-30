@@ -10,6 +10,7 @@ var hostile = false
 var willGoForward = true
 var direction
 var canSpawnEnemies = true
+var poweredLaser = false
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -96,13 +97,19 @@ func _on_move_timer_timeout():
 
 func _on_head_damage_area_entered(area):
 	if area.is_in_group("playerProjectile"):
-		damage(3)
+		if poweredLaser:
+			damage(6)
+		else:
+			damage(3)
 	elif area.name == "Lsword" or area.name == "Rsword":
 		damage(15)
 
 
 func _on_body_damage_area_entered(area):
 	if area.is_in_group("playerProjectile"):
-		damage(1)
+		if poweredLaser:
+			damage(2)
+		else:
+			damage(1)
 	elif area.name == "Lsword" or area.name == "Rsword":
 		damage(5)

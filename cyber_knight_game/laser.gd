@@ -10,10 +10,14 @@ func _ready():
 	await get_tree().create_timer(4).timeout
 	queue_free()
 
+func _process(delta):
+	if powered:
+		damage = 16
+
 func _physics_process(delta):
 	position += transform.x * speed * delta
 	if powered:
-		var damage = 12
+		var damage = 16
 		$AnimatedSprite2D.play('color')
 		$AnimatedSprite2D.show()
 		$Sprite2D.hide()
