@@ -1,3 +1,4 @@
+res://projectiles
 res://
 res://levels
 res://assets/visuals
@@ -14,7 +15,6 @@ res://assets/visuals/pop_ups_glitches
 res://assets/sound/8bit-SFX-Library/Player
 res://HUD
 res://player_weapons
-res://projectiles
 res://global_variables
 res://assets/visuals/textbox
 res://characters

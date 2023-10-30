@@ -111,7 +111,7 @@ func dash():
 
 		
 func _process(delta):
-	GlobalVars.playerPosition = self.position
+	GlobalVars.playerPosition = self.global_position
 
 func _physics_process(delta):
 	# Add the gravity.

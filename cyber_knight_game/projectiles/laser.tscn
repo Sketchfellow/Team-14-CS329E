@@ -7,7 +7,7 @@
 radius = 14.0
 height = 152.0
 
-[node name="laser" type="Area2D"]
+[node name="laser" type="Area2D" groups=["playerProjectile"]]
 script = ExtResource("1_jcedx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

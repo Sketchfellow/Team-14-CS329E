@@ -26,7 +26,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("chase")
 		
 		
-		direction = (GlobalVars.playerPosition - self.position).normalized()
+		direction = (GlobalVars.playerPosition - self.global_position).normalized()
 		
 		if direction.x > 0:
 			$AnimatedSprite2D.flip_h = true
@@ -51,9 +51,10 @@ func _on_trigger_body_entered(body):
 func _on_damage_is_hit():
 	is_hit = true
 	chase = true
-	$AnimatedSprite2D.modulate = Color.RED
-	await get_tree().create_timer(0.5).timeout
-	$AnimatedSprite2D.modulate = Color.WHITE
+	if $AnimatedSprite2D.animation != "death":
+		$AnimatedSprite2D.modulate = Color.RED
+		await get_tree().create_timer(0.5).timeout
+		$AnimatedSprite2D.modulate = Color.WHITE
 	is_hit = false
 
 

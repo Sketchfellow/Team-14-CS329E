@@ -16,6 +16,10 @@ func _on_try_again_pressed():
 		get_tree().change_scene_to_file("res://levels/testing_stage.tscn")
 	elif GlobalVars.progress == 6:
 		get_tree().change_scene_to_file("res://levels/level2.tscn")
+	elif GlobalVars.progress == 7:
+		get_tree().change_scene_to_file("res://levels/final.tscn")
+	else:
+		get_tree().change_scene_to_file("res://HUD/HUD.tscn")
 
 
 func _on_quit_pressed():

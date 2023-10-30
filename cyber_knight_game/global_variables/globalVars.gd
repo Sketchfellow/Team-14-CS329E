@@ -2,4 +2,4 @@ extends Node
 
 var progress = 0
 
-var playerPosition
+var playerPosition = Vector2(0,0)

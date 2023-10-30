@@ -5,6 +5,8 @@ var speed = 1000
 
 func _ready():
 	show()
+	await get_tree().create_timer(4).timeout
+	queue_free()
 
 func _physics_process(delta):
 	position += transform.x * speed * delta
@@ -14,4 +16,4 @@ func _on_body_entered(body):
 		for child in body.get_children():
 			if child is DamageClass:
 				child.hit(damage)
-				queue_free()
+		queue_free()

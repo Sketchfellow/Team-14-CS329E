@@ -1,0 +1,138 @@
+[gd_scene load_steps=16 format=3 uid="uid://dtjthr3xrnf1t"]
+
+[ext_resource type="Script" path="res://enemies/final_boss.gd" id="1_a8w4i"]
+[ext_resource type="Texture2D" uid="uid://dcsvt1s6h6fnk" path="res://assets/visuals/virus_assets/virus3_final_boss/1.png" id="1_tgdo2"]
+[ext_resource type="PackedScene" uid="uid://bsfm3axunfum2" path="res://projectiles/bullet.tscn" id="2_21maa"]
+[ext_resource type="Texture2D" uid="uid://b4plmr403ecgs" path="res://assets/visuals/virus_assets/virus3_final_boss/4.png" id="2_khmbf"]
+[ext_resource type="Texture2D" uid="uid://dd4uuoevc4px3" path="res://assets/visuals/virus_assets/virus3_final_boss/5.png" id="3_s24h6"]
+[ext_resource type="Texture2D" uid="uid://ddx8sprvqr7pp" path="res://assets/visuals/virus_assets/virus3_final_boss/2.png" id="4_2mi7q"]
+[ext_resource type="PackedScene" uid="uid://bnlcnwwrskwl2" path="res://enemies/turret_enemy.tscn" id="4_ch12h"]
+[ext_resource type="Texture2D" uid="uid://bwjjrqw7w40il" path="res://assets/visuals/virus_assets/virus3_final_boss/3.png" id="5_4uelr"]
+[ext_resource type="AudioStream" uid="uid://c5gs4ervul25y" path="res://assets/sound/8bit-SFX-Library/Collide/hit-5.wav" id="9_h3m5v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7y75a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tgdo2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_khmbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s24h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_tgdo2")
+}],
+"loop": false,
+"name": &"backward",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tgdo2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tgdo2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_2mi7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4uelr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_tgdo2")
+}],
+"loop": false,
+"name": &"forward",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxqk8"]
+radius = 194.0
+height = 442.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjy6q"]
+radius = 130.815
+height = 261.63
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dec7i"]
+radius = 129.4
+height = 258.801
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3hqb"]
+radius = 192.0
+height = 446.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfaan"]
+size = Vector2(3568, 1034)
+
+[node name="finalBoss" type="CharacterBody2D"]
+script = ExtResource("1_a8w4i")
+bullet = ExtResource("2_21maa")
+turretVirus = ExtResource("4_ch12h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7y75a")
+animation = &"forward"
+
+[node name="bodyCollision" type="CollisionShape2D" parent="."]
+position = Vector2(38, 159)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xxqk8")
+
+[node name="headCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-199, -86)
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_rjy6q")
+
+[node name="headDamage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="headDamage"]
+position = Vector2(-199, -86)
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_dec7i")
+
+[node name="bodyDamage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bodyDamage"]
+position = Vector2(38, 159)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_d3hqb")
+
+[node name="detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+position = Vector2(43, 40)
+shape = SubResource("RectangleShape2D_tfaan")
+
+[node name="attackTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="moveTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-288, -121)
+
+[node name="turretSpawn" type="Marker2D" parent="."]
+position = Vector2(-640, -441)
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_h3m5v")
+
+[connection signal="area_entered" from="headDamage" to="." method="_on_head_damage_area_entered"]
+[connection signal="area_entered" from="bodyDamage" to="." method="_on_body_damage_area_entered"]
+[connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
+[connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="moveTimer" to="." method="_on_move_timer_timeout"]
