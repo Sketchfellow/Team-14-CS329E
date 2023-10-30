@@ -1,13 +1,9 @@
 res://characters/cyber_knight_player.tscn
+res://characters/player.gd
 res://enemies/chase_virus.tscn
 res://enemies/turret_enemy.tscn
 res://levels/testing_stage.tscn
 res://levels/level2.tscn
 res://levels/tutorial_level.tscn
-res://loading.tscn
 res://levels/final.tscn
-res://levels/final.gd
-res://enemies/turret_enemy.gd
-res://global_variables/globalVars.gd
 res://enemies/final_boss.tscn
-res://levels/testing_stage.gd

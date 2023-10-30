@@ -17,6 +17,7 @@ var screen_size
 
 var bullet_position
 var is_shooting = false
+var can_shoot = true
 var is_slashing = false
 var can_slash = true
 
@@ -33,7 +34,8 @@ func _ready():
 	$Rsword/CollisionShape2D.disabled = true
 
 func shoot():
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and can_shoot:
+		can_shoot = false
 		$GunSound.play()
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "shoot"
@@ -51,6 +53,8 @@ func shoot():
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_shooting = false
+		await get_tree().create_timer(0.3).timeout
+		can_shoot = true
 
 func slash():
 	if Input.is_action_just_pressed("slash") and can_slash:
