@@ -15,6 +15,9 @@ var dash_direction = 0
 var facing = 'l'
 var screen_size 
 
+var can_jump = true
+var has_jumped = false
+
 var bullet_position
 var is_shooting = false
 var can_shoot = true
@@ -30,9 +33,15 @@ signal health_changed
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	is_vulnerable = false
 	$dashCollisionShape.disabled=true
 	$Lsword/CollisionShape2D.disabled = true
 	$Rsword/CollisionShape2D.disabled = true
+	$AnimatedSprite2D.flip_h = true
+	facing = 'r'
+	await get_tree().create_timer(1).timeout
+	is_vulnerable = true
+	
 
 func shoot():
 	if Input.is_action_just_pressed("shoot") and can_shoot:
@@ -91,7 +100,7 @@ func dash():
 		facing = 'r'
 		dash_direction = 1
 	
-	if Input.is_action_just_pressed("jump") and can_dash and not is_on_floor():
+	if Input.is_action_just_pressed("jump") and can_dash and not is_on_floor() and has_jumped:
 		$dashCollisionShape.disabled=false
 		$CollisionShape2D.disabled=true
 		
@@ -116,9 +125,17 @@ func dash():
 		await get_tree().create_timer(1.0).timeout
 		can_dash = true
 
+func jump_leeway():
+	await get_tree().create_timer(0.2).timeout
+	can_jump = false
 		
 func _process(delta):
 	GlobalVars.playerPosition = self.global_position
+	if is_on_floor():
+		has_jumped = false
+		can_jump = true
+	else:
+		jump_leeway()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -135,8 +152,9 @@ func _physics_process(delta):
 	dash()
 	
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and (can_jump or is_on_floor()):
 		is_jumping = true
+		has_jumped = true
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.play()
