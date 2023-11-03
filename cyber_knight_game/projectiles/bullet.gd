@@ -20,3 +20,8 @@ func die():
 
 func flip():
 	$Sprite2D.flip_h = true
+
+
+func _on_area_entered(area):
+	if area.name in ['Lsword', 'Rsword']:
+		queue_free()

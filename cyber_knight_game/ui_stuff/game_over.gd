@@ -19,6 +19,7 @@ func _on_try_again_pressed():
 	elif GlobalVars.progress == 7:
 		get_tree().change_scene_to_file("res://levels/final.tscn")
 	else:
+		GlobalVars.progress = 0
 		get_tree().change_scene_to_file("res://HUD/HUD.tscn")
 
 

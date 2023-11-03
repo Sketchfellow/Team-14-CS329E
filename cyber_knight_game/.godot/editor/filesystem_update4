@@ -1,5 +1,6 @@
+res://projectiles/bullet.gd
+res://projectiles/bullet.tscn
 res://characters/cyber_knight_player.tscn
-res://characters/player.gd
 res://enemies/chase_virus.tscn
 res://enemies/turret_enemy.tscn
 res://levels/testing_stage.tscn
@@ -8,3 +9,4 @@ res://levels/tutorial_level.tscn
 res://levels/final.tscn
 res://enemies/final_boss.tscn
 res://projectiles/laser.tscn
+res://ui_stuff/game_over.gd
