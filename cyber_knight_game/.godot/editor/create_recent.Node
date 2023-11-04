@@ -1,8 +1,10 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
+Timer
 AnimatedSprite2D
 Area2D
 CollisionShape2D
 Sprite2D
-Timer
 Node
 ColorRect
 Label
@@ -15,8 +17,6 @@ Node2D
 TextureRect
 ParallaxLayer
 ParallaxBackground
-AudioStreamPlayer
-AudioStreamPlayer2D
 CanvasLayer
 GridContainer
 VBoxContainer

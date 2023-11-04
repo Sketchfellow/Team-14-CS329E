@@ -49,6 +49,7 @@ func _on_trigger_body_entered(body):
 
 	
 func _on_damage_is_hit():
+	$hitSound.play()
 	is_hit = true
 	chase = true
 	if $AnimatedSprite2D.animation != "death":
