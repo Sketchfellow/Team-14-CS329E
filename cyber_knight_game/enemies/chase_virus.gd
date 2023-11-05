@@ -9,6 +9,12 @@ var chase = false
 var direction
 var is_hit = false
 
+var health_orb = preload("res://enemies/health_orb.tscn")
+#var turret_enemy = preload("res://enemies/turret_enemy.tscn")
+var orb_spawned = false
+var enemylocation = self.position
+signal health_spawned
+
 func _ready():
 	$AnimatedSprite2D.animation = "neutral"
 	
@@ -69,3 +75,16 @@ func _on_knockbacklogic_area_entered(area):
 		
 		self.velocity.x = 500
 		await get_tree().create_timer(0.1).timeout
+
+
+func _on_damage_enemy_died():
+	enemylocation = self.position
+			
+	var orb = health_orb.instantiate()
+	orb.position = enemylocation
+	#orb_spawned = true
+	if not orb_spawned:
+		get_parent().add_child(orb)
+		health_spawned.emit()
+		orb_spawned = true
+

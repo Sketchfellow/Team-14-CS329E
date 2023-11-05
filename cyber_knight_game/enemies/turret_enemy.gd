@@ -14,6 +14,12 @@ var direction
 var is_hit = false
 var dead = false
 
+var health_orb = preload("res://enemies/health_orb.tscn")
+#var turret_enemy = preload("res://enemies/turret_enemy.tscn")
+var orb_spawned = false
+var enemylocation = self.position
+signal health_spawned
+
 func _physics_process(delta):
 	direction = (GlobalVars.playerPosition - self.global_position).normalized()
 	velocity.y += gravity * delta
@@ -87,3 +93,14 @@ func _on_detection_area_body_exited(body):
 		player = null
 		attack = false
 		$BulletTimer.stop()
+
+
+func _on_damage_enemy_died():
+	enemylocation = self.position
+			
+	var orb = health_orb.instantiate()
+	orb.position = enemylocation
+	orb_spawned = true
+	if orb_spawned:
+		get_parent().add_child(orb)
+		health_spawned.emit()

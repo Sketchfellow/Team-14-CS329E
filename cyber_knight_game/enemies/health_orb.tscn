@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://l6655fk2n5tj"]
+
+[ext_resource type="Texture2D" uid="uid://b2c0c6u6p1fjn" path="res://assets/visuals/health/item_164.png" id="1_y8x45"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6ofi"]
+radius = 25.02
+
+[node name="health_orb" type="Area2D" groups=["health"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y8x45")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r6ofi")
