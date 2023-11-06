@@ -11,7 +11,8 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		scene += 1
-	$AnimatedSprite2D.animation = str(scene)
+	if scene < 5:
+		$AnimatedSprite2D.animation = str(scene)
 	
 	if scene == 5:
 		get_tree().change_scene_to_file("res://HUD/HUD.tscn")
