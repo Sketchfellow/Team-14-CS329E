@@ -1,1 +1,12 @@
+res://ui_stuff/hearts_container.tscn
+res://ending.tscn
+res://levels/final.tscn
+res://ui_stuff/game_over.tscn
+res://characters/cyber_knight_player.tscn
+res://levels/testing_stage.tscn
+res://enemies/final_boss.tscn
 res://opening_scene.tscn
+res://levels/level2.tscn
+res://levels/final.gd
+res://levels/final_matrix.gd
+res://levels/final_matrix.tscn

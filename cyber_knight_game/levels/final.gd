@@ -1,10 +1,18 @@
 extends Node2D
+@export var matrixLine : PackedScene
+var rng = RandomNumberGenerator.new()
 
 @onready var heartsContainer = $CanvasLayer2/HeartsContainer
 @onready var pause_menu = $CanvasLayer/PauseMenu
 @onready var player = $player
 var paused = false
 # Called when the node enters the scene tree for the first time.
+
+func spawnMatrixLine():
+	var mat = matrixLine.instantiate()
+	mat.global_position = Vector2(rng.randi_range(-3000, 3000), -1500)
+
+	add_child(mat)
 
 func _ready():
 	
@@ -36,3 +44,7 @@ func _on_powerup_body_entered(body):
 
 func _on_final_boss_boss_hit():
 	$CanvasLayer2/ProgressBar.value = $finalBoss.HP
+
+
+func _on_timer_timeout():
+	spawnMatrixLine()

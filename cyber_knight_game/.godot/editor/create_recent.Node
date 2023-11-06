@@ -1,5 +1,7 @@
-Button
 Timer
+Sprite2D
+Marker2D
+Button
 VideoStreamPlayer
 Node
 Label
@@ -10,7 +12,6 @@ StaticBody2D
 AnimatedSprite2D
 AudioStreamPlayer
 AudioStreamPlayer2D
-Sprite2D
 ColorRect
 TextEdit
 RichTextLabel
@@ -27,6 +28,5 @@ HBoxContainer
 Panel
 CharacterBody2D
 RigidBody2D
-Marker2D
 TileMap
 NinePatchRect
