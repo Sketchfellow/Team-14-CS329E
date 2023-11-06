@@ -1,3 +1,4 @@
+Label
 AudioStreamPlayer
 AudioStreamPlayer2D
 Timer
@@ -7,7 +8,6 @@ CollisionShape2D
 Sprite2D
 Node
 ColorRect
-Label
 Button
 TextEdit
 RichTextLabel
