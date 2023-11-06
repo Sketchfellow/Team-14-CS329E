@@ -5,12 +5,13 @@ extends CharacterBody2D
 
 signal isdead
 
-var HP = 200
+var HP = 400
 var hostile = false
 var willGoForward = true
 var direction
 var canSpawnEnemies = true
 var poweredLaser = false
+var isStomping = false
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -18,13 +19,19 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+signal boss_hit
+
 func _ready():
 	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.show()
+	$StandAnimation.hide()
+	$StompArea/CollisionShape2D.disabled = true
 
 
 
 func damage(damage):
 	HP -= damage
+	boss_hit.emit()
 	$hitSound.play()
 	if HP > 0:
 		$AnimatedSprite2D.modulate = Color.RED
@@ -41,6 +48,14 @@ func attack():
 
 	get_tree().get_root().add_child(b)
 		
+
+func stomp():
+	$AnimatedSprite2D.hide()
+	$StandAnimation.show()
+	$StandAnimation.play("Stand")
+	$bodyCollision.disabled = true
+	$headCollision.disabled = true
+	
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -74,24 +89,30 @@ func _on_detection_body_exited(body):
 
 func _on_attack_timer_timeout():
 	if hostile:
+		
 		attack()
 
 
+func _on_stomp_timer_timeout():
+	if hostile:
+		stomp()
+
 func _on_move_timer_timeout():
-	if willGoForward:
-		velocity.x = -600
-		$AnimatedSprite2D.play("forward")
-		await get_tree().create_timer(0.35).timeout
-		$AnimatedSprite2D.play("default")
-		velocity.x = 0
-		willGoForward = false
-	else:
-		velocity.x = 600
-		$AnimatedSprite2D.play("backward")
-		await get_tree().create_timer(0.35).timeout
-		$AnimatedSprite2D.play("default")
-		velocity.x = 0
-		willGoForward = true
+	if not isStomping:
+		if willGoForward:
+			velocity.x = -600
+			$AnimatedSprite2D.play("forward")
+			await get_tree().create_timer(0.35).timeout
+			$AnimatedSprite2D.play("default")
+			velocity.x = 0
+			willGoForward = false
+		else:
+			velocity.x = 600
+			$AnimatedSprite2D.play("backward")
+			await get_tree().create_timer(0.35).timeout
+			$AnimatedSprite2D.play("default")
+			velocity.x = 0
+			willGoForward = true
 	
 
 
@@ -113,3 +134,19 @@ func _on_body_damage_area_entered(area):
 			damage(1)
 	elif area.name == "Lsword" or area.name == "Rsword":
 		damage(5)
+
+
+
+
+func _on_stand_animation_animation_finished():
+	$StandAnimation.hide()
+	$AnimatedSprite2D.show()
+	$AnimatedSprite2D.play("stomp")
+	$StompArea/CollisionShape2D.disabled = false
+	await get_tree().create_timer(1.5).timeout
+	$StompArea/CollisionShape2D.disabled = true
+	isStomping = false
+	$AnimatedSprite2D.play("default")
+	$bodyCollision.disabled = false
+	$headCollision.disabled = false
+	

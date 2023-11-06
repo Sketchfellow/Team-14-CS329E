@@ -11,6 +11,7 @@ func _ready():
 	heartsContainer.setMaxHearts(player.max_health)
 	heartsContainer.updateHearts(player.current_health)
 	player.health_changed.connect(heartsContainer.updateHearts)
+	$CanvasLayer2/ProgressBar.value = 400
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,7 +24,7 @@ func _on_deathfloor_body_entered(body):
 
 
 func _on_final_boss_isdead():
-	get_tree().change_scene_to_file("res://HUD/HUD.tscn")
+	get_tree().change_scene_to_file("res://ending.tscn")
 
 
 func _on_powerup_body_entered(body):
@@ -31,3 +32,7 @@ func _on_powerup_body_entered(body):
 		$player.powerup = true
 		$finalBoss.poweredLaser = true
 		$powerup.queue_free()
+
+
+func _on_final_boss_boss_hit():
+	$CanvasLayer2/ProgressBar.value = $finalBoss.HP

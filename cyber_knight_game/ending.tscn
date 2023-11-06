@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://4p0rsbue80fk"]
+
+[ext_resource type="Script" path="res://ending.gd" id="1_p1scl"]
+[ext_resource type="VideoStream" path="res://assets/videos/cyberknight_ending.ogv" id="2_ag5xo"]
+
+[node name="ending" type="Node"]
+script = ExtResource("1_p1scl")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_ag5xo")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 576.0
+offset_top = 392.0
+offset_right = 768.0
+offset_bottom = 464.0
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

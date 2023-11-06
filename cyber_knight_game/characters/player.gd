@@ -26,6 +26,7 @@ var can_slash = true
 
 var is_vulnerable = true
 var powerup = false
+var knockback = false
 
 @export var max_health = 3
 var current_health: int = max_health
@@ -152,7 +153,7 @@ func _physics_process(delta):
 	dash()
 	
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and (can_jump or is_on_floor()):
+	if Input.is_action_just_pressed("jump") and (can_jump or is_on_floor()) and not knockback:
 		is_jumping = true
 		has_jumped = true
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
@@ -170,7 +171,7 @@ func _physics_process(delta):
 	# not is_dashing is important
 	# allows the player to dash even when they are holding left or right
 	# Get the input direction and handle the movement/deceleration.
-	if direction and not is_dashing:
+	if direction and not is_dashing and not knockback:
 		facing = "l" if direction == -1 else "r"
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		if is_on_floor() and not is_shooting and not is_slashing:
@@ -184,7 +185,7 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	
 	else:
-		if is_on_floor() and not is_shooting and not is_slashing:
+		if is_on_floor() and not is_shooting and not is_slashing and not knockback:
 			$AnimatedSprite2D.animation = "neutral"
 		$AnimatedSprite2D.flip_h = true if facing == "r" else false
 		$AnimatedSprite2D.play()
@@ -242,7 +243,38 @@ func _on_hurt_box_area_entered(area):
 			await get_tree().create_timer(0.1).timeout
 			$AnimatedSprite2D.modulate = Color.WHITE
 			is_vulnerable = true
+	
+	elif area.name == "StompArea" and is_vulnerable:
+		$AnimatedSprite2D.play("knockback")
+		knockback = true
+		if facing == "l":
+			$AnimatedSprite2D.flip_h = true
+			facing == 'r'
+		velocity.x = -5000
+		current_health -= 1
+		is_vulnerable = false
+		health_changed.emit(current_health)
 		
+		if current_health == 0:
+			get_tree().change_scene_to_file("res://ui_stuff/game_over.tscn")
+		else:
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.RED
+			await get_tree().create_timer(0.1).timeout
+			$AnimatedSprite2D.modulate = Color.WHITE
+			is_vulnerable = true
+			knockback = false
 		
 	
 	
