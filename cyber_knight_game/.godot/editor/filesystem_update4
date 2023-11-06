@@ -8,3 +8,4 @@ res://levels/level2.tscn
 res://levels/tutorial_level.tscn
 res://enemies/final_boss.tscn
 res://projectiles/laser.tscn
+res://laser.gd

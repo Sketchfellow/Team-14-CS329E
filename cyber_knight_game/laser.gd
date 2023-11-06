@@ -31,3 +31,5 @@ func _on_body_entered(body):
 			if child is DamageClass:
 				child.hit(damage)
 		queue_free()
+		
+	queue_free()
