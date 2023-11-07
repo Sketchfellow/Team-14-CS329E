@@ -6,11 +6,25 @@ var rng = RandomNumberGenerator.new()
 @onready var pause_menu = $CanvasLayer/PauseMenu
 @onready var player = $player
 var paused = false
-# Called when the node enters the scene tree for the first time.
+
+var levelColorHash = {
+	
+	0: Color.RED,
+	1: Color.ORANGE_RED,
+	2: Color.LIME_GREEN,
+	3: Color.AQUA,
+	4: Color.BLUE_VIOLET,
+	5: Color.WHITE,
+	6: Color.HOT_PINK
+	
+}
+var levelColorNum = 0
+
 
 func spawnMatrixLine():
 	var mat = matrixLine.instantiate()
 	mat.global_position = Vector2(rng.randi_range(-3000, 3000), -1500)
+	mat.changeColor(levelColorHash[levelColorNum])
 
 	add_child(mat)
 
@@ -48,3 +62,10 @@ func _on_final_boss_boss_hit():
 
 func _on_timer_timeout():
 	spawnMatrixLine()
+
+
+func _on_color_timer_timeout():
+	$platform/Sprite2D.modulate = levelColorHash[levelColorNum]
+	levelColorNum += 1
+	if levelColorNum > 6:
+		levelColorNum = 0
