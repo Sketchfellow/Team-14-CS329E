@@ -38,3 +38,6 @@ func _on_area_entered(area):
 		sound_trigger = true
 		print("sound_trigger is true")
 		queue_free()
+	
+	elif area.name == "HurtBox":
+		queue_free()	

@@ -12,7 +12,9 @@ var is_hit = false
 func _ready():
 	$AnimatedSprite2D.animation = "neutral"
 	
-
+func _process(delta):
+	if $AnimatedSprite2D.animation == "death":
+		$HitBox/CollisionShape2D.disabled = true
 
 func _physics_process(delta):
 

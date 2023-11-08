@@ -25,10 +25,10 @@ texture = ExtResource("1_dh8yd")
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 236.0
-offset_top = 174.0
-offset_right = 323.0
-offset_bottom = 197.0
+offset_left = 240.0
+offset_top = 88.0
+offset_right = 327.0
+offset_bottom = 111.0
 scale = Vector2(10, 10)
 theme_override_fonts/font = ExtResource("5_lqqbc")
 text = "Game Over"
@@ -43,9 +43,9 @@ autoplay = true
 [node name="TryAgain" type="Button" parent="."]
 layout_mode = 0
 offset_left = 511.0
-offset_top = 409.0
+offset_top = 336.0
 offset_right = 598.0
-offset_bottom = 436.0
+offset_bottom = 363.0
 scale = Vector2(4, 4)
 theme_override_fonts/font = ExtResource("5_lqqbc")
 text = "Try Again"
@@ -53,12 +53,27 @@ text = "Try Again"
 [node name="MainMenu" type="Button" parent="."]
 layout_mode = 0
 offset_left = 511.0
-offset_top = 547.0
+offset_top = 472.0
 offset_right = 600.0
-offset_bottom = 574.0
+offset_bottom = 499.0
 scale = Vector2(4, 4)
 theme_override_fonts/font = ExtResource("5_lqqbc")
 text = "Main Menu"
+
+[node name="Hint" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = 616.0
+offset_right = 672.0
+offset_bottom = 684.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("5_lqqbc")
+theme_override_font_sizes/font_size = 0
+text = "Hint:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
 [connection signal="pressed" from="MainMenu" to="." method="_on_quit_pressed"]

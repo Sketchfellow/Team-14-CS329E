@@ -63,10 +63,10 @@ func shoot():
 		
 		get_tree().get_root().add_child(b)
 		b.position = self.global_position + bullet_position
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.3).timeout
 		$AnimatedSprite2D.stop()
 		is_shooting = false
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.4).timeout
 		can_shoot = true
 
 func slash():
