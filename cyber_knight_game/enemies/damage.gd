@@ -5,6 +5,7 @@ class_name DamageClass
 @export var health : float = 20
 
 signal is_hit
+signal enemy_died
 
 func hit(damage:int):
 	
@@ -19,7 +20,7 @@ func hit(damage:int):
 			$"../DeathSound".play()
 			animated_sprite.play("death")
 			print("Enemy died")
+			enemy_died.emit()
 			await get_tree().create_timer(.5).timeout
 		
 		get_parent().queue_free()
-		

@@ -275,7 +275,13 @@ func _on_hurt_box_area_entered(area):
 			$AnimatedSprite2D.modulate = Color.WHITE
 			is_vulnerable = true
 			knockback = false
-		
+			
+	if area != null and area.is_in_group("health"):
+		if current_health < max_health:
+			print("health")
+			current_health += 1
+			health_changed.emit(current_health)
+	
 	
 	
 

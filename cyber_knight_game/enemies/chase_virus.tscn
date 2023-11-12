@@ -98,6 +98,7 @@ stream = ExtResource("8_230r4")
 stream = ExtResource("9_nqo22")
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="enemy_died" from="damage" to="." method="_on_damage_enemy_died"]
 [connection signal="is_hit" from="damage" to="." method="_on_damage_is_hit"]
 [connection signal="area_entered" from="knockbacklogic" to="." method="_on_knockbacklogic_area_entered"]
 [connection signal="body_entered" from="knockbacklogic" to="." method="_on_knockbacklogic_body_entered"]

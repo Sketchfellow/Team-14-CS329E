@@ -1,3 +1,4 @@
+res://enemies
 res://levels
 C:/Users/Alfred/Documents/GitHub/Team-14-CS329E/cyber_knight_game/builds/web
 C:/Users/Alfred/Documents/GitHub/Team-14-CS329E/cyber_knight_game/builds/mac
@@ -7,7 +8,6 @@ res://
 res://assets/visuals/pop_ups_glitches/windowsxp_popups
 res://projectiles
 res://assets/visuals
-res://enemies
 res://assets/sound/8bit-SFX-Library/Enemy
 res://assets/sound/8bit-SFX-Library/Collide
 res://assets/sound/8bit-SFX-Library/Shoot

@@ -106,6 +106,7 @@ shape = SubResource("RectangleShape2D_n5imq")
 stream = ExtResource("9_ugopi")
 
 [connection signal="timeout" from="BulletTimer" to="." method="_on_bullet_timer_timeout"]
+[connection signal="enemy_died" from="Damage" to="." method="_on_damage_enemy_died"]
 [connection signal="is_hit" from="Damage" to="." method="_on_damage_is_hit"]
 [connection signal="area_entered" from="knockbacklogic" to="." method="_on_knockbacklogic_area_entered"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
