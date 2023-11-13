@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dtjthr3xrnf1t"]
+[gd_scene load_steps=29 format=3 uid="uid://dtjthr3xrnf1t"]
 
 [ext_resource type="Script" path="res://enemies/final_boss.gd" id="1_a8w4i"]
 [ext_resource type="Texture2D" uid="uid://dcsvt1s6h6fnk" path="res://assets/visuals/virus_assets/virus3_final_boss/1.png" id="1_tgdo2"]
@@ -12,8 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://dh6w8ga3ujak5" path="res://assets/visuals/virus_assets/virus3_final_boss/attack/2.png" id="5_8exo0"]
 [ext_resource type="Texture2D" uid="uid://dc50dy2miqlsl" path="res://assets/visuals/virus_assets/virus3_final_boss/attack/3.png" id="6_3rfec"]
 [ext_resource type="AudioStream" uid="uid://c5gs4ervul25y" path="res://assets/sound/8bit-SFX-Library/Collide/hit-5.wav" id="9_h3m5v"]
+[ext_resource type="Texture2D" uid="uid://bgfmkny3d7tkj" path="res://assets/visuals/virus_assets/virus3_final_boss/finalBossDead.png" id="10_bjley"]
 [ext_resource type="Texture2D" uid="uid://vb2wx7rkeaj8" path="res://assets/visuals/virus_assets/virus3_final_boss/attack/4.png" id="12_uyosw"]
 [ext_resource type="Texture2D" uid="uid://u2aeffx014qu" path="res://assets/visuals/virus_assets/virus3_final_boss/attack/5.png" id="13_0h6p2"]
+[ext_resource type="Texture2D" uid="uid://yb3ulij0rhf6" path="res://assets/visuals/fileFolder/1.png" id="15_fbcp1"]
+[ext_resource type="Texture2D" uid="uid://c3a47r43cjylv" path="res://assets/visuals/fileFolder/2.png" id="16_nf0ql"]
+[ext_resource type="Texture2D" uid="uid://chrh25k2hpcx5" path="res://assets/visuals/fileFolder/3.png" id="17_l8nrn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eku3f"]
 animations = [{
@@ -50,6 +54,14 @@ animations = [{
 "loop": false,
 "name": &"backward",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_bjley")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -113,6 +125,23 @@ size = Vector2(3568, 1034)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqjgj"]
 size = Vector2(352, 200)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdsuf"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("15_fbcp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nf0ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l8nrn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}]
+
 [node name="finalBoss" type="CharacterBody2D"]
 script = ExtResource("1_a8w4i")
 bullet = ExtResource("2_21maa")
@@ -128,7 +157,7 @@ frame_progress = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7y75a")
-animation = &"stomp"
+animation = &"dead"
 
 [node name="buttCollision" type="CollisionShape2D" parent="."]
 position = Vector2(152, 110.5)
@@ -177,6 +206,10 @@ autostart = true
 wait_time = 10.0
 autostart = true
 
+[node name="turretSpawnTImer" type="Timer" parent="."]
+wait_time = 25.0
+autostart = true
+
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-288, -121)
 
@@ -192,6 +225,13 @@ stream = ExtResource("9_h3m5v")
 position = Vector2(-112, 268)
 shape = SubResource("RectangleShape2D_hqjgj")
 
+[node name="folder" type="AnimatedSprite2D" parent="."]
+position = Vector2(-872, -328)
+scale = Vector2(1.7, 1.7)
+sprite_frames = SubResource("SpriteFrames_kdsuf")
+frame = 2
+frame_progress = 1.0
+
 [connection signal="animation_finished" from="StandAnimation" to="." method="_on_stand_animation_animation_finished"]
 [connection signal="area_entered" from="headDamage" to="." method="_on_head_damage_area_entered"]
 [connection signal="area_entered" from="bodyDamage" to="." method="_on_body_damage_area_entered"]
@@ -200,3 +240,5 @@ shape = SubResource("RectangleShape2D_hqjgj")
 [connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="moveTimer" to="." method="_on_move_timer_timeout"]
 [connection signal="timeout" from="stompTimer" to="." method="_on_stomp_timer_timeout"]
+[connection signal="timeout" from="turretSpawnTImer" to="." method="_on_turret_spawn_t_imer_timeout"]
+[connection signal="animation_finished" from="folder" to="." method="_on_folder_animation_finished"]

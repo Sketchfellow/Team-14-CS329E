@@ -1,7 +1,8 @@
+Timer
+AnimatedSprite2D
 CollisionShape2D
 Sprite2D
 Area2D
-Timer
 Marker2D
 Button
 VideoStreamPlayer
@@ -9,7 +10,6 @@ Node
 Label
 ProgressBar
 StaticBody2D
-AnimatedSprite2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 ColorRect

@@ -44,6 +44,10 @@ func _ready():
 	is_vulnerable = true
 	
 
+func changeColor(color):
+	$HurtBox/CollisionShape2D.disabled = true
+	$AnimatedSprite2D.modulate = color
+
 func shoot():
 	if Input.is_action_just_pressed("shoot") and can_shoot:
 		can_shoot = false

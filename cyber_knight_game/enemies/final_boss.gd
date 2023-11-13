@@ -4,12 +4,12 @@ extends CharacterBody2D
 @export var turretVirus : PackedScene
 
 signal isdead
+signal isdying
 
-var HP = 400
+var HP = 300
 var hostile = false
 var willGoForward = true
 var direction
-var canSpawnEnemies = true
 var poweredLaser = false
 var isStomping = false
 
@@ -25,6 +25,7 @@ func _ready():
 	$AnimatedSprite2D.play("default")
 	$AnimatedSprite2D.show()
 	$StandAnimation.hide()
+	$folder.hide()
 	$StompArea/CollisionShape2D.disabled = true
 
 
@@ -64,17 +65,23 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
+func die():
+	isdying.emit()
+	$headDamage/CollisionShape2D.disabled = true
+	$bodyDamage/CollisionShape2D.disabled = true
+	
+	$AnimatedSprite2D.modulate = Color.BLACK
+	await get_tree().create_timer(0.5).timeout
+	$AnimatedSprite2D.modulate = Color.WHITE
+	$AnimatedSprite2D.play("dead")
+	await get_tree().create_timer(5).timeout
+	isdead.emit()
+	queue_free()
 
 func _process(delta):
 	direction = (GlobalVars.playerPosition - self.global_position).normalized()
 	if HP <= 0:
-		isdead.emit()
-		queue_free()
-	elif HP < 100 and canSpawnEnemies:
-		var minion = turretVirus.instantiate()
-		minion.position = $turretSpawn.global_position
-		get_tree().get_root().add_child(minion)
-		canSpawnEnemies = false
+		die()
 	
 	
 func _on_detection_body_entered(body):
@@ -88,17 +95,17 @@ func _on_detection_body_exited(body):
 
 
 func _on_attack_timer_timeout():
-	if hostile:
+	if hostile and HP > 0:
 		
 		attack()
 
 
 func _on_stomp_timer_timeout():
-	if hostile:
+	if hostile and HP > 0:
 		stomp()
 
 func _on_move_timer_timeout():
-	if not isStomping:
+	if not isStomping and HP > 0:
 		if willGoForward:
 			velocity.x = -600
 			$AnimatedSprite2D.play("forward")
@@ -149,4 +156,21 @@ func _on_stand_animation_animation_finished():
 	$AnimatedSprite2D.play("default")
 	$bodyCollision.disabled = false
 	$headCollision.disabled = false
+	
+
+
+func _on_turret_spawn_t_imer_timeout():
+	if hostile and HP > 0:
+		$folder.show()
+		$folder.play("default")
+		
+
+
+
+func _on_folder_animation_finished():
+	var minion = turretVirus.instantiate()
+	minion.position = $turretSpawn.global_position
+	get_tree().get_root().add_child(minion)
+	await get_tree().create_timer(0.5).timeout
+	$folder.hide()
 	

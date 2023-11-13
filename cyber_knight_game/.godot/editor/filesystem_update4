@@ -1,13 +1,6 @@
-res://enemies/turret_enemy.tscn
-res://enemies/damage.gd
-res://enemies/turret_enemy.gd
-res://enemies/chase_virus.gd
-res://enemies/chase_virus.tscn
-res://enemies/health_orb.tscn
-res://characters/player.gd
-res://ui_stuff/game_over.tscn
 res://levels/final.tscn
-res://projectiles/bullet.tscn
-res://levels/testing_stage.tscn
 res://characters/cyber_knight_player.tscn
-res://enemies/health_orb.gd
+res://enemies/final_boss.tscn
+res://enemies/final_boss.gd
+res://levels/final.gd
+res://characters/player.gd
