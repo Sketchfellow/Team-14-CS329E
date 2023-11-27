@@ -5,6 +5,7 @@ extends Node
 func _ready():
 	$VideoStreamPlayer.play()
 	$Button.hide()
+	$WinSound.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,6 +20,8 @@ func _on_video_stream_player_finished():
 func _on_timer_timeout():
 	$VideoStreamPlayer.paused = true
 	$Button.show()
+	$ButtonSound.play()
+	
 
 
 func _on_button_button_down():

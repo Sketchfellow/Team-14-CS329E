@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cvjsfoj623loy"]
+[gd_scene load_steps=43 format=3 uid="uid://cvjsfoj623loy"]
 
 [ext_resource type="Script" path="res://characters/player.gd" id="1_vwpwm"]
 [ext_resource type="Texture2D" uid="uid://cdbjg1sq6umym" path="res://assets/visuals/player_jump_animation/3.png" id="2_22qob"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://goys3aaltw2e" path="res://assets/sound/8bit-SFX-Library/Player/sword sound.wav" id="30_rn0xm"]
 [ext_resource type="Script" path="res://player_weapons/Rsword.gd" id="31_01bw1"]
 [ext_resource type="AudioStream" uid="uid://b3w22i1g3q7j" path="res://assets/sound/8bit-SFX-Library/Shoot/laser-1.wav" id="31_dybsn"]
+[ext_resource type="AudioStream" uid="uid://5mordln7b6qo" path="res://assets/sound/8bit-SFX-Library/Collect/collect-5.wav" id="35_3ctt5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r74gs"]
 radius = 49.0
@@ -256,6 +257,9 @@ position = Vector2(-61, 3)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-2, 9)
 shape = SubResource("CapsuleShape2D_vm36u")
+
+[node name="OrbSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_3ctt5")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Lsword" to="Lsword" method="_on_body_entered"]

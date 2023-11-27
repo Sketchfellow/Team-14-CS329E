@@ -1,3 +1,6 @@
+AudioStreamPlayer2D
+Panel
+CanvasLayer
 CollisionShape2D
 Area2D
 Timer
@@ -11,7 +14,6 @@ Label
 ProgressBar
 StaticBody2D
 AudioStreamPlayer
-AudioStreamPlayer2D
 ColorRect
 TextEdit
 RichTextLabel
@@ -20,12 +22,10 @@ Node2D
 TextureRect
 ParallaxLayer
 ParallaxBackground
-CanvasLayer
 GridContainer
 VBoxContainer
 MarginContainer
 HBoxContainer
-Panel
 CharacterBody2D
 RigidBody2D
 TileMap

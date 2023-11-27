@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://4p0rsbue80fk"]
+[gd_scene load_steps=5 format=3 uid="uid://4p0rsbue80fk"]
 
 [ext_resource type="Script" path="res://ending.gd" id="1_p1scl"]
 [ext_resource type="VideoStream" path="res://assets/videos/cyberknight_ending.ogv" id="2_ag5xo"]
+[ext_resource type="AudioStream" uid="uid://bch8hpu44khgd" path="res://assets/sound/8bit-SFX-Library/Win/win-8.wav" id="3_1ydab"]
+[ext_resource type="AudioStream" uid="uid://c4wace4wqpwwk" path="res://assets/sound/8bit-SFX-Library/UI/blip-1.wav" id="4_aew2e"]
 
 [node name="ending" type="Node"]
 script = ExtResource("1_p1scl")
@@ -24,6 +26,12 @@ offset_left = 576.0
 offset_top = 392.0
 offset_right = 768.0
 offset_bottom = 464.0
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1ydab")
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aew2e")
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -281,6 +281,7 @@ func _on_hurt_box_area_entered(area):
 			knockback = false
 			
 	if area != null and area.is_in_group("health"):
+		$OrbSound.play()
 		if current_health < max_health:
 			print("health")
 			current_health += 1
