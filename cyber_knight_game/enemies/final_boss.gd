@@ -6,8 +6,7 @@ extends CharacterBody2D
 signal isdead
 signal isdying
 
-#var HP = 300
-var HP = 20
+var HP = 300
 var hostile = false
 var willGoForward = true
 var direction
