@@ -2,9 +2,5 @@ res://levels/testing_stage.tscn
 res://ui_stuff/game_over.tscn
 res://levels/level2.tscn
 res://levels/final.tscn
-res://ending.tscn
-res://ending.gd
-res://characters/cyber_knight_player.tscn
-res://characters/player.gd
-res://enemies/final_boss.gd
 res://enemies/final_boss.tscn
+res://levels/popup-ad.gd

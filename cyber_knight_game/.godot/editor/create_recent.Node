@@ -1,8 +1,9 @@
+CollisionShape2D
+Area2D
+ColorRect
 AudioStreamPlayer2D
 Panel
 CanvasLayer
-CollisionShape2D
-Area2D
 Timer
 AnimatedSprite2D
 Sprite2D
@@ -14,7 +15,6 @@ Label
 ProgressBar
 StaticBody2D
 AudioStreamPlayer
-ColorRect
 TextEdit
 RichTextLabel
 Camera2D
