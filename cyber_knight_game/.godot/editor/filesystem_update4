@@ -1,6 +1,9 @@
+res://global_variables/globalVars.gd
+res://levels/EnterPortal.gd
+res://ui_stuff/pause_menu.gd
+res://ui_stuff/game_over.gd
+res://levels/testing_stage.gd
+res://levels/testing_stage.tscn
+res://levels/level2.tscn
+res://ui_stuff/game_over.tscn
 res://levels/final.tscn
-res://characters/cyber_knight_player.tscn
-res://enemies/final_boss.tscn
-res://enemies/final_boss.gd
-res://levels/final.gd
-res://characters/player.gd

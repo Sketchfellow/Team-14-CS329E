@@ -50,4 +50,5 @@ func _on_try_again_pressed():
 
 func _on_quit_pressed():
 	GlobalVars.progress = 0
+	GlobalVars.checkPoint = false
 	get_tree().change_scene_to_file("res://HUD/HUD.tscn")
