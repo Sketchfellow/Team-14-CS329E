@@ -81,8 +81,8 @@ func slash():
 		$AnimatedSprite2D.animation = "slash"
 		is_slashing = true
 		if is_slashing == true:
-			$Lsword/CollisionShape2D.disabled = false
-			$Rsword/CollisionShape2D.disabled = false
+			$Lsword/CollisionShape2D.disabled = false if facing == "l" else true
+			$Rsword/CollisionShape2D.disabled = false if facing == "r" else true
 		await get_tree().create_timer(0.2).timeout
 		$AnimatedSprite2D.stop()
 		is_slashing = false

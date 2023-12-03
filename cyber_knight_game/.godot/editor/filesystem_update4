@@ -1,6 +1,7 @@
 res://levels/testing_stage.tscn
+res://characters/player.gd
 res://ui_stuff/game_over.tscn
 res://levels/level2.tscn
 res://levels/final.tscn
 res://enemies/final_boss.tscn
-res://enemies/final_boss.gd
+res://levels/tutorial_level.tscn
