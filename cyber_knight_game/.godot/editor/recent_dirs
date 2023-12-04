@@ -1,5 +1,8 @@
-res://assets/sound/8bit-SFX-Library/Collect
+res://assets/fonts
 res://assets/sound/8bit-SFX-Library/UI
+res://assets/sound
+res://assets/sound/music
+res://assets/sound/8bit-SFX-Library/Collect
 res://assets/sound/8bit-SFX-Library/Win
 C:/Users/Alfred/Documents/GitHub/Team-14-CS329E/cyber_knight_game/builds/web
 C:/Users/Alfred/Documents/GitHub/Team-14-CS329E/cyber_knight_game/builds/win
@@ -15,8 +18,5 @@ res://assets/sound/8bit-SFX-Library/Enemy
 res://assets/sound/8bit-SFX-Library/Collide
 res://assets/sound/8bit-SFX-Library/Shoot
 res://ui_stuff
-res://assets/fonts
 res://assets/visuals/pop_ups_glitches
 res://assets/sound/8bit-SFX-Library/Player
-res://HUD
-res://player_weapons
