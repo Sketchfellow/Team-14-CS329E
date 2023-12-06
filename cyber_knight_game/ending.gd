@@ -25,4 +25,6 @@ func _on_timer_timeout():
 
 
 func _on_button_button_down():
+	GlobalVars.progress = 0
+	GlobalVars.checkPoint = false
 	get_tree().change_scene_to_file("res://HUD/HUD.tscn")

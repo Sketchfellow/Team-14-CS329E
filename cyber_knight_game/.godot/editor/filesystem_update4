@@ -1,4 +1,7 @@
 res://HUD/HUD.tscn
 res://ending.tscn
 res://opening_scene.tscn
-res://openingScene.gd
+res://levels/testing_stage.tscn
+res://ending.gd
+res://levels/tutorial_level.tscn
+res://levels/tutorialPop.gd

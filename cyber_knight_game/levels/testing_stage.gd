@@ -44,3 +44,10 @@ func _on_to_final_body_entered(body):
 func _on_check_pt_body_entered(body):
 	if body.name == 'player':
 		GlobalVars.checkPoint = true
+
+
+func _on_enter_portal_body_entered(body):
+	if body.name == 'player':
+		GlobalVars.progress=6
+		GlobalVars.checkPoint = false
+		get_tree().change_scene_to_file("res://levels/level2.tscn")

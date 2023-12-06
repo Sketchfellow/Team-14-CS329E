@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cqxef30t0q6y8" path="res://assets/visuals/ad-popups/chat-ad.png" id="2_ijrro"]
 [ext_resource type="Texture2D" uid="uid://cb8evdyey4ocj" path="res://assets/placeholder/arrow.png" id="2_xm3wf"]
 [ext_resource type="PackedScene" uid="uid://dg08whuakg7gd" path="res://characters/tutorial_character.tscn" id="3_07gmp"]
-[ext_resource type="Script" path="res://levels/popup-ad.gd" id="3_rerhk"]
+[ext_resource type="Script" path="res://levels/tutorialPop.gd" id="3_xhbn7"]
 [ext_resource type="PackedScene" uid="uid://b635r7pahxgwj" path="res://levels/progressCheckpoint.tscn" id="5_7jif5"]
 [ext_resource type="PackedScene" uid="uid://bnlcnwwrskwl2" path="res://enemies/turret_enemy.tscn" id="6_glbka"]
 [ext_resource type="Texture2D" uid="uid://c4d1fdxgg13p8" path="res://assets/visuals/arrow keys.png" id="8_2heki"]
@@ -84,7 +84,7 @@ script = ExtResource("1_6kmgm")
 [node name="popup" type="Sprite2D" parent="."]
 position = Vector2(310, -113)
 texture = ExtResource("2_ijrro")
-script = ExtResource("3_rerhk")
+script = ExtResource("3_xhbn7")
 
 [node name="Button" type="Button" parent="popup"]
 anchors_preset = -1
@@ -96,10 +96,6 @@ offset_left = -214.836
 offset_top = -169.711
 offset_right = -188.836
 offset_bottom = -143.711
-
-[node name="Timer" type="Timer" parent="popup"]
-one_shot = true
-autostart = true
 
 [node name="direction_arrow" type="Sprite2D" parent="."]
 position = Vector2(-1414, -91)
@@ -184,4 +180,3 @@ position = Vector2(9326, 207)
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("8_uqy7t")]
 
 [connection signal="pressed" from="popup/Button" to="popup" method="_on_button_pressed"]
-[connection signal="timeout" from="popup/Timer" to="popup" method="_on_timer_timeout"]
